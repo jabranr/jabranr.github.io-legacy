@@ -1,0 +1,19 @@
+<!-- Blog listing -->
+<div class="page-header">
+	<h2 class="section-heading">
+		Articles
+	</h2>
+</div>
+{% for post in site.categories.blog limit:20 %}
+	{% if post.private != true %}
+	  <div class="blog-listing">
+	    <h4 class="lead blog-heading">
+	      	<a href="{{ post.url }}" rel="bookmark" data-href="{{ post.url }}">{{ post.title }}</a>
+	    </h4>
+		<p class="blog-metadata">
+			<i class="glyphicon glyphicon-time"></i>&nbsp;{{ post.date | date_to_string }}
+		</p>
+		<!-- <p class="blog-excerpt">{{ post.excerpt | strip_html }}</p> -->
+	  </div>
+	{% endif %}
+{% endfor %}

@@ -1,0 +1,23 @@
+<!-- projects listing -->
+<div class="page-header">
+	<h2 class="section-heading">
+		Projects
+	</h2>
+</div>
+{% for post in site.categories.project limit:10 %}
+    <div class="project-listing">
+      <h4>{{ post.title }}</h4>
+      <ul class="project-badge list-inline">
+	    <li class="project-detail">
+	    	<a href="{{ post.url }}" rel="bookmark" title="Project details">Details</a>
+	    </li>
+	    <li class="project-code">
+	    	<a href="{{ post.code }}" title="View project">View Project</a>
+	    	<span class="project-version stage-{{ post.stage | strip_html }}" title="Version {{ post.version }} {{ post.stage | strip_html }}">v {{ post.version }}</span>
+	    </li>
+	    <li class="project-license">
+	    	{{ post.license }}
+	    </li>
+      </ul>
+    </div>
+{% endfor %}

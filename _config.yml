@@ -1,0 +1,4 @@
+name: Jabran Rafique
+markdown: redcarpet
+pygments: true
+permalink: /:categories/:title/
