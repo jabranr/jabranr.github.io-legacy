@@ -1,4 +1,5 @@
 name: Jabran Rafique
 markdown: redcarpet
 pygments: true
+baseurl: /
 permalink: /:categories/:title/
