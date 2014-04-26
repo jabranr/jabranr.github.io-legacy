@@ -5,7 +5,7 @@ date:   2014-04-05 08:00:00
 categories: project
 client: "Personal"
 excerpt: 'WordPress plugin based on Fetchwitter PHP Library'
-code: https://github.com/jabranr/fetchwitter-or-wordpress
+code: http://j.mp/fetchwitter-for-wordpress
 private: false
 stage: stable
 version: 0.0.1

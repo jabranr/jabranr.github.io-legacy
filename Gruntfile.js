@@ -4,15 +4,18 @@ module.exports = function(grunt) {
 
 		concat: {
 			dist: {
-				src: [],
-				dest: ''
+				src: ['_scripts/*.js'],
+				dest: 'js/global-<%= pkg.version %>.js'
 			}
 		},
 
 		uglify: {
 			build: {
-				src: '',
-				dest: ''
+				src: 'js/global-<%= pkg.version %>.js',
+				dest: 'js/global.min.js'
+			},
+			options: {
+				preserveComments: 'some'
 			}
 		},
 
@@ -55,6 +58,13 @@ module.exports = function(grunt) {
 				options: {
 					spawn: false
 				}
+			},
+			img: {
+				files: ['_img/*.*'],
+				tasks: ['imagemin'],
+				options: {
+					spawn: false
+				}
 			}
 		}
 
@@ -66,5 +76,5 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-sass');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 
-	grunt.registerTask('default', ['watch', 'imagemin']);
+	grunt.registerTask('default', ['concat', 'uglify', 'sass', 'watch']);
 }
