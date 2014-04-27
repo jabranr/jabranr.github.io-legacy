@@ -2,7 +2,7 @@
 layout: project
 title: 'PHP library for Instagram API'
 date:   2013-03-09 08:00:00
-categories: project
+categories: projects
 client: "Personal"
 excerpt: 'PHP library to access Instagram API'
 code: https://github.com/jabranr/instagram-api-php

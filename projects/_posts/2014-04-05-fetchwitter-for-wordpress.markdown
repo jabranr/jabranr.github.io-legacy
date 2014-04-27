@@ -2,7 +2,7 @@
 layout: project
 title: 'Fetchwitter for WordPress'
 date:   2014-04-05 08:00:00
-categories: project
+categories: projects
 client: "Personal"
 excerpt: 'WordPress plugin based on Fetchwitter PHP Library'
 code: http://j.mp/fetchwitter-for-wordpress

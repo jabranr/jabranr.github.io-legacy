@@ -4,12 +4,12 @@ description: 'web developer, cartographer'
 version: 0.0.2
 
 # Routes
-url: http://jabranr.github.io
+url: http://127.0.0.1:4000
 baseurl: /
 permalink: /:categories/:title/
 
 # Pagination
-paginate: 1
+paginate: 10
 
 # Dependencies
 markdown: redcarpet

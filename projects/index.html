@@ -1,0 +1,54 @@
+---
+layout: default
+title: Project
+description: 'web developer, cartographer'
+---
+
+
+<div class="col-md-3 about-content clearfix">
+	{% include about.html %}
+</div>
+
+<div class="col-md-9 project-content clearfix">
+	<div class="page-header">
+		<h2 class="section-heading">
+			Projects
+		</h2>
+	</div>
+	<p>
+		Here is list of my projects I work on from time to time. Hardly any of them would be a private project otherwise they are all public with open source licenses hosted at <a href="https://github.com/jabranr" target="_blank">Github</a> and free to use. You are most welcome to share your feedback, corrections and even enhancements. Relevant details to file an issue can be found in detailed page for each of these projects.
+	</p>
+	<p>I also use <a href="https://gist.github.com/jabranr" target="_blank">Gist</a> and <a href="https://codepen.io/jabranr" target="_blank">CodePen</a> to share experiments from day to day work.</p>
+	<p>&nbsp;</p>
+
+	{% for post in site.categories.projects %}
+	    <div class="project-listing">
+	      <h4>{{ post.title }}</h4>
+	      <ul class="project-badge list-inline">
+	      	<li>
+		    	<span class="project-version stage-{{ post.stage | strip_html }}" title="Version {{ post.version }} {{ post.stage | strip_html }}">
+		    		{% if post.stage == "stable" %}
+		    			<i class="glyphicon glyphicon-ok-sign"></i>
+		    		{% elsif post.stage == "alpha" %}
+		    			<i class="glyphicon glyphicon-question-sign"></i>
+		    		{% elsif post.stage == "beta" %}
+		    			<i class="glyphicon glyphicon-question-sign"></i>
+		    		{% elsif post.stage == "deprecated" %}
+		    			<i class="glyphicon glyphicon-remove-sign"></i>
+		    		{% endif %}
+		    		 {{ post.version }}
+		    	</span>
+	      	</li>
+		    <li class="project-detail">
+		    	<a href="{{ post.url }}" rel="bookmark" title="Project details">Details</a>
+		    </li>
+		    <li class="project-code">
+		    	<a href="{{ post.code }}" title="View project">View Project</a>
+		    </li>
+		    <li class="project-license">
+		    	{{ post.license }}
+		    </li>
+	      </ul>
+	    </div>
+	{% endfor %}
+</div>
