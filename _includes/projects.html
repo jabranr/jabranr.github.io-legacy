@@ -13,7 +13,18 @@
 	    </li>
 	    <li class="project-code">
 	    	<a href="{{ post.code }}" title="View project">View Project</a>
-	    	<span class="project-version stage-{{ post.stage | strip_html }}" title="Version {{ post.version }} {{ post.stage | strip_html }}">v {{ post.version }}</span>
+	    	<span class="project-version stage-{{ post.stage | strip_html }}" title="Version {{ post.version }} {{ post.stage | strip_html }}">
+	    		{% if post.stage == "stable" %}
+	    			<i class="glyphicon glyphicon-ok-sign"></i>
+	    		{% elsif post.stage == "alpha" %}
+	    			<i class="glyphicon glyphicon-question-sign"></i>
+	    		{% elsif post.stage == "beta" %}
+	    			<i class="glyphicon glyphicon-question-sign"></i>
+	    		{% elsif post.stage == "deprecated" %}
+	    			<i class="glyphicon glyphicon-remove-sign"></i>
+	    		{% endif %}
+	    		 {{ post.version }}
+	    	</span>
 	    </li>
 	    <li class="project-license">
 	    	{{ post.license }}

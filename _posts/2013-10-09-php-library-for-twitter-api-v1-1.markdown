@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: project
 title: 'PHP library for Twitter API v1.1'
 date:   2013-10-09 08:00:00
 categories: project

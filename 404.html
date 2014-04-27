@@ -1,0 +1,16 @@
+---
+layout: page
+title: Page not found
+permalink: 404.html
+---
+
+Sorry, the requested page cannot be found. Try searching the required information at <a href="{{ site.url }}">home page</a>.
+
+{% if site.posts %}
+	<h3>Recent articles</h3>
+	<ul>
+		{% for post in site.categories.blog limit:5 %}
+			<li><a href="{{ post.url }}">{{ post.title }}</a></li>
+		{% endfor %}
+	</ul>
+{% endif %}

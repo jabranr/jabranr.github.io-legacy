@@ -1,9 +1,15 @@
 <!doctype html>
 <html>
   <head>
-    <title>{{ site.name }}</title>
+    <title>
+      {% if page.title == 'Home' %}
+        {{ site.title }} &ndash; {{ site.description }}
+      {% else %}
+        {{ page.title }} &ndash; {{ site.title }}
+      {% endif %}
+    </title>
     <meta charset="utf-8">
-    <meta name="title" content="{{ site.name }}">
+    <meta name="title" content="{{ site.title }}">
     <meta name="author" content="Jabran Rafique">
     <meta name="description" content="Web Developer based in London, UK">
     <meta name="viewport" content="initial-scale=1.0, width=device-width">

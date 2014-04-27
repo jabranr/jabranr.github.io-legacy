@@ -1,5 +1,16 @@
-name: Jabran Rafique
-markdown: redcarpet
-pygments: true
+# Basic info
+title: Jabran Rafique
+description: 'web developer, cartographer'
+version: 0.0.2
+
+# Routes
+url: http://jabranr.github.io
 baseurl: /
 permalink: /:categories/:title/
+
+# Pagination
+paginate: 1
+
+# Dependencies
+markdown: redcarpet
+pygments: true

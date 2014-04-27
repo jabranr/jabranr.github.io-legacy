@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: project
 title: 'HTML Form fields placeholder fallback with jQuery'
 date:   2014-01-30 08:00:00
 categories: project

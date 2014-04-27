@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: project
 title: 'PHP library for Instagram API'
 date:   2013-03-09 08:00:00
 categories: project

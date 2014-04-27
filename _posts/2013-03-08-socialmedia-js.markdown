@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: project
 title: 'SocialMedia.js'
 date:   2013-03-08 08:00:00
 categories: project
