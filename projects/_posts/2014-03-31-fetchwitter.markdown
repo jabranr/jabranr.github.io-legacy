@@ -6,7 +6,7 @@ categories: projects
 client: "Personal"
 excerpt: 'Fetchwitter makes it easier to fetch Tweets from a Twitter API v1.1 and OAuth authentication/authorization'
 code: http://j.mp/fetchwitter
-private: false
+private: true
 stage: beta
 version: 1.0.1
 ---

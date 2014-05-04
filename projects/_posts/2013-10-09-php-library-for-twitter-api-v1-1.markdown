@@ -6,7 +6,7 @@ categories: projects
 client: "Personal"
 excerpt: 'PHP library to fetch Tweets from Twitter API v1.1'
 code: https://github.com/jabranr/twitter-api-v1.1
-private: false
+private: true
 stage: deprecated
 version: 1.1.0
 ---

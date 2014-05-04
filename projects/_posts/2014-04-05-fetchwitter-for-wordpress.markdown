@@ -6,7 +6,7 @@ categories: projects
 client: "Personal"
 excerpt: 'WordPress plugin based on Fetchwitter PHP Library'
 code: http://j.mp/fetchwitter-for-wordpress
-private: false
+private: true
 stage: alpha
 version: 0.0.1
 ---

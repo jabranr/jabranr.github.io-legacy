@@ -5,6 +5,7 @@
 	</h2>
 </div>
 {% for post in site.categories.projects limit:10 %}
+	{% if post.private != true %}
     <div class="project-listing">
       <h4>{{ post.title }}</h4>
       <ul class="project-badge list-inline">
@@ -33,6 +34,7 @@
 	    </li>
       </ul>
     </div>
+    {% endif %}
 {% endfor %}
 
 <p class="btn-archive-container">

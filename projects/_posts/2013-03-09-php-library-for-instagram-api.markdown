@@ -6,7 +6,7 @@ categories: projects
 client: "Personal"
 excerpt: 'PHP library to access Instagram API'
 code: https://github.com/jabranr/instagram-api-php
-private: false
+private: true
 stage: stable
 version: 0.0.1
 ---

@@ -6,7 +6,7 @@ categories: projects
 client: "Personal"
 excerpt: 'HTML Form fields placeholder fallback with jQuery'
 code: https://github.com/jabranr/jquery.placeholderfallback.js
-private: false
+private: true
 stage: stable
 version: 1.0.0
 ---
