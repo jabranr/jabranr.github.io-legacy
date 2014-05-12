@@ -1,7 +1,11 @@
 <div class="page-header text-center">
+  {% if page.title == 'Home' %}
 	<a href="/" title="{{ site.title }}"><img src="https://graph.facebook.com/jabranr/picture?width=150&height=150" alt="Jabran Rafique" class="img-circle clearfix"></a>
-	<h1 class="logo">{{ site.title }}</h1>
-	<h4 class="sub-heading">{{ site.description }}</h4>
+  <h1 class="logo">{{ site.title }}</h1>
+  {% else %}
+  <h1 class="logo"><a href="{{ site.url }}">{{ site.title }}</a></h1>
+  {% endif %}
+	<h4 class="sub-heading">{{ site.tagline }}</h4>
     <ul class="list-inline contact-list">
       <li>
         <a href="https://twitter.com/intent/follow?screen_name=jabranr" target="_blank" class="text-hide twitter-icon" title="Follow me on Twitter">Twitter</a>
@@ -12,4 +16,4 @@
     </ul>
 </div>
 
-<p>I develop ideas that are useful and helpful for everyone.</p>
+<p>{{ site.description }}</p>
