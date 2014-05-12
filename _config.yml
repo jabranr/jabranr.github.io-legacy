@@ -4,8 +4,9 @@ description: 'web developer, cartographer'
 version: 0.0.2
 
 # Routes
-url: http://127.0.0.1:4000
 baseurl: /
+# url: http://127.0.0.1:4000
+url: http://jabranr.github.io
 permalink: /:categories/:title/
 
 # Pagination
