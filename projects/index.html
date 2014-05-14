@@ -22,33 +22,35 @@ description: 'web developer, cartographer'
 	<p>&nbsp;</p>
 
 	{% for post in site.categories.projects %}
-	    <div class="project-listing">
-	      <h4>{{ post.title }}</h4>
-	      <ul class="project-badge list-inline">
-	      	<li>
-		    	<span class="project-version stage-{{ post.stage | strip_html }}" title="Version {{ post.version }} {{ post.stage | strip_html }}">
-		    		{% if post.stage == "stable" %}
-		    			<i class="glyphicon glyphicon-ok-sign"></i>
-		    		{% elsif post.stage == "alpha" %}
-		    			<i class="glyphicon glyphicon-question-sign"></i>
-		    		{% elsif post.stage == "beta" %}
-		    			<i class="glyphicon glyphicon-question-sign"></i>
-		    		{% elsif post.stage == "deprecated" %}
-		    			<i class="glyphicon glyphicon-remove-sign"></i>
-		    		{% endif %}
-		    		 {{ post.version }}
-		    	</span>
-	      	</li>
-		    <li class="project-detail">
-		    	<a href="{{ post.url }}" rel="bookmark" title="Project details">Details</a>
-		    </li>
-		    <li class="project-code">
-		    	<a href="{{ post.code }}" title="View project">View Project</a>
-		    </li>
-		    <li class="project-license">
-		    	{{ post.license }}
-		    </li>
-	      </ul>
-	    </div>
+		{% if post.private != true %}
+		    <div class="project-listing">
+		      <h4>{{ post.title }}</h4>
+		      <ul class="project-badge list-inline">
+		      	<li>
+			    	<span class="project-version stage-{{ post.stage | strip_html }}" title="Version {{ post.version }} {{ post.stage | strip_html }}">
+			    		{% if post.stage == "stable" %}
+			    			<i class="glyphicon glyphicon-ok-sign"></i>
+			    		{% elsif post.stage == "alpha" %}
+			    			<i class="glyphicon glyphicon-question-sign"></i>
+			    		{% elsif post.stage == "beta" %}
+			    			<i class="glyphicon glyphicon-question-sign"></i>
+			    		{% elsif post.stage == "deprecated" %}
+			    			<i class="glyphicon glyphicon-remove-sign"></i>
+			    		{% endif %}
+			    		 {{ post.version }}
+			    	</span>
+		      	</li>
+			    <li class="project-detail">
+			    	<a href="{{ post.url }}" rel="bookmark" title="Project details">Details</a>
+			    </li>
+			    <li class="project-code">
+			    	<a href="{{ post.code }}" title="View project">View Project</a>
+			    </li>
+			    <li class="project-license">
+			    	{{ post.license }}
+			    </li>
+		      </ul>
+		    </div>
+		{% endif %}
 	{% endfor %}
 </div>

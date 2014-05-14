@@ -7,11 +7,14 @@
 {% for post in site.categories.blog limit:10 %}
 	{% if post.private != true %}
 	  <div class="blog-listing">
-	    <h4 class="lead blog-heading">
+	    <h4 class="blog-heading">
 	      	<a href="{{ post.url }}" rel="bookmark" data-href="{{ post.url }}">{{ post.title }}</a>
 	    </h4>
-		<p class="blog-metadata">
-			<i class="glyphicon glyphicon-time"></i>&nbsp;{{ post.date | date_to_string }}
+	    <p class="blog-excerpt">
+	    	{{ post.excerpt | strip_html }}
+	    </p>
+		<p class="help-block">
+			<small><em>{{ post.date | date_to_string }}</em></small>
 		</p>
 	  </div>
 	{% endif %}

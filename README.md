@@ -1,3 +1,3 @@
-#### Personal Website
+# Personal Website [![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/)
 
-<blockquote>The project is in continuous developmet!</blockquote>
+This is a repository of my personal website. To visit the live site, follow [http://jabranr.github.me](http://jabranr.github.me)
