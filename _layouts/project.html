@@ -2,11 +2,25 @@
 layout: default
 ---
 
-<div class="col-md-3 about-content clearfix">
+<div class="col-md-3 about-content projects-template clearfix">
 	{% include about.html %}
+	{% if page.stage == 'stable' %}
+	<p class="project-download">
+		<a class="btn btn-primary" target="_blank" href="{{ page.code }}">
+			Download version {{ page.version }}&nbsp;
+			<i class="glyphicon glyphicon-chevron-right"></i>
+		</a>
+	</p>
+	<p class="project-download">
+		<a class="btn btn-warning" target="_blank" href="{{ page.code }}/issues">
+			Report an issue&nbsp;
+			<i class="glyphicon glyphicon-info-sign"></i>
+		</a>
+	</p>
+	{% endif %}
 </div>
 
-<div class="col-md-9 blog-content clearfix">
+<div class="col-md-9 project-content projects-template clearfix">
 	<div class="page-header">
 		<h1 class="post-title">
 			{{ page.title }} 
@@ -23,7 +37,23 @@ layout: default
 	    		 {{ page.version }}
 	    	</span>
 		</h1>
-		<p class="post-metadata">First Release: {{ page.date | date_to_string }}</p>
+		<p class="post-metadata">First Release: {{ page.date | date_to_long_string }}</p>
 	</div>
 	{{ content }}
+
+	{% if page.stage == 'stable' %}
+	<p class="project-download text-center">
+		<a class="btn btn-primary" target="_blank" href="{{ page.code }}">
+			Download version {{ page.version }}&nbsp;
+			<i class="glyphicon glyphicon-chevron-right"></i>
+		</a>
+		<a class="btn btn-warning" target="_blank" href="{{ page.code }}/issues">
+			Report an issue&nbsp;
+			<i class="glyphicon glyphicon-info-sign"></i>
+		</a>
+	</p>
+	{% endif %}
+
+	{% include social.html %}
+
 </div>

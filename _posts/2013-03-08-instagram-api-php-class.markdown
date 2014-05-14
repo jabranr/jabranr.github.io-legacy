@@ -4,7 +4,7 @@ title: 'Instagram API PHP Class'
 date: 2013-03-08 07:00:00
 categories: blog
 tags: 'Beatport API, Facebook API, GitHub, Instagram API, JavaScript, Open Graph, PHP, Spotify API, Twitter API'
-excerpt: 'custom excerpt goes here...'
+excerpt: 'This PHP wrapper for Instagram API intends to provide an easy access to majority of methods in Instagram API as well as to OAuth authentication and authorization.'
 permalink: instagram-api-php-class
 private: false
 ---

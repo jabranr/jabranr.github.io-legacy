@@ -4,7 +4,7 @@ title: 'Fetch tweets with Twitter API v1.1'
 date: 2013-10-09 07:00:00
 categories: blog
 tags: Personal
-excerpt: 'custom excerpt goes here...'
+excerpt: 'An attampt to create a PHP wrapper to easily access the methods of Twitter API v1.1 that requires OAuth authentication and authorization on all endpoints unlike its previous version.'
 permalink: fetch-tweets-with-twitter-api-v1-1
 private: false
 ---

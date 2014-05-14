@@ -10,8 +10,9 @@ layout: default
 	<div class="page-header">
 		<h1>{{ page.title }}</h1>
 		{% if page.date %}
-		<p class="post-metadata">Published: {{ page.date | date_to_string }}</p>
+		<p class="post-metadata">Published: {{ page.date | date_to_long_string }}</p>
 		{% endif %}
 	</div>
 	{{ content }}
+	{% include social.html %}
 </div>

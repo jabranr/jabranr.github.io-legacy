@@ -4,7 +4,7 @@ module.exports = function(grunt) {
 
 		concat: {
 			dist: {
-				src: ['_scripts/*.js'],
+				src: ['_scripts/socialmedia.min.js', '_scripts/*.js'],
 				dest: 'js/global-<%= pkg.version %>.js'
 			}
 		},

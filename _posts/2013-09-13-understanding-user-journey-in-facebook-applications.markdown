@@ -4,12 +4,12 @@ title: 'Understanding user journey in Facebook applications'
 date: 2013-09-13 07:00:00
 categories: blog
 tags: 'Facebook, Facebook API, Facebook App, Facebook Games, Graph API'
-excerpt: 'custom excerpt goes here...'
+excerpt: 'Facebook applications are wonderful medium to promote products and build up a fan base. In this article, I try to explain two sides of a Facebook canvas app.'
 permalink: understanding-user-journey-in-facebook-applications
 private: false
 ---
 
-[Facebook applications](http://developers.facebook.com/) (apps) are wonderful medium to promote the products and build up the fan base. Facebook canvas apps can be subdivided into two types based on their type of use − canvas app and page tab app. You may be familiar with canvas apps in form of Facebook games. Page tab app on other hand resides inside the area of a [Facebook Page](https://www.facebook.com/pages/create/). There are different things that we can do and cannot do with each of the app type.
+[Facebook applications](http://developers.facebook.com/) (apps) are wonderful medium to promote products and build up a fan base. Facebook canvas apps can be subdivided into two types based on their type of use − canvas app and page tab app. You may be familiar with canvas apps in form of Facebook games. Page tab app on other hand resides inside the area of a [Facebook Page](https://www.facebook.com/pages/create/). There are different things that we can do and cannot do with each of the app type.
 
 <img src="../img/facebook_app_basic_settings.jpg" alt="Facebook App Settings" class="img-responsive">
 <p class="help-block">Basic settings for a Facebook application</p>

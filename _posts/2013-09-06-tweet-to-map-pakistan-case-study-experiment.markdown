@@ -4,12 +4,12 @@ title: 'Tweet to map Pakistan – Case Study / Experiment'
 date: 2013-09-06 07:00:00
 categories: blog
 tags: 'Google Map Maker, GPS, Maps, Pakistan, Tweet, Twitter'
-excerpt: 'custom excerpt goes here...'
+excerpt: 'In 2011, I setup a private Twitter handler @pkmaps for an experiment by collecting and using the location information through Tweet in order to map the features at Google Map Maker.'
 permalink: tweet-to-map-pakistan-case-study-experiment
 private: false
 ---
 
-In 2011, I setup a private Twitter handler [@pkmaps](http://twitter.com/pkmaps) for an experiment to collect and use the location information through tweets to map the features at [Google Map Maker](http://mapmaker.google.com/) that I would come across during my usual daily journeys to nearby towns. While I was in Pakistan, I used the handler to post the locations I passed by during said short trips. The method was simple. Write the feature name in tweet, enable location and post tweet. I also posted about this experiment to mapping forums and asked if anyone likes to join in. Some of [fellow passionate mappers](https://twitter.com/pkmaps/followers) joined in.
+In 2011, I setup a private Twitter handler [@pkmaps](http://twitter.com/pkmaps) for an experiment by collecting and using the location information through Tweet in order to map the features at [Google Map Maker](http://mapmaker.google.com/) that I would come across during my usual daily journeys to nearby towns. While I was in Pakistan, I used the handler to post the locations I passed by during said short trips. The method was simple. Write the feature name in tweet, enable location and post tweet. I also posted about this experiment to mapping forums and asked if anyone likes to join in. Some of [fellow passionate mappers](https://twitter.com/pkmaps/followers) joined in.
 
 <img src="../img/pkmaps_twitter.jpg" alt="@pkmaps Twitter Account" class="img-responsive">
 <p class="help-block">@pkmaps experimental Twitter handler</p>

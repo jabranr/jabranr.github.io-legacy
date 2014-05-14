@@ -4,7 +4,7 @@ title: 'Introducing CodePakistan'
 date: 2014-01-03 07:00:00
 categories: blog
 tags: Personal
-excerpt: 'custom excerpt goes here...'
+excerpt: 'CodePakistan is a collection of publicly available and usable code snippets, programs, libraries and data sets.'
 permalink: introducing-codepakistan
 private: true
 ---

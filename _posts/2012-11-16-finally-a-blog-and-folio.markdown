@@ -4,12 +4,12 @@ title: 'Welcome! Finally a blog and folio'
 date: 2012-11-16 07:00:00
 categories: blog
 tags: 'Jabran Rafique, personal blog, portfolio'
-excerpt: 'custom excerpt goes here...'
+excerpt: 'After pretty much of a year long procrastination, finally I got the chance to setup my blog and folio! Since you already have shown some interest to spend some time here — therefore please let me offer you a warm welcome at my personal space.'
 permalink: finally-a-blog-and-folio
 private: false
 ---
 
-After pretty much of a year long procrastination, finally I got the chance to setup my blog and folio! Since you already have shown some interest to spend some time here—therefore please let me offer you a warm welcome at my personal space.
+After pretty much of a year long procrastination, finally I got the chance to setup my blog and folio! Since you already have shown some interest to spend some time here — therefore please let me offer you a warm welcome at my personal space.
 
 For a long time, I had been thinking to have a personal space where I could share my thoughts in detail, present the ideas that strike me from time to time and of course discuss them with you all and showcase my involvements in various on going activities.
 

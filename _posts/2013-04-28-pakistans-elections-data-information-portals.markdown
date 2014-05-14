@@ -4,7 +4,7 @@ title: 'Pakistan’s Elections Information Portals'
 date: 2013-04-28 07:00:00
 categories: blog
 tags: 'Constituency Maps, data mining, Elections, Google Maps, Information portals, Pakistan, Public data'
-excerpt: 'custom excerpt goes here...'
+excerpt: 'Since Pakistan’s next general elections are just few weeks away now, there has been an incredible use of technology in different and innovative forms. I see this as a revolution towards making much more information and data available for public than ever before.'
 permalink: pakistans-elections-data-information-portals
 private: false
 ---
