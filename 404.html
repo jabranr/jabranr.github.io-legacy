@@ -10,7 +10,9 @@ Sorry, the requested page cannot be found. Try searching the required informatio
 	<h3>Recent articles</h3>
 	<ul>
 		{% for post in site.categories.blog limit:5 %}
+			{% if post.private != true %}
 			<li><a href="{{ post.url }}">{{ post.title }}</a></li>
+			{% endif %}
 		{% endfor %}
 	</ul>
 {% endif %}
