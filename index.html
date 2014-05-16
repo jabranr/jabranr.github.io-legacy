@@ -9,10 +9,12 @@ description: 'web developer, cartographer'
 	{% include about.html %}
 </div>
 
-<div class="col-md-6 blog-content clearfix">
+<div class="col-md-6 blog-content clearfix" 
+	{% if page.title == 'Home' %} ontouchstart="this.classList.toggle('hover');"{% endif %}>
 	{% include articles.html %}
 </div>
 
-<div class="col-md-3 project-content clearfix">
+<div class="col-md-3 project-content clearfix"
+	{% if page.title == 'Home' %} ontouchstart="this.classList.toggle('hover');"{% endif %}>
 	{% include projects.html %}
 </div>

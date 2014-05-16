@@ -6,5 +6,28 @@
 	    </div>
 	</div>
 	<script src="{{ site.url }}/js/global.min.js"></script>
+
+{% if page.title != 'Home' and page.title != 'Projects' and page.title != 'Archives' %}
+	<script>
+		(function()	{
+			document.querySelector('.facebook').addEventListener('click', function(event)	{
+				event.preventDefault();
+				jrfb.Share();
+			}, false);
+
+			document.querySelector('.twitter').addEventListener('click', function(event)	{
+				event.preventDefault();
+				jrtwttr.Tweet();
+			}, false);
+
+			document.querySelector('.google-plus').addEventListener('click', function(event)	{
+				event.preventDefault();
+				jrgplus.Share();
+			}, false);
+
+		})();
+	</script>
+{% endif %}
+
 	</body>
 </html>

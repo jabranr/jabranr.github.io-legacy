@@ -21,22 +21,3 @@ document.addEventListener("touchstart", function()	{}, false);
 var jrfb = new Socialmedia.Facebook({ appid: '142530249248955' }),
 	jrtwttr = new Socialmedia.Twitter(),
 	jrgplus = new Socialmedia.GooglePlus();
-
-
-(function()	{
-	document.querySelector('.facebook').addEventListener('click', function(event)	{
-		event.preventDefault();
-		jrfb.Share();
-	}, false);
-
-	document.querySelector('.twitter').addEventListener('click', function(event)	{
-		event.preventDefault();
-		jrtwttr.Tweet();
-	}, false);
-
-	document.querySelector('.google-plus').addEventListener('click', function(event)	{
-		event.preventDefault();
-		jrgplus.Share();
-	}, false);
-
-})();

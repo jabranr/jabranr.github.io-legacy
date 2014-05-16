@@ -5,10 +5,10 @@ layout: none
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
 		<title>{{ site.title }}</title>
-		<description>{{ site.description }}</description>
+		<description>{{ site.tagline }}</description>
 		<link>{{ site.url }}</link>
 		<atom:link href="{{ site.url }}/feed.xml" rel="self" type="application/rss+xml" />
-		{% for post in site.posts limit:10 %}
+		{% for post in site.posts %}
 			{% if post.private != true %}
 			<item>
 				<title>{{ post.title }}</title>

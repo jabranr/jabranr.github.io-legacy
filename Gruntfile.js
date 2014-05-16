@@ -31,12 +31,20 @@ module.exports = function(grunt) {
 		},
 
 		sass: {
+			dev: {
+				options: {
+					style: 'expanded'
+				},
+				files: {
+					'css/main.css':'_sass/main.scss',
+				}
+			},
 			dist: {
 				options: {
 					style: 'compressed'
 				},
 				files: {
-					'css/main.min.css':'_sass/main.scss'
+					'css/main.min.css':'_sass/main.scss',
 				}
 			}
 		},
