@@ -1,10 +1,10 @@
 ---
 layout: project
-title: 'jQuery form fields placeholder fallback support'
+title: 'Form field placeholder fallback support'
 date:   2014-01-30 08:00:00
 categories: projects
 client: "Personal"
-excerpt: 'HTML Form fields placeholder fallback with jQuery'
+excerpt: 'This jQuery plugin uses form field placeholder attribute to provide a fallback support for incompatible browsers.'
 code: https://github.com/jabranr/jquery.placeholderfallback.js
 private: false
 stage: stable
@@ -15,11 +15,12 @@ HTML Form fields placeholders can be very useful in terms of providing accessibi
 
 To use the plugin, simple follow the steps in following example.
 
-* Add reference to `jQuery` and plugin files In `head` section of HTML document.
+* Add script reference to `jQuery` and plugin files in `head` section of HTML document.
 
-`<script src="//code.jquery.com/jquery-1.10.2.min.js"></script>`
-
-`<script src="src/jquery.placeholderfallback.js"></script>`
+``` html
+<script src="path/to/jQuery.js"></script>
+<script src="path/to/jquery.placeholderfallback.js"></script>
+```
 
 * Then call the `placeholderfallback()` plugin for form fields where falback support is required. You can link the form fields using any usual element identity attribute such as `id`, `class` or element itself.
 

@@ -3769,6 +3769,7 @@ pre {
   display: none;
 }
 .projects-template .project-version {
+  white-space: nowrap;
   font-size: 0.33em;
   padding: 5px 6px;
 }
@@ -3840,6 +3841,7 @@ pre {
 }
 .home .blog-listing:hover .blog-heading a, .home .blog-listing:focus .blog-heading a, .home .blog-listing.hover .blog-heading a {
   text-decoration: none;
+  color: #cc3300;
 }
 .home .blog-listing:hover .blog-heading a:hover, .home .blog-listing:hover .blog-heading a:focus, .home .blog-listing:hover .blog-heading a.hover, .home .blog-listing:focus .blog-heading a:hover, .home .blog-listing:focus .blog-heading a:focus, .home .blog-listing:focus .blog-heading a.hover, .home .blog-listing.hover .blog-heading a:hover, .home .blog-listing.hover .blog-heading a:focus, .home .blog-listing.hover .blog-heading a.hover {
   text-decoration: none;
@@ -3870,6 +3872,7 @@ pre {
 }
 .home .project-listing:hover .project-heading a, .home .project-listing:focus .project-heading a, .home .project-listing.hover .project-heading a {
   text-decoration: none;
+  color: #cc3300;
 }
 .home .project-listing:hover .project-heading a:hover, .home .project-listing:hover .project-heading a:focus, .home .project-listing:hover .project-heading a.hover, .home .project-listing:focus .project-heading a:hover, .home .project-listing:focus .project-heading a:focus, .home .project-listing:focus .project-heading a.hover, .home .project-listing.hover .project-heading a:hover, .home .project-listing.hover .project-heading a:focus, .home .project-listing.hover .project-heading a.hover {
   text-decoration: none;

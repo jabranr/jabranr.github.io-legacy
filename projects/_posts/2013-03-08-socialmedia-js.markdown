@@ -4,7 +4,7 @@ title: 'Socialmedia.js'
 date:   2013-03-08 08:00:00
 categories: projects
 client: "Personal"
-excerpt: 'Enable JavaScript SDKs and associated social media functions in web pages and apps'
+excerpt: 'Enable JavaScript SDKs and associated social media functions in web pages and apps.'
 code: http://git.io/socialmedia.js
 private: false
 stage: stable

@@ -28,5 +28,3 @@ I have tried to keep this website design as simple as possible and to best possi
 ### Web mapping / cartography
 
 I also contribute at [Google Map Maker](http://mapmaker.google.com/) platform to map Pakistan from time to time and I had been doing this passionately since July 2008. Since March 2011, I am serving as platform advocate (an honorary position) that enables me along with other advocates to organise web mapping events, help others to organise such events, lead and speak at these events to share the experience and benefits of digital maps—especially for developing countries. Since there is a lot to share in this regard, I shall write about this long journey at some different time in future.
-
-Meanwhile you can still find a little more [about me](http://jabran.me/about/).

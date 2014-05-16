@@ -14,23 +14,25 @@
       <p class="project-excerpt">
       	<a href="{{ post.url }}" rel="bookmark" data-href="{{ post.url }}">{{ post.excerpt | strip_html }}</a>
       </p>
-      <p class="project-badge help-block">
-		<small>
-			<em>{{ post.date | date_to_long_string }}</em>
-		</small>
+      <p class="project-badge help-block clearfix">
+      	<span class="pull-left project-version stage-{{ post.stage | strip_html }}" title="Version {{ post.version }} {{ post.stage | strip_html }}">
+      		{% if post.stage == "stable" %}
+      			<i class="glyphicon glyphicon-ok-sign"></i>
+      		{% elsif post.stage == "alpha" %}
+      			<i class="glyphicon glyphicon-question-sign"></i>
+      		{% elsif post.stage == "beta" %}
+      			<i class="glyphicon glyphicon-question-sign"></i>
+      		{% elsif post.stage == "deprecated" %}
+      			<i class="glyphicon glyphicon-remove-sign"></i>
+      		{% endif %}
+      		 {{ post.version }}
+      	</span>
 
-    	<span class="project-version stage-{{ post.stage | strip_html }}" title="Version {{ post.version }} {{ post.stage | strip_html }}">
-    		{% if post.stage == "stable" %}
-    			<i class="glyphicon glyphicon-ok-sign"></i>
-    		{% elsif post.stage == "alpha" %}
-    			<i class="glyphicon glyphicon-question-sign"></i>
-    		{% elsif post.stage == "beta" %}
-    			<i class="glyphicon glyphicon-question-sign"></i>
-    		{% elsif post.stage == "deprecated" %}
-    			<i class="glyphicon glyphicon-remove-sign"></i>
-    		{% endif %}
-    		 {{ post.version }}
-    	</span>
+        <span class="pull-right">
+          <small>
+            <em>{{ post.date | date_to_long_string }}</em>
+          </small>
+        </span>
       </p>
     </div>
     {% endif %}
