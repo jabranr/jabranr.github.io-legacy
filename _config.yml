@@ -7,7 +7,7 @@ version: 0.0.2
 # Routes
 baseurl: /
 # url: http://127.0.0.1:4000
-url: http://jabranr.github.io
+url: http://jabranr.me
 avatar: https://graph.facebook.com/jabranr/picture?size=large
 permalink: /:categories/:title/
 
