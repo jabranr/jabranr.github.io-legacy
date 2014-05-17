@@ -3829,12 +3829,14 @@ pre {
 .home .blog-listing:hover, .home .blog-listing:focus, .home .blog-listing.hover {
   border-bottom: 2px solid #ff9900;
 }
-.home .blog-listing:hover ~ .blog-listing, .home .blog-listing:focus ~ .blog-listing, .home .blog-listing.hover ~ .blog-listing {
-  filter: alpha(opactiy=50);
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
-  -moz-opacity: 0.5;
-  -khtml-opacity: 0.5;
-  opacity: 0.5;
+@media (min-width: 992px) {
+  .home .blog-listing:hover ~ .blog-listing, .home .blog-listing:focus ~ .blog-listing, .home .blog-listing.hover ~ .blog-listing {
+    filter: alpha(opactiy=50);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+    -moz-opacity: 0.5;
+    -khtml-opacity: 0.5;
+    opacity: 0.5;
+  }
 }
 .home .blog-listing:hover .blog-heading, .home .blog-listing:focus .blog-heading, .home .blog-listing.hover .blog-heading {
   cursor: pointer;
@@ -3860,12 +3862,14 @@ pre {
 .home .project-listing:hover, .home .project-listing:focus, .home .project-listing.hover {
   border-bottom: 2px solid #873241;
 }
-.home .project-listing:hover ~ .project-listing, .home .project-listing:focus ~ .project-listing, .home .project-listing.hover ~ .project-listing {
-  filter: alpha(opactiy=50);
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
-  -moz-opacity: 0.5;
-  -khtml-opacity: 0.5;
-  opacity: 0.5;
+@media (min-width: 992px) {
+  .home .project-listing:hover ~ .project-listing, .home .project-listing:focus ~ .project-listing, .home .project-listing.hover ~ .project-listing {
+    filter: alpha(opactiy=50);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+    -moz-opacity: 0.5;
+    -khtml-opacity: 0.5;
+    opacity: 0.5;
+  }
 }
 .home .project-listing:hover .project-heading, .home .project-listing:focus .project-heading, .home .project-listing.hover .project-heading {
   cursor: pointer;
@@ -3892,17 +3896,22 @@ pre {
 .home .project-excerpt {
   cursor: pointer;
   color: #222222;
-  height: 0;
-  display: block;
-  overflow: hidden;
-  visibility: hidden;
-  filter: alpha(opactiy=0);
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-  -moz-opacity: 0;
-  -khtml-opacity: 0;
-  opacity: 0;
   -webkit-transition: min-height 0.2s linear, height 0.2s linear, opacity 0.3s ease-out;
   transition: min-height 0.2s linear, height 0.2s linear, opacity 0.3s ease-out;
+}
+@media (min-width: 992px) {
+  .home .blog-excerpt,
+  .home .project-excerpt {
+    height: 0;
+    display: block;
+    overflow: hidden;
+    visibility: hidden;
+    filter: alpha(opactiy=0);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    -moz-opacity: 0;
+    -khtml-opacity: 0;
+    opacity: 0;
+  }
 }
 .home .blog-excerpt a,
 .home .project-excerpt a {
