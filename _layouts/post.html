@@ -13,6 +13,9 @@ layout: default
 	</div>
 	{{ content }}
 	{% include social.html %}
+
+	{% if page.comment != false %}
 	<hr>
 	{% include disquis.html %}
+	{% endif %}
 </div>

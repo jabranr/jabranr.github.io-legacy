@@ -2,10 +2,11 @@
 layout: post
 title: 'Tweet to map Pakistan – Case Study / Experiment'
 date: 2013-09-06 07:00:00
-categories: blog
+categories: articles
 tags: 'Google Map Maker, GPS, Maps, Pakistan, Tweet, Twitter'
 excerpt: 'In 2011, I setup a private Twitter handler @pkmaps for an experiment by collecting and using the location information through Tweet in order to map the features at Google Map Maker.'
 permalink: tweet-to-map-pakistan-case-study-experiment
+comment: true
 private: false
 ---
 

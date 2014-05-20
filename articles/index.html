@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Archives
+title: Articles
 description: 'web developer, cartographer'
 ---
 
@@ -12,10 +12,10 @@ description: 'web developer, cartographer'
 <div class="col-md-9 blog-content archives clearfix">
 	<div class="page-header">
 		<h2 class="section-heading">
-			Archives
+			Articles
 		</h2>
 	</div>
-	{% for post in site.categories.articles %}
+	{% for post in site.categories.articles limit:10 %}
 		{% if post.private != true %}
 			<div class="blog-listing">
 				<h4><a href="{{ post.url }}">{{ post.title }}</a></h4>
@@ -28,4 +28,10 @@ description: 'web developer, cartographer'
 			</div>
 		{% endif %}
 	{% endfor %}
+
+
+<p class="btn-archive-container text-right">
+	<a href="{{ site.url }}/archives/" class="btn btn-link btn-sm">More in archives &raquo;</a>
+</p>
+
 </div>

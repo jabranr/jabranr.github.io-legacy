@@ -2,10 +2,11 @@
 layout: post
 title: 'Introducing CodePakistan'
 date: 2014-01-03 07:00:00
-categories: blog
+categories: articles
 tags: Personal
 excerpt: 'CodePakistan is a collection of publicly available and usable code snippets, programs, libraries and data sets.'
 permalink: introducing-codepakistan
+comment: false
 private: true
 ---
 

@@ -2,10 +2,11 @@
 layout: post
 title: 'Using Special Integers with Bitwise Operators for PHP RBAC'
 date: 2013-10-11 07:00:00
-categories: blog
+categories: articles
 tags: 'Binary, Bitwise Operators, CMS, GitHub, PHP, RBAC, Role-Based Access Control'
 excerpt: 'Ever wondered how different type of roles and permissions in a system are handled? Well, using bitwise operators can be one of the methods. But this article is more about getting a list of required integers that would make Bitwise operator work properly.'
 permalink: using-special-integers-with-bitwise-operators-for-php-rbac
+comment: true
 private: false
 ---
 
