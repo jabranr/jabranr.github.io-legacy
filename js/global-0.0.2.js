@@ -18,6 +18,6 @@ var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(ga
 document.addEventListener("touchstart", function()	{}, false);
 
 // Initialize socialmedia.js classes
-var jrfb = new Socialmedia.Facebook({ appid: '142530249248955' }),
+var jrfb = new Socialmedia.Facebook({ appid: '453078498112064' }),
 	jrtwttr = new Socialmedia.Twitter(),
 	jrgplus = new Socialmedia.GooglePlus();

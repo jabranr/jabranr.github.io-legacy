@@ -35,7 +35,7 @@ bower install bootstrap-sass-official
 
 Then imported the `/bootstrap.scss` file into website’s custom Sass file. Now not only I can simply comment out the unwanted parts of TWBS to exclude the code from final CSS file but I can also setup custom values for TWBS Sass variables. Additionally, I can even make use of TWBS Sass `mixin` too.
 
-Grunt.js once again, automated the compiling of TWBS Sass and my custom Sass files into one CSS file and then minified it further to save more bytes on overall size. This not only reduced the overall CSS file size but also killed the extra HTTP request(s). I also used [imagemin](https://github.com/gruntjs/grunt-contrib-imagemin) task in Grunt.js to compress images used in the website. Here is a complete list of all tasks in Gruntfile.js for this project:
+Grunt.js once again, automated the compiling of TWBS Sass and my custom Sass files into one CSS file and then minified it further to save more bytes on overall size. This not only reduced the overall CSS file size but also killed the extra HTTP request(s). I also used [imagemin](https://github.com/gruntjs/grunt-contrib-imagemin) task in Grunt.js to compress images used in the website. Here is a complete list<sup>5</sup> of all tasks in Gruntfile.js for this project:
 
 * grunt-contrib-concat
 * grunt-contrib-uglify
@@ -45,16 +45,18 @@ Grunt.js once again, automated the compiling of TWBS Sass and my custom Sass fil
 
 The projects section of the website, generates projects information from [Jekyll Front Matter](http://jekyllrb.com/docs/frontmatter/). I initially thought of pulling the Github feed but then trashed the idea to keep the overall website experience more personalized. Each project status and version is color-coded giving you an idea of what is the current status of each project. The website is built using mobile-first approach<sup>3</sup> and is fully responsive. The front-end is originally based on CSS and it enhances progressively and degrades gracefully<sup>4</sup> to defaults wherever needed. The [website source is available](https://github.com/jabranr/jabranr.github.io) under MIT License at Github.
 
-The whole experience of moving from a comprehensive CMS to a content generating platform (Jekyll) with automated tasks runner (Grunt.js) was just brilliant. I recommend giving these and other tools a go to speedup the overall development work flow.
+The whole experience of moving from a comprehensive CMS to a content generating platform (Jekyll) with automated tasks runner (Grunt.js) was just brilliant. I recommend giving these and other tools a go to speedup the overall development work flow. Have a quick start with Grunt.js by reading through [Chris Coyier's very well written article about Grunt.js](http://24ways.org/2013/grunt-is-not-weird-and-hard/) on 24ways.
 
-Welcome to my new website!
+..and welcome to my new website!
 
+===
 
-**References:**
+#### References:
 
 <small>
-1) [Jekyll](http://jekyllrb.com), [Sass](http://sass-lang.com), [Grunt.js](http://gruntjs.com), [Bower](http://bower.io/) and [CoffeeScript](http://coffeescript.org) <br>
+1) [Jekyll](http://jekyllrb.com), [Sass](http://sass-lang.com), [Grunt.js](http://gruntjs.com), [Bower](http://bower.io/), [CoffeeScript](http://coffeescript.org) <br>
 2) [Twitter Bootstrap](http://getbootstrap.com) <br>
 3) [Mobile First Responsive Web Design - Brad Frost](http://bradfrostweb.com/blog/web/mobile-first-responsive-web-design/) <br>
-4) [Progressive Enhancement](http://en.wikipedia.org/wiki/Progressive_enhancement)
+4) [Progressive Enhancement &amp; Graceful Degradation](http://www.sitepoint.com/progressive-enhancement-graceful-degradation-basics/) <br>
+5) [Grunt.js plugins](http://gruntjs.com/plugins)
 </small>
