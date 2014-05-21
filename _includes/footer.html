@@ -12,7 +12,13 @@
 		(function()	{
 			document.querySelector('.facebook').addEventListener('click', function(event)	{
 				event.preventDefault();
-				jrfb.Share();
+				jrfb.Share({
+					title: "{{ page.title }}",
+					link: "{{ page.url }}",
+					image: "{{ site.avatar }}",
+					caption: "{{ site.url }}",
+					description: "{{ page.description }}"
+				});
 			}, false);
 
 			document.querySelector('.twitter').addEventListener('click', function(event)	{
