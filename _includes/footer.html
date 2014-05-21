@@ -14,7 +14,7 @@
 				event.preventDefault();
 				jrfb.Share({
 					title: "{{ page.title }}",
-					link: "{{ page.url }}",
+					link: "{{ site.url }}{{ page.url }}",
 					image: "{{ site.avatar }}",
 					caption: "{{ site.url }}",
 					description: "{{ page.excerpt }}"
