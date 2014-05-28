@@ -5,17 +5,17 @@ date:   2013-03-08 08:00:00
 categories: projects
 client: "Personal"
 excerpt: 'Enable JavaScript SDKs and associated social media functions in web pages and apps.'
-code: http://git.io/socialmedia.js
+code: https://github.com/jabranr/Socialmedia
 private: false
 stage: stable
-version: 1.4.1
+version: 1.4.2
 ---
 
 Socialmedia.js enables JavaScript SDKs and associated social media functions in web pages and apps. This library helps to replace the tedious routine of retrieving the SDK codes from developers sections, read the instructions and then having same block of code in each page of your website. The simple methods to initialize Socialmedia.js library give you complete control over what particular social media service you want to use but also ends the worries of having the SDK code duplicated in your pages which may result in unexpected errors.
 
-From version 1.4.1, the library is rewritten completely from scratch. I also went on learning [CoffeeScript](http://coffeescript.org) for first time while rewriting the library and experience was awesome. The complete base code for the library is available at Github that also includes the development part in both [CoffeeScript and JavaScript](https://github.com/jabranr/Socialmedia.js/tree/master/dev). If you may find any inconsistencies, errors or bugs – you can report them in [repo’s issues](https://github.com/jabranr/socialmedia.js/issues). If you would like to take part in development then please use the usual Github fork and pull request methods.
+From version 1.4.1, the library is rewritten completely from scratch. I also went on learning [CoffeeScript](http://coffeescript.org) for first time while rewriting the library and experience was awesome. The complete base code for the library is available at Github that also includes the development part in both [CoffeeScript and JavaScript](https://github.com/jabranr/Socialmedia/tree/master/dev). If you may find any inconsistencies, errors or bugs – you can report them in [repo’s issues](https://github.com/jabranr/Socialmedia/issues). If you would like to take part in development then please use the usual Github fork and pull request methods.
 
-I have written a [detailed documentation](http://git.io/socialmedia.js#documentation) on how to use the library and its methods associated with different social media services. To give you an idea on how easy it is to use – here is an example of using Google+ Share function.
+I have written a [detailed documentation](https://github.com/jabranr/Socialmedia#documentation) on how to use the library and its methods associated with different social media services. To give you an idea on how easy it is to use – here is an example of using Google+ Share function.
 
 Initialize the Google+ class and create a new instance.
 
