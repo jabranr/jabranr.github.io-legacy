@@ -5,7 +5,7 @@ date: 2013-09-19 07:00:00
 categories: articles
 tags: 'Facebook API, Facebook SDK, GitHub, Google Maps API, JavaScript, Socialmedia.js, Twitter API'
 excerpt: 'Socialmedia.js is a JavaScript library that enables social media functions and plugins in web apps and websites. It reduces the pain of collecting code snippets and their setup.'
-permalink: post-slug
+permalink: introducing-socialmedia-js-v1-1
 comment: true
 private: false
 ---
