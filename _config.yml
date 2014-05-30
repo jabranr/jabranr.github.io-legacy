@@ -8,7 +8,8 @@ version: 0.0.2
 url: http://jabran.me
 baseurl: /
 permalink: /:categories/:title/
-avatar: https://graph.facebook.com/jabranr/picture?size=large
+avatar: http://www.gravatar.com/avatar/43b6a42f211e3110d056957f1cd56e2a?s=250
+# https://graph.facebook.com/jabranr/picture?size=large
 
 # Pagination
 paginate: 10
