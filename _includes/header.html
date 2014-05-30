@@ -31,30 +31,32 @@
 
     <!-- Facebook open graph -->
     <meta property="fb:app_id" content="453078498112064">
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="{{ site.avatar }}">
+    <meta property="og:type" content="blog">
     {% if page.title == 'Home' %}
     <meta property="og:title" content="{{ site.title }} &ndash; {{ site.tagline }}">
     <meta property="og:url" content="{{ site.url }}">
     <meta property="og:description" content="{{ site.description }}">
+    <meta property="og:image" content="{{ site.avatar }}">
     {% else %}
     <meta property="og:title" content="{{ page.title }}">
     <meta property="og:url" content="{{ site.url }}{{ page.url }}">
     <meta property="og:description" content="{{ page.excerpt }}">
+    <meta property="og:image" content="{% if page.thumbnail %}{{ site.url }}/img/{{ page.thumbnail }}{% else %}{{ site.avatar }}{% endif %}">
     {% endif %}
 
     <!-- Twitter card -->
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="jabranr">
-    <meta name="twitter:image" content="{{ site.avatar }}">
     {% if page.title == 'Home' %}
     <meta name="twitter:title" content="{{ site.title }} &ndash; {{ site.tagline }}">
     <meta name="twitter:description" content="{{ site.description }}">
     <meta name="twitter:url" content="{{ site.url }}">
+    <meta name="twitter:image" content="{{ site.avatar }}">
     {% else %}
     <meta name="twitter:title" content="{{ page.title }}">
     <meta name="twitter:description" content="{{ page.excerpt }}">
     <meta name="twitter:url" content="{{ site.url }}{{ page.url }}">
+    <meta name="twitter:image" content="{% if page.thumbnail %}{{ site.url }}/img/{{ page.thumbnail }}{% else %}{{ site.avatar }}{% endif %}">
     {% endif %}
 
     <!-- Styles -->
