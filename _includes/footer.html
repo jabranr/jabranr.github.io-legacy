@@ -15,7 +15,7 @@
 				jrfb.Share({
 					title: "{{ page.title }}",
 					link: "{{ site.url }}{{ page.url }}",
-					image: "{% if page.thumbnail %}{{ page.thumbnail }}{% else %}{{ site.avatar }}{% endif %}",
+					image: "{% if page.thumbnail %}{{ site.url }}/img/{{ page.thumbnail }}{% else %}{{ site.avatar }}{% endif %}",
 					caption: "{{ site.url }}{{ page.url }}",
 					description: "{{ page.excerpt }}"
 				});

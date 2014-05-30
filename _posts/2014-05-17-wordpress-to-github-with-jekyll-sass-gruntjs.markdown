@@ -6,7 +6,7 @@ categories: articles
 tags: Personal
 excerpt: 'Here is a quick overview of my journey from WordPress to Github that introduced me to amazing collection of tools in web industry.'
 permalink:
-thumbnail: {{ site.url }}/img/avatar.jpg
+thumbnail: avatar.jpg
 comment: true
 private: false
 ---
