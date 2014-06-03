@@ -5,13 +5,13 @@ module.exports = function(grunt) {
 		concat: {
 			dist: {
 				src: ['_scripts/socialmedia.min.js', '_scripts/*.js'],
-				dest: 'js/global-<%= pkg.version %>.js'
+				dest: 'js/global-dev.js'
 			}
 		},
 
 		uglify: {
 			build: {
-				src: 'js/global-<%= pkg.version %>.js',
+				src: 'js/global-dev.js',
 				dest: 'js/global.min.js'
 			},
 			options: {

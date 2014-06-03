@@ -9,10 +9,10 @@
 	  <div class="blog-listing"
 	  	{% if page.title == 'Home' %} ontouchstart="this.classList.toggle('hover');"{% endif %}>
 	    <h4 class="blog-heading">
-	      	<a href="{{ post.url }}" rel="bookmark" data-href="{{ post.url }}">{{ post.title }}</a>
+	      	<a href="{{ site.url }}{{ post.url }}" rel="bookmark">{{ post.title }}</a>
 	    </h4>
 	    <p class="blog-excerpt">
-	    	<a href="{{ post.url }}" rel="bookmark" data-href="{{ post.url }}">{{ post.excerpt | strip_html }}</a>
+	    	<a href="{{ site.url }}{{ post.url }}" rel="bookmark">{{ post.excerpt | strip_html }}</a>
 	    </p>
 		<p class="help-block">
 			<small><em>{{ post.date | date_to_long_string }}</em></small>
