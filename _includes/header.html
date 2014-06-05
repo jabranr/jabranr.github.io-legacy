@@ -50,16 +50,17 @@
     <!-- Twitter card -->
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="jabranr">
+    <meta name="twitter:creator" content="jabranr">
     {% if page.title == 'Home' %}
     <meta name="twitter:title" content="{{ site.title }} &ndash; {{ site.tagline }}">
     <meta name="twitter:description" content="{{ site.description }}">
-    <meta name="twitter:url" content="{{ site.url }}">
-    <meta name="twitter:image" content="{{ site.avatar }}">
+    <meta name="twitter:domain" content="{{ site.url }}">
+    <meta name="twitter:image:src" content="{{ site.avatar }}">
     {% else %}
     <meta name="twitter:title" content="{{ page.title }}">
     <meta name="twitter:description" content="{{ page.excerpt }}">
-    <meta name="twitter:url" content="{{ site.url }}{{ page.url }}">
-    <meta name="twitter:image" content="{% if page.thumbnail %}{{ site.url }}/img/{{ page.thumbnail }}{% else %}{{ site.avatar }}{% endif %}">
+    <meta name="twitter:domain" content="{{ site.url }}{{ page.url }}">
+    <meta name="twitter:image:src" content="{% if page.thumbnail %}{{ site.url }}/img/{{ page.thumbnail }}{% else %}{{ site.avatar }}{% endif %}">
     {% endif %}
 
     <!-- Styles -->
