@@ -6,7 +6,7 @@ categories: articles
 tags: Personal
 excerpt: 'I recently went into learning iOS development. Here is all about so far experience and what future holds in it with new child in Cocoa family called Swift.'
 permalink:
-thumbnail: xcode-logo.png
+thumbnail: wwdc-swift-launch.png
 comment: true
 private: false
 ---
@@ -16,7 +16,7 @@ It was not long ago when native apps development fascinated me. So I kicked off 
 <blockquote class="twitter-tweet" lang="en"><p>Gearing up for some solid learning. Starting with C++ and heading to iOS &amp; Android. Future is full of more knowledge!</p>&mdash; Jabran Rafique (@jabranr) <a href="https://twitter.com/jabranr/statuses/463763722305929216">May 6, 2014</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-I started with reading through [ecosystems of iOS and Android environments](http://code.tutsplus.com/tutorials/understanding-the-ios-ecosystem--mobile-13824). As I read through ecosystems of both environments, I get a strong desire to start with iOS instead of Android besides having experience with Java and no experience at all with C family. So one could imagine that now days I am all about reading and practicing the iOS development.
+I started with reading through [ecosystems of iOS and Android environments](http://code.tutsplus.com/tutorials/understanding-the-ios-ecosystem--mobile-13824). As I read through ecosystems of both environments, I get a strong desire to start with iOS instead of Android despite having experience with Java and no experience at all with C family. So one could imagine that now days I am all about reading and practicing the iOS development.
 
 I have to confess that originally it was C family syntax that held me start learning it. But as they say, to overcome a fear you have to go through it so here it goes. Objective-C definitely has extra long naming convention schemes which are bit awkward to write first but good part is that they are not only easily readable but also self explanatory. That means one can understand what actually is going on inside the method by just looking at the name of the method. For example:
 
@@ -35,5 +35,3 @@ Apple released a starter guide to learn Swift language – which actually is mor
 Apple continues to support Objective-C and in fact it is possible to use both languages to build the apps. Getting a new *easy to learn* language doesn't mean that I'm going to just leave Objective-C and C++ in the middle. In fact I will carry on as usual and then adding Swift into this list eventually – just in time for iOS8 release in coming fall since it is the future of Cocoa apps.
 
 Happy learning!
-
-<small>Xcode Logo &copy; Apple Inc.</small>
