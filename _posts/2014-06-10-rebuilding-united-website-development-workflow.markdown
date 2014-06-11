@@ -82,7 +82,7 @@ Fetchwitter has built-in method `to_tweet` that formats plain text into proper t
 
 See JavaScript code in <kbd>JS</kbd> tab. It is [also available as Gist](https://gist.github.com/jabranr/68515719cde0653d641d#file-format-text-string-to-tweet-with-javascript-string-prototype-js).
 
-#### Animations:
+### Animations:
 
 I like to build stuff for usability and accessibility. To accomplish this, I normally build stuff with simplest and generally available technologies that are available to majority of users through variety of browsers. Then I would enhance the product accordingly with mantra of progressive enhancement by keeping the graceful degradation in mind. The last thing was to add the animations. We wanted to give this website a very subtle parallax type animation on scroll. <kbd>onscroll</kbd> is a very heavy event in DOM and to keep its use minimum, I used the jQuery and [Animate.css](http://daneden.github.io/animate.css/). Animate.css is a wonderful collection of beautiful CSS3 animations. I used the <kbd>Fading Entrances</kbd> and <kbd>Fading Exits</kbd> modules to create a easing parallax effect when scrolling down on this website. Animations are set to false once these animations are finished running as user scrolls down to the last section of page.
 
