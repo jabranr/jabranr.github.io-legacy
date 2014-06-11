@@ -80,11 +80,13 @@ Fetchwitter has built-in method `to_tweet` that formats plain text into proper t
 <p data-height="268" data-theme-id="6602" data-slug-hash="wBxGA" data-default-tab="result" class='codepen'>See the Pen <a href='http://codepen.io/jabranr/pen/wBxGA/'>Format text to tweet using JavaScript String prototyping</a> by Jabran Rafique (<a href='http://codepen.io/jabranr'>@jabranr</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
 <script async src="//codepen.io/assets/embed/ei.js"></script>
 
-You can check the <kbd>JS</kbd> tab to see the JavaScript code. It is[also available as Gist](https://gist.github.com/jabranr/68515719cde0653d641d#file-format-text-string-to-tweet-with-javascript-string-prototype-js).
+See JavaScript code in <kbd>JS</kbd> tab. It is [also available as Gist](https://gist.github.com/jabranr/68515719cde0653d641d#file-format-text-string-to-tweet-with-javascript-string-prototype-js).
+
+#### Animations:
 
 I like to build stuff for usability and accessibility. To accomplish this, I normally build stuff with simplest and generally available technologies that are available to majority of users through variety of browsers. Then I would enhance the product accordingly with mantra of progressive enhancement by keeping the graceful degradation in mind. The last thing was to add the animations. We wanted to give this website a very subtle parallax type animation on scroll. <kbd>onscroll</kbd> is a very heavy event in DOM and to keep its use minimum, I used the jQuery and [Animate.css](http://daneden.github.io/animate.css/). Animate.css is a wonderful collection of beautiful CSS3 animations. I used the <kbd>Fading Entrances</kbd> and <kbd>Fading Exits</kbd> modules to create a easing parallax effect when scrolling down on this website. Animations are set to false once these animations are finished running as user scrolls down to the last section of page.
 
-Visit new website at [http://united-agency.co.uk](http://united-agency.co.uk)!
+> Visit new website at [http://united-agency.co.uk](http://united-agency.co.uk)!
 
 
-<small>Update 11-06-2014: Last section has been updated with details on use of animation in this project.</small>
+<small><kbd>Updated 11-06-2014:</kbd> Last section has been updated with details on use of animations in this project.</small>
