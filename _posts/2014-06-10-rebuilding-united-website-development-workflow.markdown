@@ -11,13 +11,13 @@ comment: true
 private: false
 ---
 
-Around three weeks ago, we ([@_Bchalk](https://twitter.com/_Bchalk) and myself) were given the task to redesign and redevelop the United website. The website have not been touched in months and totally required an overhaul. This was a very basic website spanned over a single page – with information about clients, services and contact. So basically keeping the original amount of contents with an new section showcasing United work/case studies – idea is to give it a whole new vibrant look and make it more widely usable in terms of accessibility and user experience. So this was what we started with:
+Around three weeks ago, we ([Ben Chalk](https://twitter.com/_Bchalk) and myself) were given the task to redesign and redevelop the United website. The website have not been touched in months and totally required an overhaul. This was a very basic website spanned over a single page – with information about clients, services and contact. So basically by keeping the original set of contents and with a new section showcasing United work/case studies – idea was to give it a whole new vibrant look and make it more widely usable in terms of accessibility and user experience. Here is what we started with:
 
 <img src="{{ site.url }}/img/united-agency-old-website.png" alt="" class="img-responsive">
 
 ### Design &amp; Wireframes
 
-Ben worked through design process with mobile-first approach since being responsive was one of the important part of this overhaul. After brainstorming over few mockups and wireframes by Ben, set of final wireframes were selected for development. Ben worked on these wireframes to create the first actual and visual design of the website. Once happy with designs, the project goes into development process.
+Ben Chalk worked through design process with mobile-first approach since being responsive was one of the important part of this overhaul. After brainstorming over few mockups and wireframes, we agreed on one to be our final design of website. Then Ben Chalk worked on these wireframes to create the first actual and visual design of the website. Once happy with designs, the project went into development process.
 
 ### Development:
 
@@ -52,13 +52,13 @@ This awesomeness of selecting only required modules doesn't just stop at Bootstr
 
 ### Setup Instagram &amp; Twitter Feeds:
 
-The contact section has feed from Instagram and Twitter channels.
+The contact section has feeds from Instagram and Twitter channels.
 
 <img src="{{ site.url }}/img/united-agency-contact.png" alt="" class="img-responsive">
 
 #### Instagram Feed:
 
-[Instagram API](http://instagram.com/developer/) now provides a very convenient way to grab a user feed with [a new addition to its users endpoint](http://instagram.com/developer/endpoints/users/#get_users_media_recent_with_client_id). I used `jQuery.getJSON` method as exampled below to grab the feed. The `callback=?` parameter here is to get the response in JSONP type to bypass the cross-domain restrictions in a `XMLHttpRequest`.
+[Instagram API](http://instagram.com/developer/) now provides a very convenient way to grab a user feed with [a new addition](http://instagram.com/developer/endpoints/users/#get_users_media_recent_with_client_id) to its <kbd>/users</kbd> endpoint. I used `jQuery.getJSON` method as exampled below to grab the feed. The `callback=?` parameter here is to get the response in JSONP type to bypass the cross-origin restrictions in a `XMLHttpRequest`.
 
 ``` javascript
 	var url = "https://api.instagram.com/v1/users/396527045/media/recent/";
@@ -73,15 +73,18 @@ The contact section has feed from Instagram and Twitter channels.
 
 #### Twitter Feed:
 
-To get a feed from Twitter API requires an OAuth authentication. For this purpose, I used [PHP library Fetchwitter](https://github.com/jabranr/Fetchwitter). A `XMLHttpRequest` call (somewhat similar to above example) to Fetchwitter output would grab the response in JSON format. Once Twitter feed is setup, its time to decorate it so it looks more like a Tweet.
+To get a feed from Twitter API requires an OAuth authentication. For this purpose, I used PHP library [Fetchwitter](https://github.com/jabranr/Fetchwitter) that provides an excellent and easy support for Twitter API OAuth authentication. An `XMLHttpRequest` call (somewhat similar to above example) to Fetchwitter output grabs the response in JSON format. The default tweet coming from this response is plain text so once Twitter feed is setup, it is time to format the plain text to a tweet.
 
-Fetchwitter has built-in method `to_tweet` that formats plain text into proper tweet with links, hashtags and mentions enabled appropriately. Since I am getting data in JSON format from Fetchwitter, it was more convenient to format the tweet at front-end than using the `to_tweet` method. So I decided to use JavaScript at front-end by modifying the `String` prototype and adding few methods to it. This prototyping used JavaScript `indexOf` method which is not available in Internet Explorer 8 therefore to make this String prototype available in IE8 as well I also needed an extra prototype manipulation in `Array` object. Here is what it looks like:
+Fetchwitter has built-in method `to_tweet` that formats plain text into proper tweet with links, hashtags and mentions enabled appropriately. Since I am getting data in JSON format from Fetchwitter, it would be more convenient to format the tweet at front-end than using the built-in `to_tweet` method. So I decided to use JavaScript at front-end to modify the `String` prototype and add few methods to it to get the similar formatting output. This prototyping used JavaScript `indexOf` method which is not available in Internet Explorer 8 therefore to make this `String` prototype available in IE8 as well I needed an extra prototype manipulation in `Array` object too. Here is what a plain text formatted into tweet looks like:
 
 <p data-height="268" data-theme-id="6602" data-slug-hash="wBxGA" data-default-tab="result" class='codepen'>See the Pen <a href='http://codepen.io/jabranr/pen/wBxGA/'>Format text to tweet using JavaScript String prototyping</a> by Jabran Rafique (<a href='http://codepen.io/jabranr'>@jabranr</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
 <script async src="//codepen.io/assets/embed/ei.js"></script>
 
-[Also available on Gist](https://gist.github.com/jabranr/68515719cde0653d641d#file-format-text-string-to-tweet-with-javascript-string-prototype-js)
+You can check the <kbd>JS</kbd> tab to see the JavaScript code. It is[also available as Gist](https://gist.github.com/jabranr/68515719cde0653d641d#file-format-text-string-to-tweet-with-javascript-string-prototype-js).
 
-The last thing was to add the animations. We wanted to give it a very subtle parallax affect. [Animate.css](http://daneden.github.io/animate.css/) is a wonderful collection of beautiful CSS3 animations. I used the <kbd>Fading Entrances</kbd> and <kbd>Fading Exits</kbd> modules to create a easing parallax effect when scrolling down for first time.
+I like to build stuff for usability and accessibility. To accomplish this, I normally build stuff with simplest and generally available technologies that are available to majority of users through variety of browsers. Then I would enhance the product accordingly with mantra of progressive enhancement by keeping the graceful degradation in mind. The last thing was to add the animations. We wanted to give this website a very subtle parallax type animation on scroll. <kbd>onscroll</kbd> is a very heavy event in DOM and to keep its use minimum, I used the jQuery and [Animate.css](http://daneden.github.io/animate.css/). Animate.css is a wonderful collection of beautiful CSS3 animations. I used the <kbd>Fading Entrances</kbd> and <kbd>Fading Exits</kbd> modules to create a easing parallax effect when scrolling down on this website. Animations are set to false once these animations are finished running as user scrolls down to the last section of page.
 
 Visit new website at [http://united-agency.co.uk](http://united-agency.co.uk)!
+
+
+<small>Update 11-06-2014: Last section has been updated with details on use of animation in this project.</small>
