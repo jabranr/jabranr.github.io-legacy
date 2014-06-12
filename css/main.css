@@ -1,3 +1,24 @@
+@font-face {
+  font-family: 'icomoon';
+  src: url("icomoon-fonts/icomoon.eot?gnxttk");
+  src: url("icomoon-fonts/icomoon.eot?#iefixgnxttk") format("embedded-opentype"), url("icomoon-fonts/icomoon.woff?gnxttk") format("woff"), url("icomoon-fonts/icomoon.ttf?gnxttk") format("truetype"), url("icomoon-fonts/icomoon.svg?gnxttk#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 /*! normalize.css v3.0.0 | MIT License | git.io/normalize */
 html {
   font-family: sans-serif;
@@ -3684,6 +3705,10 @@ a.list-group-item-danger.active, a.list-group-item-danger.active:hover, a.list-g
 }
 /*! Copyright @jabranr 2014 | MIT License | jabran.me */
 /*! https://gist.github.com/jgv/745754 */
+kbd {
+  background-color: #666;
+}
+
 body {
   font-weight: 300;
 }
@@ -3722,32 +3747,25 @@ pre {
   padding: 0 3px;
 }
 .contact-list li a {
-  background-image: url(../img/contactsprites.png);
-  background-repeat: no-repeat;
-  background-size: 64px auto;
-  display: block;
-  width: 32px;
-  height: 32px;
-  margin: 0;
-  padding: 0;
-  cursor: pointer;
-}
-
-.ie8 .contact-list li a {
-  background-image: url(../img/contactsprites-ie.png);
+  font-size: 41px;
+  text-decoration: none;
 }
 
 .twitter-icon {
+  color: #55ACEE;
   background-position: 0 -32px;
 }
 .twitter-icon:hover, .twitter-icon:active, .twitter-icon:focus {
+  color: #147bc9;
   background-position: -32px -32px;
 }
 
 .github-icon {
+  color: #292F33;
   background-position: 0 0;
 }
 .github-icon:hover, .github-icon:active, .github-icon:focus {
+  color: black;
   background-position: -32px 0;
 }
 
@@ -3966,23 +3984,52 @@ pre {
 
 .spread-the-word {
   margin-top: 18px;
-  margin-bottom: 18px;
-  font-size: 85%;
+  margin-bottom: 50px;
+  padding-top: 18px;
+  border-bottom: 1px dotted #CCC;
+  border-top: 1px dotted #CCC;
+  font-size: 34px;
 }
 .spread-the-word li {
   padding-left: 0;
-  padding-right: 0;
+  padding-right: 10px;
 }
-.spread-the-word li:after {
-  content: "\\";
-  color: #ddd;
+.spread-the-word li:before {
+  content: "\2022";
+  color: #ccc;
+  margin-right: 10px;
 }
-.spread-the-word li:first-child {
-  color: #666;
-  margin-right: 5px;
-}
-.spread-the-word li:first-child:after, .spread-the-word li:last-child:after {
+.spread-the-word li:first-child:before {
   content: " ";
+}
+.spread-the-word li a {
+  text-decoration: none;
+  -webkit-transition: color 0.2s ease;
+  transition: color 0.2s ease;
+}
+.spread-the-word .discussion {
+  color: #404040;
+}
+.spread-the-word .discussion:hover, .spread-the-word .discussion:focus, .spread-the-word .discussion.hover {
+  color: #008000;
+}
+.spread-the-word .facebook {
+  color: #787878;
+}
+.spread-the-word .facebook:hover, .spread-the-word .facebook:focus, .spread-the-word .facebook.hover {
+  color: #4C66A4;
+}
+.spread-the-word .twitter {
+  color: #a2a2a2;
+}
+.spread-the-word .twitter:hover, .spread-the-word .twitter:focus, .spread-the-word .twitter.hover {
+  color: #55ACEE;
+}
+.spread-the-word .google-plus {
+  color: #858585;
+}
+.spread-the-word .google-plus:hover, .spread-the-word .google-plus:focus, .spread-the-word .google-plus.hover {
+  color: #D73D32;
 }
 
 .footer {
@@ -3992,4 +4039,57 @@ pre {
   padding-top: 18px;
   font-size: small;
   color: #888;
+}
+
+.rss-feed {
+  color: #ffae00;
+  text-decoration: none;
+}
+.rss-feed:hover, .rss-feed:focus, .rss-feed.hover {
+  text-decoration: none;
+  color: #996800;
+}
+
+.icon-chat-bubble:before {
+  content: "\e600";
+}
+
+.icon-google-plus:before {
+  content: "\e601";
+}
+
+.icon-google-plus-square:before {
+  content: "\e602";
+}
+
+.icon-facebook:before {
+  content: "\e603";
+}
+
+.icon-facebook-square:before {
+  content: "\e604";
+}
+
+.icon-twitter:before {
+  content: "\e605";
+}
+
+.icon-twitter-sqaure:before {
+  content: "\e606";
+}
+
+.icon-rss-feed:before {
+  content: "\e607";
+}
+
+.icon-youtube:before {
+  content: "\e608";
+}
+
+.icon-github:before {
+  content: "\e609";
+}
+
+.icon-linkedin:before {
+  content: "\e60a";
 }

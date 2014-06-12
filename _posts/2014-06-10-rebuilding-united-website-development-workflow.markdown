@@ -38,7 +38,7 @@ Since amount of contents of this website were not massive and did not need to be
 
 Sass provides an excellent support for manipulating and customizing the default packages without touching the core code. It also helps to concatenate more than one Sass files together as well as to reuse variables, functions, compressing and minifying the CSS output for production use.
 
-[Bootstrap Sass](http://getbootstrap.com/customize/) provides excellent support for optional selection of modules required for a project. By simply commenting out the modules that are not required saves on output file size and removes the unused CSS from production code.
+[Bootstrap Sass](http://getbootstrap.com/css/#sass) provides excellent support for optional selection of modules required for a project. By simply commenting out the modules that are not required saves on output file size and removes the unused CSS from production code.
 
 > It is important to understand that one should not include a complete library for few functions but rather tailor it to the needs.
 
