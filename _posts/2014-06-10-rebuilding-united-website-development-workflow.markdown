@@ -4,7 +4,7 @@ title: 'Rebuilding United Website - Development Workflow'
 date: 2014-06-10 08:00:00
 categories: articles
 tags: Personal
-excerpt: 'Recently I developed the redesigned website of United Agency. Here I share development workflow and overview of tools used during this process.'
+excerpt: 'Recently we redesigned and redeveloped United Agency website. Here I share development workflow and overview of tools used during this process.'
 permalink:
 thumbnail: united-agency-new-website.png
 comment: true
