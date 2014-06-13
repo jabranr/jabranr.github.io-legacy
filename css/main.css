@@ -3845,7 +3845,7 @@ pre {
   border-bottom-color: #873241;
 }
 .home .blog-listing:hover, .home .blog-listing:focus, .home .blog-listing.hover {
-  border-bottom: 2px solid #ff9900;
+  border-bottom: 1px solid #ff9900;
 }
 .home .blog-listing:hover .blog-heading, .home .blog-listing:focus .blog-heading, .home .blog-listing.hover .blog-heading {
   cursor: pointer;
@@ -3864,7 +3864,7 @@ pre {
   color: #333333;
 }
 .home .project-listing:hover, .home .project-listing:focus, .home .project-listing.hover {
-  border-bottom: 2px solid #873241;
+  border-bottom: 1px solid #873241;
 }
 .home .project-listing:hover .project-heading, .home .project-listing:focus .project-heading, .home .project-listing.hover .project-heading {
   cursor: pointer;
@@ -4044,6 +4044,7 @@ pre {
 .rss-feed {
   color: #ffae00;
   text-decoration: none;
+  font-size: 16px;
 }
 .rss-feed:hover, .rss-feed:focus, .rss-feed.hover {
   text-decoration: none;
