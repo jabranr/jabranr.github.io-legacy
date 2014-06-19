@@ -28,9 +28,13 @@
         var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(ga, s);
         })();
 
+		(function()	{
+
+			// Detect the retina ready device and add class to body tag
+			if ( window.devicePixelRatio === 1 ) document.body.classList += ' x2 high-res';
+
 {% if page.title != 'Home' and page.title != 'Projects' and page.title != 'Articles' and page.title != 'Archives' %}
 
-		(function()	{
 			document.querySelector('.facebook').addEventListener('click', function(event)	{
 				event.preventDefault();
 				jrfb.Share({
@@ -52,11 +56,8 @@
 				jrgplus.Share();
 			}, false);
 
-		})();
-
 {% elsif page.title == 'Home' %}
 
-		(function()	{
 			var h1 = document.querySelector('h1.jr-logo'),
 				a = document.createElement('a'),
 				avatar = document.createElement('img');
@@ -74,8 +75,8 @@
 
 				h1.parentNode.insertBefore(a, h1);
 
-		})();		
 {% endif %}
+		})();		
 	</script>
 
 	</body>
