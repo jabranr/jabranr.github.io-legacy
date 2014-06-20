@@ -3,7 +3,7 @@ layout: post
 title: 'WordPress to Github with Jekyll, SASS and Grunt.js'
 date: 2014-05-17 07:00:00
 categories: articles
-tags: Personal
+tags: 'WordPress, Github, Jekyll, Sass, Gruntjs, Socialmedia, CoffeeScript, Twitter Bootstrap'
 excerpt: 'Here is a quick overview of my journey from WordPress to Github that introduced me to amazing collection of tools in web industry.'
 permalink:
 thumbnail: avatar.jpg

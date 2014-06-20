@@ -3,7 +3,7 @@ layout: post
 title: 'New Cocoa Programmers, iOS, Objective-C and Swift'
 date: 2014-06-05 07:00:00
 categories: articles
-tags: Personal
+tags: 'iOS, Xcode, Mac OS X, Cocoa, Apple, Swift, Development'
 excerpt: 'I recently went into learning iOS development. Here is all about so far experience and what future holds in it with new child in Cocoa family called Swift.'
 permalink:
 thumbnail: wwdc-swift-launch.png

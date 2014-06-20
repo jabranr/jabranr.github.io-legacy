@@ -3,14 +3,14 @@ layout: post
 title: 'Fetch tweets with Twitter API v1.1'
 date: 2013-10-09 07:00:00
 categories: articles
-tags: Personal
+tags: 'Tweets, Twitter API, Twitter API v1.1, PHP'
 excerpt: 'An attampt to create a PHP wrapper to easily access the methods of Twitter API v1.1 that requires OAuth authentication and authorization on all endpoints unlike its previous version.'
 permalink: fetch-tweets-with-twitter-api-v1-1
 comment: true
 private: false
 ---
 
-<blockquote>A better version of this library is available by the name of <a href="http://j.mp/fetchwitter" title="Fetchwitter">Fetchwitter</a></blockquote>
+> A better version of this library is available by the name of <a href="http://j.mp/fetchwitter" title="Fetchwitter">Fetchwitter</a>
 
 If you happen to follow my updates at Twitter, you may have come across [ranting me about bugs](https://twitter.com/jabranr/statuses/354288195694886912) in Twitter API v1.1 documentations.
 

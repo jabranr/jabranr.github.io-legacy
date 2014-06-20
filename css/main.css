@@ -4008,10 +4008,10 @@ pre {
   transition: color 0.2s ease;
 }
 .spread-the-word .discussion {
-  color: #404040;
+  color: #979797;
 }
 .spread-the-word .discussion:hover, .spread-the-word .discussion:focus, .spread-the-word .discussion.hover {
-  color: #008000;
+  color: #2e9fff;
 }
 .spread-the-word .facebook {
   color: #787878;
@@ -4049,6 +4049,11 @@ pre {
 .rss-feed:hover, .rss-feed:focus, .rss-feed.hover {
   text-decoration: none;
   color: #996800;
+}
+
+footer ul, footer ol {
+  margin-top: 50px;
+  font-size: 14px;
 }
 
 .icon-chat-bubble:before {

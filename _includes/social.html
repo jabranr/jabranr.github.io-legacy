@@ -1,8 +1,10 @@
 <div class="col-sm-12 text-center spread-the-word">
 	<ul class="list-inline">
+		{% if page.comment == true %}
 		<li>
 			<a href="#disqus_thread" class="discussion"><i class="icon-chat-bubble"></i></a>
 		</li>
+		{% endif %}
 		<li>
 			<a href="#" class="facebook"><i class="icon-facebook"></i></a>
 		</li>

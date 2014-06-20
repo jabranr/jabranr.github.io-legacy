@@ -3,7 +3,7 @@ layout: post
 title: 'Rebuilding United Website - Development Workflow'
 date: 2014-06-10 08:00:00
 categories: articles
-tags: Personal
+tags: 'Web, Design, Development, United Agency, London, Workflow'
 excerpt: 'Recently I worked on redesigning &amp; redeveloping United Agency website. Here is an overview on development workflow and tools used during this process.'
 permalink:
 thumbnail: united-agency-new-website.png
@@ -88,5 +88,6 @@ I like to build stuff for usability and accessibility. To accomplish this, I nor
 
 > Visit new website at [http://united-agency.co.uk](http://united-agency.co.uk)!
 
-
-<small><kbd>Updated 11-06-2014:</kbd> Last section has been updated with details on use of animations in this project.</small>
+<p>
+	Updated 11-06-2014: Last section has been updated with details on use of animations in this project.
+</p>
