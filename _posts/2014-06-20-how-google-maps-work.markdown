@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'How Google Maps work?'
+title: 'Everything you need to know on how Google Maps work?'
 date: 2014-06-20 08:00:00
 categories: articles
 tags: 'Google, Maps, StreetView, Earth, Live satellite images'
