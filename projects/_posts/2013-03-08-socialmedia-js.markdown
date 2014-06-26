@@ -5,7 +5,7 @@ date:   2013-03-08 08:00:00
 categories: projects
 client: "Personal"
 excerpt: 'Enable JavaScript SDKs and associated social media functions in web pages and apps.'
-code: https://github.com/jabranr/Socialmedia
+code: http://git.io/socialmedia.js
 private: false
 stage: stable
 version: 1.4.2
