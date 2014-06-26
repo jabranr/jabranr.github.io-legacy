@@ -14,14 +14,12 @@
     <meta name="author" content="Jabran Rafique">
 
     {% if page.title == 'Home' %}
-    <meta name="title" content="{{ site.title }} &ndash; {{ site.tagline }}">
     <meta name="description" content="{{ site.description }}">
-    <meta name="canonical" content="{{ site.url }}">
+    <link rel="canonical" href="{{ site.url }}">
     {% else %}
-    <meta name="title" content="{{ page.title }}">
     <meta name="keywords" content="{{ page.tags }}">
     <meta name="description" content="{{ page.excerpt }}">
-    <meta name="canonical" content="{{ site.url }}{{ page.url }}">
+    <link rel="canonical" href="{{ site.url }}{{ page.url }}">
     {% endif %}
 
     <!-- Mobile optimization -->
