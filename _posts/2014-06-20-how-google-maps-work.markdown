@@ -11,13 +11,13 @@ comment: true
 private: false
 ---
 
-Perhaps not as you might have been thinking. Few years ago, I amazed my father by showing sattelite images of our home using [Google Maps](https://maps.google.com). The very first question was – are these live real time images, showing current state of this place? The answer was obvisouly no but I did explain how it works so to feed their curiosity. Similarly, majority of people using such products always wonder how this all stuff actually works. There are many who will go ahead and make their own perceptions over such things – taking not enough explanations are out there.
+Perhaps not as you might have been thinking. Few years ago, I amazed my father by showing sattelite images of our home using [Google Maps](https://maps.google.com). The very first question was – are these live real time images, showing current state of this place? The answer was obvisouly no but I did explain how it works so to feed their curiosity. Similarly, majority of people using such products always wonder how this all stuff actually works. There are many who will go ahead and make their own perceptions over such things – taking that not enough explanations are out there to answer their queries.
 
-This informational article is based on my experience with Google Mapping products for last ~5+ years and covers major points on how these things work. This is also in relations to recent [terrorists attack at Karachi airport](http://www.bbc.co.uk/news/world-asia-27758032) especially after what it seems to be some people sharing the [screenshots of sattelite images taken from Google Maps](https://twitter.com/jabranr/status/475750198036402176) thinking if they were live images. So let’s start with what are Google Maps &amp; Google Earth.
+This informational article is based on my experience with Google Mapping products for last ~5+ years and covers major points on how these things work. This is also in relations to recent [terrorists attack at Karachi airport](http://www.bbc.co.uk/news/world-asia-27758032) especially after what it seems to be some people sharing the [screenshots of sattelite images taken from Google Maps](https://twitter.com/jabranr/status/475750198036402176) thinking if they were live images. Let’s start with what are Google Maps &amp; Google Earth.
 
 ### Google Maps &amp; Google Earth
 
-Google Maps is a free web based service with geographical information and can be accessed by variety of methods and devices. The most interesting part of it is it’s static true color sattelite images of [Earth](http://google.com/maps), [Moon](http://google.com/moon), [Sky](http://google.com/sky) and [Mars](http://google.com/mars), interactive 360&deg; panoramas of Earth ([StreetView](http://google.com/maps/views)) and so on. Google Maps is also [available for mobile devices](https://www.google.com/mobile/maps/) – as well as in form of installable software known as [Google Earth](http://earth.google.com). There is also another platform called [Google Map Maker](http://mapmaker.google.com) where anyone can register to contribute to add or update the map data. Nevertheless, all these products are linked to each other in one or more ways.
+Google Maps is a free web based service with geographical information and can be accessed by variety of methods and devices. The most interesting part is it’s static true color sattelite images of [Earth](http://google.com/maps), [Moon](http://google.com/moon), [Sky](http://google.com/sky) and [Mars](http://google.com/mars), interactive 360&deg; panoramas of Earth ([StreetView](http://google.com/maps/views)) and so on. Google Maps is also [available for mobile devices](https://www.google.com/mobile/maps/) – as well as in form of installable software known as [Google Earth](http://earth.google.com). There is also another platform called [Google Map Maker](http://mapmaker.google.com) where anyone can register to contribute to add or update the map data. Nevertheless, all these products are linked to each other in one or more ways.
 
 ### How Google gets sattelite images?
 
@@ -54,7 +54,7 @@ People can also [create their own StreetViews using a camera](http://google-latl
 
 Probably one of the most useful features is up-to-dated traffic situation. Traffic data comes through [Google Transit](http://maps.google.co.uk/intl/en/landing/transit/) a separate product to Google Maps where all this data is provided by third parties. Mostly these sources are local transport agencies or government departments who provide information in specific formats to Google. Like StreetView, traffic data is also available in certain countries only.
 
-### Where does all map data comes from?
+### Where does all map data come from?
 
 Google has a huge list of data providers from each country that includes partners such as local government departments and companies like Yellow Pages etc. However, for a part of world it was still very difficult to get such data especially countries with certain restrictions and limitations on providing public data.
 
