@@ -67,6 +67,13 @@ Map data synchronization works opposite to how it is mentioned above for satteli
 > Others products that have indirect attachments to Google Maps are [Google Business](https://www.google.com/business/) (previously Places) and [Panoramio](http://www.panoramio.com/).
 
 
+### Here comes the live imagery: <sup>3</sup>
+
+[Google recently bought Skybox](http://www.fastcompany.com/3023325/fast-feed/proof-that-cheaper-satellites-still-can-take-incredibly-detailed-photos-of-earth), a company aiming to provide HD quality live satellite footage at public domains. It is becoming more apparent that live imagery is not too far away from being a reality with [these stunning satelling images and HD quality videos](http://www.firstimagery.skybox.com/) taken from SkySat-1 satellite. Here is Burj Khalifa, Dubai in one of the footages:
+
+<iframe src="//player.vimeo.com/video/92251790?title=0&amp;byline=0&amp;portrait=0" width="100%" height="432" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
+
 If you think that I have missed something in this article, let me know in comments below and I'll try to answer.
 
 Enjoy beautiful universe!
@@ -76,5 +83,6 @@ Enjoy beautiful universe!
 
 1. Latest satellite imagery update was on 27 February 2014. It seems that Google has not updated this file since then although satellite imagery have updated at various places in world since this update.
 2. Google Maps Logo copyrights to Google Inc. All products mentioned in this article are registered tradmarks of Google. This article does not reflect Google viewpoints and support.
+3. Updated 13th July 2014
 
 </footer>
