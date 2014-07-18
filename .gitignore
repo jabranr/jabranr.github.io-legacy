@@ -1,8 +1,5 @@
+_dev
 .DS_Store
 .sass-cache
 node_modules
-_raw
-_img
-_site
-_scripts
-_sass
+bower_components
