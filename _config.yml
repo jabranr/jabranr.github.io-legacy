@@ -5,10 +5,10 @@ description: 'I develop ideas that are useful and beneficial to everyone. I am a
 version: 1.0.2
 
 # Routes
-url: http://www.jabran.me
+url: http://jabran.me
 baseurl: /
 permalink: /:categories/:title/
-avatar: http://www.jabran.me/img/avatar.png
+avatar: http://jabran.me/img/avatar.png
 
 # Pagination
 paginate: 10
