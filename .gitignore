@@ -3,13 +3,4 @@ _site
 .DS_Store
 .sass-cache
 node_modules
-<<<<<<< HEAD
-_raw
-_img
-_site
-_scripts
-_sass
-_dev
-=======
 bower_components
->>>>>>> dev-master
