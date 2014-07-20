@@ -8,7 +8,7 @@ version: 1.0.3
 url: ''
 baseurl: /
 permalink: /:categories/:title/
-avatar: http://www.jabran.me/img/avatar.png
+avatar: http://jabran.me/img/avatar.png
 
 # Pagination
 paginate: 10
