@@ -1,17 +1,28 @@
-module.exports = function(grunt) {
+module.exports = function(grunt)	{
 	grunt.initConfig({
+		
+		// read the package.json
 		pkg: grunt.file.readJSON('package.json'),
 
+		// workflow
+		// concat JS files
 		concat: {
 			dist: {
-				src: ['_scripts/socialmedia.min.js', '_scripts/*.js'],
-				dest: 'js/global-dev.js'
+				src: [
+					'bower_components/socialmedia/src/socialmedia.js',
+					'_dev/js/global.js'
+				],
+				dest: '_dev/js/global-dev.js'
+			},
+			options: {
+				banner: '/*! <%= pkg.name %> | v<%= pkg.version %> | <%= pkg.author %> | <%= pkg.license %> | <%= pkg.repo %> */ \n'
 			}
 		},
 
+		// uglify/minify JS files
 		uglify: {
-			build: {
-				src: 'js/global-dev.js',
+			dist: {
+				src: '_dev/js/global-dev.js',
 				dest: 'js/global.min.js'
 			},
 			options: {
@@ -19,57 +30,89 @@ module.exports = function(grunt) {
 			}
 		},
 
+		// process sass files
+		sass: {
+			dist: {
+				options: {
+					style: 'expanded'
+				},
+				files: {
+					'_dev/css/main.css':'_dev/css/main.scss'
+				}
+			}
+		},
+
+		// minify css
+		cssmin: {
+			dist: {
+				files: {
+					'css/main.min.css': ['_dev/css/main.css']
+				},
+				options: {
+					banner: '/*! <%= pkg.name %> | v<%= pkg.version %> | <%= pkg.author %> | <%= pkg.license %> | <%= pkg.repo %> */ \n'
+				}
+			}
+		},
+
+		// minify images
 		imagemin: {
 			dynamic: {
 				files: [{
 					expand: true,
-					cwd: '_img/',
+					cwd: '_dev/img/',
 					src: ['**/*.{png,jpg,jpeg,gif,ico}'],
 					dest: 'img/'
 				}]
 			}
 		},
 
-		sass: {
-			dev: {
-				options: {
-					style: 'expanded'
-				},
-				files: {
-					'css/main.css':'_sass/main.scss',
-				}
+		// jekyll build
+		jekyll: {
+			build: {
+				serve: false
 			},
 			dist: {
 				options: {
-					style: 'compressed'
-				},
-				files: {
-					'css/main.min.css':'_sass/main.scss',
+					config: '_config.yml'
 				}
 			}
 		},
 
+		// watch
 		watch: {
-			options: {
-				livereload: true
-			},
+
 			scripts: {
-				files: ['_scripts/*.js'],
+				files: ['_dev/js/global.js'],
 				tasks: ['concat', 'uglify'],
 				options: {
 					spawn: false
 				}
 			},
-			css: {
-				files: ['_sass/*.scss'],
-				tasks: ['sass'],
+
+			styles: {
+				files: ['_dev/css/main.scss'],
+				tasks: ['sass', 'cssmin'],
 				options: {
 					spawn: false
 				}
 			},
-			img: {
-				files: ['_img/*.*'],
+
+			images: {
+				files: ['_dev/img/*.*'],
 				tasks: ['imagemin'],
+				options: {
+					spawn: false
+				}
+			},
+
+			deploy: {
+				files: [
+					'./_layouts/*.html',
+					'./_includes/*.html',
+					'./_posts/*.markdown',
+					'./index.html'
+				],
+				tasks: ['jekyll:dist'],
 				options: {
 					spawn: false
 				}
@@ -80,9 +123,12 @@ module.exports = function(grunt) {
 
 	grunt.loadNpmTasks('grunt-contrib-concat');
 	grunt.loadNpmTasks('grunt-contrib-uglify');
-	grunt.loadNpmTasks('grunt-contrib-imagemin');
 	grunt.loadNpmTasks('grunt-contrib-sass');
+	grunt.loadNpmTasks('grunt-contrib-cssmin');
+	grunt.loadNpmTasks('grunt-contrib-imagemin');
+	grunt.loadNpmTasks('grunt-jekyll');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 
-	grunt.registerTask('default', ['concat', 'uglify', 'sass', 'watch']);
+	grunt.registerTask('default', ['concat', 'uglify', 'sass', 'cssmin', 'jekyll:dist', 'watch']);
+
 }
