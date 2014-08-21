@@ -7,8 +7,8 @@ tags: 'Facebook, Graph, API, Google Maps, JavaScript, Asynchorounus, callback'
 excerpt: 'Using multiple APIs parallel to each other can be very tricky. Here is a detailed case study to chain multiple APIs with each other using JavaScript’s asynchronous approach.'
 permalink:
 thumbnail: usa-outdoors-adventure.jpg
-comment: true
-private: false
+comment: false
+private: true
 ---
 
 Recently, I worked on few Facebook apps that utilized multiple APIs in addition to [Graph API](https://developers.facebook.com/docs/graph-api/) &ndash; especially [Google Maps API](https://developers.google.com/maps/documentation/javascript/). Using multiple APIs is absolutely fine until unless they are dependent on each other in one or other way. This is simply the point where things get bit complicated.
