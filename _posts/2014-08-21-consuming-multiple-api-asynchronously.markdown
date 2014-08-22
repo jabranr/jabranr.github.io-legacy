@@ -146,8 +146,7 @@ function setupLocationData(map, json) {
 
 This process may go on as we add more and more interactivity into this. We can also display a loading status or animated progress cricle between calls so to provide a better user experience and so on.
 
-So go ahead and [try<sup>2</sup> the USA Outdoors Adventure app](http://j.mp/1oVh3SD). Your feedback or any questions are always welcome!
-
+So go ahead and try<sup>2</sup> the [USA Outdoors Adventure app](http://j.mp/1oVh3SD). Your feedback or any questions are always welcome!
 
 <footer>
 
