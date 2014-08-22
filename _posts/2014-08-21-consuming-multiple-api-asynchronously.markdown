@@ -1,21 +1,21 @@
 ---
 layout: post
-title: 'Chain multiple APIs using asynchronous approach'
+title: 'Consuming multiple APIs asynchronously'
 date: 2014-08-21 08:00:00
 categories: articles
 tags: 'Facebook, Graph, API, Google Maps, JavaScript, Asynchorounus, callback'
-excerpt: 'Using multiple APIs parallel to each other can be very tricky. Here is a detailed case study to chain multiple APIs with each other using JavaScript’s asynchronous approach.'
+excerpt: 'Consuming multiple APIs parallel to each other can be very tricky. Here is a detailed case study to chain multiple APIs with each other using JavaScript’s asynchronous approach.'
 permalink:
 thumbnail: usa-outdoors-adventure.jpg
 comment: false
 private: true
 ---
 
-Recently, I worked on few Facebook apps that utilized multiple APIs in addition to [Graph API](https://developers.facebook.com/docs/graph-api/) &ndash; especially [Google Maps API](https://developers.google.com/maps/documentation/javascript/). Using multiple APIs is absolutely fine until unless they are dependent on each other in one or other way. This is simply the point where things get bit complicated.
+Recently, I worked on few Facebook apps that utilized multiple Application Programming Interfaces (APIs) in addition to default [Facebook Graph API](https://developers.facebook.com/docs/graph-api/). Applications normally use provided Software Development Kits (SDKs) to consume an API. At front-end development, majority of developers, prefer to use JavaScript SDKs for such a purpose. Consuming multiple APIs can be tricky in single app sometime&mdash;especially when using their JavaScript SDKs.
 
-This could be because of many reasons but an obvious one is being unable to time the load time of a SDK. It can vary from app to app and even from page to page. Therefore, loading multiple SDKs, in parallel, can lead to unexpected response from APIs. For Facebook Graph API, most common examples are [early call warnings for FB methods](http://stackoverflow.com/search?q=fb.getloginstatus+called+before+fb.init).
+There can be multiple reasons behind this tricky behaviour but an obvious one is not able to calculate the load time of an SDK. It can vary from app to app and even from page to page. Therefore, loading multiple SDKs and parallel consumption of their associated APIs, can lead to unexpected responses. For Facebook Graph API, most common examples are [early call warnings for FB methods](http://stackoverflow.com/search?q=fb.getloginstatus+called+before+fb.init).
 
-> In an ideal world of APIs, their JavaScript SDKs will be loaded asynchronously &ndash; for almost 99.9% of the time. This makes sure of priority loading of the client app and a valid response is returned for any calls made to API.
+> In an ideal world of APIs, their JavaScript SDKs will be loaded asynchronously &ndash; for almost 99.9% of the time &ndash; to make sure the priority loading of the app and a valid response is returned for any calls made to API.
 
 [USA Outdoors Adventure](http://j.mp/1ohip3T) app recognises its users by using Facebook Graph API and then loads their up-to-date status by consuming Graph, Google Maps and its own Outdoors Adventure (OA) API. The process flow is as following:
 
