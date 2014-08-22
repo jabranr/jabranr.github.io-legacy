@@ -1,5 +1,9 @@
 <!doctype html>
-<html xmlns:fb="http://ogp.me/ns/fb#">
+<!--[if lt IE 8]> <html xmlns:fb="http://ogp.me/ns/fb#" class="ie-legacy"> <![endif]-->
+<!--[if IE 8]> <html xmlns:fb="http://ogp.me/ns/fb#" class="ie8"> <![endif]-->
+<!--[if IE 9]> <html xmlns:fb="http://ogp.me/ns/fb#" class="ie9"> <![endif]-->
+<!--[if gt IE 9]> <html xmlns:fb="http://ogp.me/ns/fb#" class="ie10"> <![endif]-->
+<!--[if !IE]> <html xmlns:fb="http://ogp.me/ns/fb#"> <![endif]-->
   <head>
     <title>
       {% if page.title == 'Home' %}
@@ -84,11 +88,7 @@
     <link rel="alternate" type="application/rss+xml" title="{{ site.title }} &ndash; Feed" href="{{ site.url }}/feed.xml" />
 
   </head>
-  
-    <!--[if lt IE 8]> <body class="ie-legacy"> <![endif]-->
-    <!--[if IE 8]> <body class="ie8"> <![endif]-->
-    <!--[if IE 9]> <body class="ie9"> <![endif]-->
-    <!--[if gt IE 9]> <body class="ie10"> <![endif]-->
-    <!--[if !IE]> <body> <![endif]-->
+  <body>  
+
 	<div class="container">
 		<div class="row{% if page.title == 'Home' %} home{% endif %}">
