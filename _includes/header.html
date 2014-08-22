@@ -15,11 +15,11 @@
 
     {% if page.title == 'Home' %}
     <meta name="description" content="{{ site.description }}">
-    <link rel="canonical" href="{{ site.url }}">
+    <link rel="canonical" href="{{ site.website }}">
     {% else %}
     <meta name="keywords" content="{{ page.tags }}">
     <meta name="description" content="{{ page.excerpt }}">
-    <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+    <link rel="canonical" href="{{ site.website }}{{ page.url }}">
     {% endif %}
 
     <!-- Mobile optimization -->
@@ -36,7 +36,7 @@
     {% if page.title == 'Home' %}
     <meta property="og:type" content="website">
     <meta property="og:title" content="{{ site.title }} &ndash; {{ site.tagline }}">
-    <meta property="og:url" content="{{ site.url }}">
+    <meta property="og:url" content="{{ site.website }}">
     <meta property="og:description" content="{{ site.description }}">
     <meta property="og:image" content="{{ site.avatar }}">
     {% else %}
@@ -46,9 +46,9 @@
     <meta property="article:section" content="{{ page.categories }}">
     <meta property="article:tag" content="{{ page.tags }}">
     <meta property="og:title" content="{{ page.title }}">
-    <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+    <meta property="og:url" content="{{ site.website }}{{ page.url }}">
     <meta property="og:description" content="{{ page.excerpt }}">
-    <meta property="og:image" content="{% if page.thumbnail %}{{ site.url }}/img/{{ page.thumbnail }}{% else %}{{ site.avatar }}{% endif %}">
+    <meta property="og:image" content="{% if page.thumbnail %}{{ site.website }}/img/{{ page.thumbnail }}{% else %}{{ site.avatar }}{% endif %}">
     {% endif %}
 
     <!-- Twitter card -->
@@ -59,13 +59,13 @@
     {% if page.title == 'Home' %}
     <meta name="twitter:title" content="{{ site.title }} &ndash; {{ site.tagline }}">
     <meta name="twitter:description" content="{{ site.description }}">
-    <meta name="twitter:domain" content="{{ site.url }}">
+    <meta name="twitter:domain" content="{{ site.website }}">
     <meta name="twitter:image:src" content="{{ site.avatar }}">
     {% else %}
     <meta name="twitter:title" content="{{ page.title }}">
     <meta name="twitter:description" content="{{ page.excerpt }}">
-    <meta name="twitter:domain" content="{{ site.url }}{{ page.url }}">
-    <meta name="twitter:image:src" content="{% if page.thumbnail %}{{ site.url }}/img/{{ page.thumbnail }}{% else %}{{ site.avatar }}{% endif %}">
+    <meta name="twitter:domain" content="{{ site.website }}{{ page.url }}">
+    <meta name="twitter:image:src" content="{% if page.thumbnail %}{{ site.website }}/img/{{ page.thumbnail }}{% else %}{{ site.avatar }}{% endif %}">
     {% endif %}
 
     <!-- Styles -->

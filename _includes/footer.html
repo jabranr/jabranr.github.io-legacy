@@ -39,9 +39,9 @@
 				event.preventDefault();
 				jrfb.Share({
 					title: "{{ page.title }}",
-					link: "http://jabran.me{{ site.url }}{{ page.url }}",
-					image: "{% if page.thumbnail %}{{ site.url }}/img/{{ page.thumbnail }}{% else %}{{ site.avatar }}{% endif %}",
-					caption: "{{ site.url }}{{ page.url }}",
+					link: "{{ site.website }}{{ page.url }}",
+					image: "{% if page.thumbnail %}{{ site.website }}/img/{{ page.thumbnail }}{% else %}{{ site.avatar }}{% endif %}",
+					caption: "{{ site.website }}{{ page.url }}",
 					description: "{{ page.excerpt }}"
 				});
 			}, false);

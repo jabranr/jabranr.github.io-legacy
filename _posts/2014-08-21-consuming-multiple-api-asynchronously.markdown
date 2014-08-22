@@ -7,17 +7,17 @@ tags: 'Facebook, Graph, API, Google Maps, JavaScript, Asynchorounus, callback'
 excerpt: 'Consuming multiple APIs parallel to each other can be very tricky. Here is a detailed case study to chain multiple APIs with each other using JavaScript’s asynchronous approach.'
 permalink:
 thumbnail: usa-outdoors-adventure.jpg
-comment: false
-private: true
+comment: true
+private: false
 ---
 
-Recently, I worked on few Facebook apps that utilized multiple Application Programming Interfaces (APIs) in addition to default [Facebook Graph API](https://developers.facebook.com/docs/graph-api/). Applications normally use provided Software Development Kits (SDKs) to consume an API. At front-end development, majority of developers, prefer to use JavaScript SDKs for such a purpose. Consuming multiple APIs can be tricky in single app sometime&mdash;especially when using their JavaScript SDKs.
+Recently, I worked on few Facebook apps that utilized multiple Application Programming Interfaces(APIs) in addition to default [Facebook Graph API](https://developers.facebook.com/docs/graph-api/). Applications normally use provided Software Development Kits(SDKs) to consume an API. At front-end development, majority of developers, prefer to use JavaScript SDKs for such a purpose. Consuming multiple APIs can be tricky in single app sometime&mdash;especially when using their JavaScript SDKs.
 
 There can be multiple reasons behind this tricky behaviour but an obvious one is not able to calculate the load time of an SDK. It can vary from app to app and even from page to page. Therefore, loading multiple SDKs and parallel consumption of their associated APIs, can lead to unexpected responses. For Facebook Graph API, most common examples are [early call warnings for FB methods](http://stackoverflow.com/search?q=fb.getloginstatus+called+before+fb.init).
 
 > In an ideal world of APIs, their JavaScript SDKs will be loaded asynchronously &ndash; for almost 99.9% of the time &ndash; to make sure the priority loading of the app and a valid response is returned for any calls made to API.
 
-[USA Outdoors Adventure](http://j.mp/1ohip3T) app recognises its users by using Facebook Graph API and then loads their up-to-date status by consuming Graph, Google Maps and its own Outdoors Adventure (OA) API. The process flow is as following:
+[USA Outdoors Adventure](http://j.mp/1ohip3T) app recognises its users by using Facebook Graph API and then loads their up-to-date status by consuming Graph, Google Maps and its own Outdoors Adventure(OA) API. The process flow is as following:
 
 * Check user status (Graph API)
 * Confirm user registration (OA API)
@@ -57,7 +57,9 @@ window.fbAsyncInit = function() {
 	fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));
 ```
-Passing a custom function `myCallbackFunc` in `FB.getLoginStatus(...)` here, will have a deferred execution and will be served as callback. Now depending on your workflow, that may or may not be an optimal solution so I have a better solution by using [Socialmedia.js](http://jabran.me/projects/socialmedia-js). Making an exact similar call with `Socialmedia.js` could not be anymore simpler:
+Passing a custom function `myCallbackFunc` in `FB.getLoginStatus(...)`, will have a deferred execution and will be served as callback. 
+
+Now depending on personal choice, that may or may not be an optimal workflow &ndash; so here is a better workflow by using [Socialmedia.js](http://jabran.me/projects/socialmedia-js). Making an exact similar call with `Socialmedia.js` could not be anymore simpler.
 
 ``` javascript
 var myFbApp = new Socialmedia.Facebook({
@@ -67,9 +69,9 @@ var myFbApp = new Socialmedia.Facebook({
 ```
 ## Outdoors Adventure (OA) API
 
-Now that we have Facebook SDK ready to use as well as user status from Graph API. We can use user status to determine if user is connected to the app as yet so we can make use of OA API for user registration or status and progress.
+Now that we have Facebook SDK ready to use as well as user status from Graph API. We can use user status to determine if user is connected to the app as yet so we can make use of OA API or ask user to connect otherwise.
 
-Since [jQuery](http://jquery.org) is default part of our Facebook app templates, a simple `jQuery.getJSON` call grabs user data from OA API. But first, we want user to authenticate the app by giving appropriate permissions so we know who this user is. Here is the breakdown of complete scenario:
+A simple `jQuery.getJSON` call grabs user data from OA API. But first, we want user to authenticate the app by giving appropriate permissions so that we know who this user is. Here is the breakdown of complete scenario:
 
 ``` javascript
 function myCallbackFunc(response) {
@@ -83,7 +85,7 @@ function myCallbackFunc(response) {
 					.done(loadGoogleMapsFunc),
 	
 					.fail(function(jqxhr, textStatus, error)  {
-						// handle failures/errors here
+						// handle errors here
 					});
 
 		});
@@ -142,7 +144,7 @@ function setupLocationData(map, json) {
 }
 ```
 
-This process goes on as we add more and more interactivity into this. We can also display a loading status or animated progress cricle between calls so to provide a better user experience and so on.
+This process may go on as we add more and more interactivity into this. We can also display a loading status or animated progress cricle between calls so to provide a better user experience and so on.
 
 So go ahead and [try<sup>2</sup> the USA Outdoors Adventure app](http://j.mp/1oVh3SD). Your feedback or any questions are always welcome!
 
