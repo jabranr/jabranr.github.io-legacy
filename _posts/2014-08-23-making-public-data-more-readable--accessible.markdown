@@ -4,10 +4,10 @@ title: 'Making public data more readable and accessible'
 date: 2014-08-23 08:00:00
 categories: articles
 tags: 'Pakistan, public, census, boundaries, data'
-excerpt: 'Making public data more readable and accessible'
+excerpt: 'Introducing Geography of Pakistan project that collects Pakistan’s public data from official sources and make them available in different better formats for reusability, scalability and accessibility.'
 permalink:
 thumbnail: pk-census.jpg
-comment: false
+comment: true
 private: false
 ---
 
