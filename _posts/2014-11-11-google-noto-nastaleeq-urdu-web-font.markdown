@@ -58,7 +58,7 @@ The [Noto project](https://code.google.com/p/noto/) is hosted at Google Code. Al
 
 ### Alternatives:
 
-Urdu fonts has strong support in Naskh and Nastaleeq typefaces for desktop use but the web still lacks the optimized support for Urdu fonts, in particular case of Nastaleeq typeface. If you are looking for a bit more comprehensive web support for Urdu with mix of Naskh and Nastaleeq then you can try few of existing projects.
+Urdu fonts have strong support with Naskh and Nastaleeq typefaces for desktop use but the web still lacks the optimized support for Urdu fonts, in particular case of Nastaleeq typeface. If you are looking for a bit more comprehensive web support for Urdu with mix of Naskh and Nastaleeq then you can try few of existing projects.
 
 Some of the very well known projects are by [Center for Language Engineering](http://www.cle.org.pk) (CLE), formely Center for Research in Urdu Language Processing (CRULP). They have [number of fonts](http://www.cle.org.pk/software/localization.htm), in both Naskh and Nastaleeq typefaces that are available to use under appropriate public licenses. However, only [Nafees Pakistani Web Naskh](http://www.cle.org.pk/software/localization/Fonts/nafeesPakistaniWebNaskh.html) is an optimized web compatible font. [Taj Nastaleeq by Alqlm](http://taj.alqlm.org/) is another very comprehensive Urdu Nastaleeq font available for desktop use only under public license. The team behind Taj Nastaleeq has reportedly been working on its web edition.
 
