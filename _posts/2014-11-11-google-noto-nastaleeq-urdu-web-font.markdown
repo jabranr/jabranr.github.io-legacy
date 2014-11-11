@@ -16,7 +16,7 @@ Today, Google Web Fonts Early Access [announced experimental draft of Noto Nasta
 
 ### Using as Desktop font:
 
-The typeface is available to [download as a single True-Type Font](http://www.google.com/get/noto/) (TTF) file in compressed ZIP format. One of the major things to notice is that file size is amazingly small (~289KB) but keep the fact in mind that this is an experimental release so it may increase in future. Nevertheless, download the file and simply install the font to use in various system software as well as read web sites that list this typeface in their `font-family`.
+The typeface is available to [download as a single True-Type Font](http://www.google.com/get/noto/) (TTF) file in compressed ZIP format. The major thing to notice is the file size that is amazingly small (~289KB) but keeping in mind the fact that this is an experimental release so file size may increase with future updates. Nevertheless, download the file and simply install the font to use in various system software as well as read web sites that list this typeface in their `font-family`.
 
 
 ### Using as Web font:
@@ -29,14 +29,14 @@ Now comes the interesting part where you have a website in Urdu language and you
 
 or Import into CSS:
 
-```
+``` css
 @import url(http://fonts.googleapis.com/earlyaccess/notonastaliqurdudraft.css);
 
 ```
 
 Then update the `font-family` to include Noto Nastaleeq as suggested and you are good to go.
 
-```
+``` html
 body {
 	font-family: 'Noto Nastaliq Urdu Draft', serif;
 }
