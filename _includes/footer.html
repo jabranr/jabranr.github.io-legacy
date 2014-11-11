@@ -28,55 +28,37 @@
         var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(ga, s);
         })();
 
-		(function()	{
-
-			// Detect the retina ready device and add class to body tag
-			if ( window.devicePixelRatio === 1 ) document.body.classList += ' x2 high-res';
-
 {% if page.title != 'Home' and page.title != 'Projects' and page.title != 'Articles' and page.title != 'Archives' %}
+	j__r.domReady(function()	{
 
-			document.querySelector('.facebook').addEventListener('click', function(event)	{
-				event.preventDefault();
-				jrfb.Share({
-					title: "{{ page.title }}",
-					link: "{{ site.website }}{{ page.url }}",
-					image: "{% if page.thumbnail %}{{ site.website }}/img/{{ page.thumbnail }}{% else %}{{ site.avatar }}{% endif %}",
-					caption: "{{ site.website }}{{ page.url }}",
-					description: "{{ page.excerpt }}"
-				});
-			}, false);
+		// socialmedia.js Facebook share
+		document.querySelector('.facebook').addEventListener('click', function(event)	{
+			event.preventDefault();
+			j__r.facebook.Share({
+				title: "{{ page.title }}",
+				link: "{{ site.website }}{{ page.url }}",
+				image: "{% if page.thumbnail %}{{ site.website }}/img/{{ page.thumbnail }}{% else %}{{ site.avatar }}{% endif %}",
+				caption: "{{ site.website }}{{ page.url }}",
+				description: "{{ page.excerpt }}"
+			});
+		}, false);
 
-			document.querySelector('.twitter').addEventListener('click', function(event)	{
-				event.preventDefault();
-				jrtwttr.Tweet();
-			}, false);
+		// socialmedia.js Twitter tweet
+		document.querySelector('.twitter').addEventListener('click', function(event)	{
+			event.preventDefault();
+			j__r.twitter.Tweet();
+		}, false);
 
-			document.querySelector('.google-plus').addEventListener('click', function(event)	{
-				event.preventDefault();
-				jrgplus.Share();
-			}, false);
+		// socialmedia.js GooglePlus share
+		document.querySelector('.google-plus').addEventListener('click', function(event)	{
+			event.preventDefault();
+			j__r.googleplus.Share();
+		}, false);
 
+	});
 {% elsif page.title == 'Home' %}
-
-			var h1 = document.querySelector('h1.jr-logo'),
-				a = document.createElement('a'),
-				avatar = document.createElement('img');
-
-				a.href = '/';
-				a.title = '{{ site.title }}';
-
-				avatar.src = 'https://graph.facebook.com/jabranr/picture?width=160&height=160';
-				avatar.alt = 'Jabran Rafique';
-				avatar.width = 160;
-				avatar.height = 160;
-				avatar.setAttribute('class', 'img-circle clearfix');
-
-				a.appendChild(avatar);
-
-				h1.parentNode.insertBefore(a, h1);
-
+	j__r.isHome = true;
 {% endif %}
-		})();		
 	</script>
 
 	</body>
