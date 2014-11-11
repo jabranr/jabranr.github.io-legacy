@@ -51,8 +51,8 @@ Since this is an experimental release, I would highly recommend NOT to completel
 
 Google engineer Behdad Esfahbod had a [test drive with Noto Nastaleeq Urdu](http://behdad.org/urdu/) typeface where he tried to tackle some of currently known issues using CSS. In fact, even after some fixes, the main issue with character mapping and kerning remains unresolved as shown in screenshot below.
 
-<img src="../img/noto-nastaleeq-character-mapping-gone-bonkers.png" alt="Bhratian Road Correction" class="img-responsive">
-<p class="help-block">Screenshot from Google Earth showing the old road path</p>
+<img src="../img/noto-nastaleeq-character-mapping-gone-bonkers.png" alt="Example from Noto Nastaleeq Urdu Draft" class="img-responsive">
+<p class="help-block">Messed up character mapping and rendering with Noto Nastaleeq</p>
 
 The [Noto project](https://code.google.com/p/noto/) is hosted at Google Code. All [known issues with Noto Nastaleeq](https://code.google.com/p/noto/issues/list?can=1&q=Noto+Nastaliq&colspec=ID+Type+Status+Priority+Milestone+Owner+Summary&cells=tiles) can be seen at project's Issue Tracker. If you are testing this release then you can also [file a new issue](https://code.google.com/p/noto/issues/entry).
 
