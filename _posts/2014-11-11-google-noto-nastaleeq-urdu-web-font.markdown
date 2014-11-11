@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'Google Noto Nastaleeq Urdu Web Font'
+title: 'Quick overview of Google Noto Nastaleeq Urdu web font'
 date: 2014-11-11 08:00:00
 categories: articles
 tags: 'Urdu, Typeface, Type, Font, Webfont, Google'
