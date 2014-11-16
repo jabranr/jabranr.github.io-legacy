@@ -12,3 +12,5 @@ version: 0.0.5
 ---
 
 An inline custom element to provide letter-spacing CSS styling to its contents. This custom element is made with [Polymer Boilerplate](http://polymer-project.org).
+
+A live demo is available at [http://jabran.me/letter-spacing/](http://jabran.me/letter-spacing/)
