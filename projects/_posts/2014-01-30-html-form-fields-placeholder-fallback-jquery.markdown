@@ -8,7 +8,7 @@ excerpt: 'This jQuery plugin uses form field placeholder attribute to provide a 
 code: https://github.com/jabranr/jquery.placeholderfallback.js
 private: false
 stage: stable
-version: 1.0.0
+version: 1.0.1
 ---
 
 HTML Form fields placeholders can be very useful in terms of providing accessibility as well as saving space on field labels. Unfortunately not all browsers support it &ndash; especially when providing a support for user coming from older versions of Microsoft Internet Explorer. To tackle this issue and automate the support, I created this small jQuery plugin that takes care of placeholders for form fields in incompatible browsers.

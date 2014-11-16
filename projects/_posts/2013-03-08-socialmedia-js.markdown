@@ -8,7 +8,7 @@ excerpt: 'Enable JavaScript SDKs and associated social media functions in web pa
 code: http://git.io/socialmedia.js
 private: false
 stage: stable
-version: 1.4.2
+version: 1.6.4
 thumbnail: socialmedia-js.png
 ---
 

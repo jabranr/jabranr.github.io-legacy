@@ -8,7 +8,7 @@ excerpt: 'Fetchwitter makes it easier to fetch Tweets from a Twitter API v1.1 an
 code: http://j.mp/fetchwitter
 private: false
 stage: stable
-version: 1.0.4
+version: 1.0.7
 thumbnail: fetchwitter-1024x1024-transparent.png
 ---
 
