@@ -2,7 +2,7 @@
 title: Jabran Rafique
 tagline: 'web developer, cartographer'
 description: 'I develop ideas that are useful and beneficial to everyone. I am a web developer based in England, UK.'
-version: 1.1.4
+version: 2.0.0
 
 # Routes
 website: http://jabran.me
@@ -16,6 +16,6 @@ paginate: 10
 
 # Dependencies
 markdown: redcarpet
-pygments: true
+highlighter: true
 
 exclude: ['node_modules', 'bower_components', '_dev', '_site']

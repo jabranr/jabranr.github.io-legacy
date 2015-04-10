@@ -1,0 +1,25 @@
+{
+  "name": "jabranr.me",
+  "version": "2.0.0",
+  "homepage": "http://jabran.me",
+  "authors": [
+    "Jabran Rafique <hello@jabran.me>"
+  ],
+  "description": "Personal website and blog",
+  "keywords": [
+    "Blog"
+  ],
+  "license": "MIT License",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "private": "true",
+  "devDependencies": {
+    "bootstrap-sass": "~3.3.4",
+    "socialmedia": "~1.7.6"
+  }
+}
