@@ -1,6 +1,6 @@
 ---
 layout: project
-title: 'CSV Parser'
+title: 'Instagram PHP Client'
 date:   2014-12-01 08:00:00
 categories: projects
 client: "Personal"
