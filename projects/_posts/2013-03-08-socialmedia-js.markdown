@@ -8,7 +8,7 @@ excerpt: 'Enable JavaScript SDKs and associated social media functions in web pa
 code: http://git.io/socialmedia.js
 private: false
 stage: stable
-version: 1.6.4
+version: 1.7.6
 thumbnail: socialmedia-js.png
 ---
 
@@ -33,7 +33,7 @@ var gplusButton = document.querySelector('.google-plus-button');
 
 // Attach an event handler function
 gplusButton.addEventListener('click', function(event) {
-	
+
 	// Prevent default event actions
 	event.preventDefault();
 

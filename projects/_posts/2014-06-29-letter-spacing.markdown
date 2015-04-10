@@ -8,7 +8,7 @@ excerpt: 'An inline custom element to provide letter-spacing CSS styling to its 
 code: http://git.io/letter-spacing
 private: false
 stage: stable
-version: 0.0.5
+version: 0.0.6
 ---
 
 An inline custom element to provide letter-spacing CSS styling to its contents. This custom element is made with [Polymer Boilerplate](http://polymer-project.org).
