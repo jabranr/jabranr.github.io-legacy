@@ -1,23 +1,125 @@
----
-layout: none
----
 <?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-	<channel>
-		<title>{{ site.title }}</title>
-		<description>{{ site.tagline }}</description>
-		<link>{{ site.website }}</link>
-		<atom:link href="{{ site.website }}/feed.xml" rel="self" type="application/rss+xml" />
-		{% for post in site.posts %}
-			{% if post.private != true %}
-			<item>
-				<title>{{ post.title }}</title>
-				<description>{{ post.content | xml_escape }}</description>
-				<pubDate>{{ post.date | date_to_xmlschema }}</pubDate>
-				<link>{{ site.website }}{{ post.url }}</link>
-				<guid isPermaLink="true">{{ site.website }}{{ post.url }}</guid>
-			</item>
-			{% endif %}
-		{% endfor %}
-	</channel>
-</rss>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+<url>
+  <loc>http://jabran.me/</loc>
+  <lastmod>2015-04-10T20:50:04+00:00</lastmod>
+</url>
+<url>
+  <loc>http://jabran.me/articles/google-noto-nastaleeq-urdu-web-font/</loc>
+  <lastmod>2015-04-10T20:50:04+00:00</lastmod>
+</url>
+<url>
+  <loc>http://jabran.me/articles/making-public-data-more-readable--accessible/</loc>
+  <lastmod>2015-04-10T20:50:04+00:00</lastmod>
+</url>
+<url>
+  <loc>http://jabran.me/articles/consuming-multiple-api-asynchronously/</loc>
+  <lastmod>2015-04-10T20:50:04+00:00</lastmod>
+</url>
+<url>
+  <loc>http://jabran.me/articles/twitter-uk-developers-meetup/</loc>
+  <lastmod>2015-04-10T20:50:04+00:00</lastmod>
+</url>
+<url>
+  <loc>http://jabran.me/articles/how-google-maps-work/</loc>
+  <lastmod>2015-04-10T20:50:04+00:00</lastmod>
+</url>
+<url>
+  <loc>http://jabran.me/articles/rebuilding-united-website-development-workflow/</loc>
+  <lastmod>2015-04-10T20:50:04+00:00</lastmod>
+</url>
+<url>
+  <loc>http://jabran.me/articles/new-cocoa-programmers-ios-objective-c-and-swift/</loc>
+  <lastmod>2015-04-10T20:50:04+00:00</lastmod>
+</url>
+<url>
+  <loc>http://jabran.me/articles/wordpress-to-github-with-jekyll-sass-gruntjs/</loc>
+  <lastmod>2015-04-10T20:50:04+00:00</lastmod>
+</url>
+<url>
+  <loc>http://jabran.me/using-special-integers-with-bitwise-operators-for-php-rbac/</loc>
+  <lastmod>2015-04-10T20:50:04+00:00</lastmod>
+</url>
+<url>
+  <loc>http://jabran.me/archives/</loc>
+  <lastmod>2015-04-10T20:50:04+00:00</lastmod>
+</url>
+<url>
+  <loc>http://jabran.me/projects/csv-parser/</loc>
+  <lastmod>2015-04-10T20:50:04+00:00</lastmod>
+</url>
+<url>
+  <loc>http://jabran.me/projects/instagram-php-sdk/</loc>
+  <lastmod>2015-04-10T20:50:04+00:00</lastmod>
+</url>
+<url>
+  <loc>http://jabran.me/projects/event-timeline/</loc>
+  <lastmod>2015-04-10T20:50:04+00:00</lastmod>
+</url>
+<url>
+  <loc>http://jabran.me/projects/letter-spacing/</loc>
+  <lastmod>2015-04-10T20:50:04+00:00</lastmod>
+</url>
+<url>
+  <loc>http://jabran.me/projects/fetchwitter/</loc>
+  <lastmod>2015-04-10T20:50:04+00:00</lastmod>
+</url>
+<url>
+  <loc>http://jabran.me/projects/html-form-fields-placeholder-fallback-jquery/</loc>
+  <lastmod>2015-04-10T20:50:04+00:00</lastmod>
+</url>
+<url>
+  <loc>http://jabran.me/projects/php-library-for-twitter-api-v1-1/</loc>
+  <lastmod>2015-04-10T20:50:04+00:00</lastmod>
+</url>
+<url>
+  <loc>http://jabran.me/projects/socialmedia-js/</loc>
+  <lastmod>2015-04-10T20:50:04+00:00</lastmod>
+</url>
+<url>
+  <loc>http://jabran.me/projects/</loc>
+  <lastmod>2015-04-10T20:50:04+00:00</lastmod>
+</url>
+<url>
+  <loc>http://jabran.me/fetch-tweets-with-twitter-api-v1-1/</loc>
+  <lastmod>2015-04-10T20:50:04+00:00</lastmod>
+</url>
+<url>
+  <loc>http://jabran.me/roads-alignment-in-google-map-maker-with-help-of-google-earth-imagery/</loc>
+  <lastmod>2015-04-10T20:50:04+00:00</lastmod>
+</url>
+<url>
+  <loc>http://jabran.me/introducing-socialmedia-js-v1-1/</loc>
+  <lastmod>2015-04-10T20:50:04+00:00</lastmod>
+</url>
+<url>
+  <loc>http://jabran.me/understanding-user-journey-in-facebook-applications/</loc>
+  <lastmod>2015-04-10T20:50:04+00:00</lastmod>
+</url>
+<url>
+  <loc>http://jabran.me/tweet-to-map-pakistan-case-study-experiment/</loc>
+  <lastmod>2015-04-10T20:50:04+00:00</lastmod>
+</url>
+<url>
+  <loc>http://jabran.me/pakistans-elections-data-information-portals/</loc>
+  <lastmod>2015-04-10T20:50:04+00:00</lastmod>
+</url>
+<url>
+  <loc>http://jabran.me/instagram-api-php-class/</loc>
+  <lastmod>2015-04-10T20:50:04+00:00</lastmod>
+</url>
+<url>
+  <loc>http://jabran.me/finally-a-blog-and-folio/</loc>
+  <lastmod>2015-04-10T20:50:04+00:00</lastmod>
+</url>
+<url>
+  <loc>http://jabran.me/letter-spacing/</loc>
+  <lastmod>2015-03-17T12:56:42+00:00</lastmod>
+</url>
+</urlset>
