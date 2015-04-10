@@ -3,7 +3,7 @@ layout: post
 title: 'First ever Twitter UK Developers meetup'
 date: 2014-07-15 08:00:00
 categories: articles
-tags: 'Twitter UK, Twitter API, Developer'
+tags: [Twitter UK, Twitter API, Developer]
 excerpt: 'Experience tale of attending first ever Twitter Developers meetup by Twitter UK in London.'
 permalink:
 thumbnail: twitter-uk-office.jpg

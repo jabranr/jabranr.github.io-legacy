@@ -3,7 +3,7 @@ layout: post
 title: 'Quick overview of Google Noto Nastaleeq Urdu web font'
 date: 2014-11-11 08:00:00
 categories: articles
-tags: 'Urdu, Typeface, Type, Font, Webfont, Google'
+tags: [Urdu, Typeface, Type, Font, Webfont, Google]
 excerpt: 'Today, Google Web Fonts Early Access announced experimental draft of Noto Nastaleeq typeface. This move makes it a first Urdu Nastaleeq font available in famous web fonts repository.'
 permalink:
 thumbnail: google-noto-nastaleeq-draft.jpg

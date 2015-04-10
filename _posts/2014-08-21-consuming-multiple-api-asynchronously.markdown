@@ -3,7 +3,7 @@ layout: post
 title: 'Consuming multiple APIs asynchronously'
 date: 2014-08-21 08:00:00
 categories: articles
-tags: 'Facebook, Graph, API, Google Maps, JavaScript, Asynchorounus, callback'
+tags: [Facebook, Graph, API, Google Maps, JavaScript, Asynchorounus, callback]
 excerpt: 'Consuming multiple APIs parallel to each other can be very tricky. Here is a detailed case study to chain multiple APIs with each other using JavaScript’s asynchronous approach.'
 permalink:
 thumbnail: usa-outdoors-adventure.jpg
@@ -57,7 +57,7 @@ window.fbAsyncInit = function() {
 	fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));
 ```
-Passing a custom function `myCallbackFunc` in `FB.getLoginStatus(...)`, will have a deferred execution and will be served as callback. 
+Passing a custom function `myCallbackFunc` in `FB.getLoginStatus(...)`, will have a deferred execution and will be served as callback.
 
 Now depending on personal choice, that may or may not be an optimal workflow &ndash; so here is a better workflow by using [Socialmedia.js](http://jabran.me/projects/socialmedia-js). Making an exact similar call with `Socialmedia.js` could not be anymore simpler.
 
@@ -76,14 +76,14 @@ A simple `jQuery.getJSON` call grabs user data from OA API. But first, we want u
 ``` javascript
 function myCallbackFunc(response) {
 	if ( isConnectedUser(response) ) {
-		
+
 		FB.api('/me', function(info)  {
-			
+
 			return
 				$.getJSON('/api/user?uid=info.id&token=secretToken')
-	
+
 					.done(loadGoogleMapsFunc),
-	
+
 					.fail(function(jqxhr, textStatus, error)  {
 						// handle errors here
 					});
@@ -107,7 +107,7 @@ Now that we have the user identity, status and progress data in JSON format, we 
 
 ``` javascript
 function loadGoogleMapsFunc(json) {
-	var map = null, 
+	var map = null,
 	mapOptions = {
 		center: new google.maps.LatLng(35.589439, -106.387605),
 		zoom: 9,
@@ -117,7 +117,7 @@ function loadGoogleMapsFunc(json) {
 	map = new google.maps.Map(document.getElementById('mapCanvas'), mapOptions);
 
 	/**
-	 * Using built-in event listener of Google Maps API, we can 
+	 * Using built-in event listener of Google Maps API, we can
 	 * defer loading the data on map until map is fully loaded,
 	 */
 

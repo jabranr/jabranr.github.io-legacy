@@ -3,7 +3,7 @@ layout: post
 title: 'Everything you need to know on how Google Maps work?'
 date: 2014-06-20 08:00:00
 categories: articles
-tags: 'Google, Maps, StreetView, Earth, Live satellite images'
+tags: [Google, Maps, StreetView, Earth, Live satellite images]
 excerpt: 'Informational article explaining Google mapping products and how they work. Also covers relevant Google products directly or indirectly involved.'
 permalink:
 thumbnail: google-maps-logo.jpg
@@ -34,7 +34,7 @@ These images are taken from time to time, analyzed, processed and then made avai
 
 and list probably continues. For example, you will also note that images in Google StreetView are mostly taken on a weekend or at time of the day with less activities as you can see most businesses are shut normally. *hint*
 
-> There are no live sattelite images on Google mapping products – at least not yet! 
+> There are no live sattelite images on Google mapping products – at least not yet!
 
 There are no specific times to capture the sattelite images. Actually satellites are taking pictures continuously but not all of them are usable for that matter. Normally satellite images on Google products can be as old as 6-7 years old or fresh like 1 week old – depending on situations.
 
@@ -48,7 +48,7 @@ Google Earth on other hand is an extended version of Google Maps in a software f
 
 StreetView is basically street level 360&deg; panoramas stitched together. Google uses [cars, trekkers, trolleys, snowmobiles and trikes](http://www.google.co.uk/intl/en-GB/maps/about/behind-the-scenes/streetview/#devices) to captures these images. Originally it started from streets (hence the product name) but it is not limited to streets only any more as Google StreetView goes [under oceans](https://www.google.com/maps/views/streetview/oceans), [inside museums & historical landmarks](https://www.google.com/maps/views/streetview/art-project), ski resorts and much more.
 
-People can also [create their own StreetViews using a camera](http://google-latlong.blogspot.com/2013/12/create-your-own-street-view.html?m=1) and submit to [Google Maps Views](https://google.com/maps/views) gallery from where it eventually appears in Google Maps as part of [StreetView coverage layer](http://www.google.co.uk/intl/en-GB/maps/about/behind-the-scenes/streetview/#where). 
+People can also [create their own StreetViews using a camera](http://google-latlong.blogspot.com/2013/12/create-your-own-street-view.html?m=1) and submit to [Google Maps Views](https://google.com/maps/views) gallery from where it eventually appears in Google Maps as part of [StreetView coverage layer](http://www.google.co.uk/intl/en-GB/maps/about/behind-the-scenes/streetview/#where).
 
 ### How Google Maps gets traffic information?
 

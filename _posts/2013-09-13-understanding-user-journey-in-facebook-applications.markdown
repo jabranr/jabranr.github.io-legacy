@@ -3,7 +3,7 @@ layout: post
 title: 'Understanding user journey in Facebook applications'
 date: 2013-09-13 07:00:00
 categories: articles
-tags: 'Facebook, Facebook API, Facebook App, Facebook Games, Graph API'
+tags: [Facebook, Facebook API, Facebook App, Facebook Games, Graph API]
 excerpt: 'Facebook applications are wonderful medium to promote products and build up a fan base. In this article, I try to explain two sides of a Facebook canvas app.'
 permalink: understanding-user-journey-in-facebook-applications
 comment: true

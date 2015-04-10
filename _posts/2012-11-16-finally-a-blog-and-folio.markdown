@@ -3,7 +3,7 @@ layout: post
 title: 'Welcome! Finally a blog and folio'
 date: 2012-11-16 07:00:00
 categories: articles
-tags: 'Jabran Rafique, personal blog, portfolio'
+tags: [Jabran Rafique, personal blog, portfolio]
 excerpt: 'After pretty much of a year long procrastination, finally I got the chance to setup my blog and folio! Since you already have shown some interest to spend some time here — therefore please let me offer you a warm welcome at my personal space.'
 permalink: finally-a-blog-and-folio
 comment: true

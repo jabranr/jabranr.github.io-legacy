@@ -3,7 +3,7 @@ layout: post
 title: 'Rebuilding United Website - Development Workflow'
 date: 2014-06-10 08:00:00
 categories: articles
-tags: 'Web, Design, Development, United Agency, London, Workflow'
+tags: [Web, Design, Development, United Agency, London, Workflow]
 excerpt: 'Recently I worked on redesigning &amp; redeveloping United Agency website. Here is an overview on development workflow and tools used during this process.'
 permalink:
 thumbnail: united-agency-new-website.png
@@ -26,7 +26,7 @@ Since responsiveness was an important part of it so development had to start wit
 + [Google Chrome Mobile Emulator](https://developer.chrome.com/devtools/docs/mobile-emulation)
 + [Resizer by Malte Wassermann](http://lab.maltewassermann.com/viewport-resizer/)
 
-Google Chrome Mobile Emulator provides an excellent set of environment for variety of devices. Resizer provides a comprehensive list of screen resolutions as well as options to define custom. 
+Google Chrome Mobile Emulator provides an excellent set of environment for variety of devices. Resizer provides a comprehensive list of screen resolutions as well as options to define custom.
 
 Since amount of contents of this website were not massive and did not need to be generated dynamically from a CMS or database, I used [Jekyll](http://jekyllrb.com/) for content delivery. Jekyll also provides a local server to run the tests and confirm outputs. In addition to Jekyll, I used [Grunt.js](http://gruntjs.com) to automate my tasks and make the overflow smooth. Grunt plugins helped in automating the following tasks:
 

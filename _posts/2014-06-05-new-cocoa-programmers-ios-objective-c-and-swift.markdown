@@ -3,7 +3,7 @@ layout: post
 title: 'New Cocoa Programmers, iOS, Objective-C and Swift'
 date: 2014-06-05 07:00:00
 categories: articles
-tags: 'iOS, Xcode, Mac OS X, Cocoa, Apple, Swift, Development'
+tags: [iOS, Xcode, Mac OS X, Cocoa, Apple, Swift, Development]
 excerpt: 'I recently went into learning iOS development. Here is all about so far experience and what future holds in it with new child in Cocoa family called Swift.'
 permalink:
 thumbnail: wwdc-swift-launch.png
@@ -11,7 +11,7 @@ comment: true
 private: false
 ---
 
-It was not long ago when native apps development fascinated me. So I kicked off with basics of mobile apps development. 
+It was not long ago when native apps development fascinated me. So I kicked off with basics of mobile apps development.
 
 <blockquote class="twitter-tweet" lang="en"><p>Gearing up for some solid learning. Starting with C++ and heading to iOS &amp; Android. Future is full of more knowledge!</p>&mdash; Jabran Rafique (@jabranr) <a href="https://twitter.com/jabranr/statuses/463763722305929216">May 6, 2014</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
@@ -24,9 +24,9 @@ I have to confess that originally it was C family syntax that held me start lear
 
 As a web developer with history of working with a bit *different* kind of languages, some of the stuff in C family is both exciting and confusing at the same time. However, since all programming languages share the core concepts therefore it’s just a matter of getting familiar with new extra-lengthy-excitingly-confusing syntax.
 
-But so far so good! I find it interesting and fun to learn Objective-C. Since I didn't have any clue about C family, I actually found this as a wonderful opportunity to learn one of those too. Therefore I have chosen C++ as a side learning with Objective-C. 
+But so far so good! I find it interesting and fun to learn Objective-C. Since I didn't have any clue about C family, I actually found this as a wonderful opportunity to learn one of those too. Therefore I have chosen C++ as a side learning with Objective-C.
 
-Then comes [WWDC 2014](http://www.apple.com/apple-events/june-2014/) where Apple announces [Swift language](https://developer.apple.com/swift/) in replacement of Objective-C. Given the reasons why they decide to orphan their 20 years old have created [mix responses from Cocoa developers](http://thenextweb.com/apple/2014/06/03/developers-apples-swift-huge-potential/). As I am only warming up with it so I may not even qualify for making a response to this decision so instead I will only share my own exciting reasons. 
+Then comes [WWDC 2014](http://www.apple.com/apple-events/june-2014/) where Apple announces [Swift language](https://developer.apple.com/swift/) in replacement of Objective-C. Given the reasons why they decide to orphan their 20 years old have created [mix responses from Cocoa developers](http://thenextweb.com/apple/2014/06/03/developers-apples-swift-huge-potential/). As I am only warming up with it so I may not even qualify for making a response to this decision so instead I will only share my own exciting reasons.
 
 One of the fascinating things in Swift seems to be eliminating the complex naming conventions and long typed syntaxes. In fact making it more alike JavaScript syntax – that is very exciting for programmers like me who are actually just turning to native mobile apps development. There is an excellent read about [Swift language syntax] (https://medium.com/programming-stories/swift-optionals-a10dcfd8aab5) on Medium by Matt Bridges.
 
