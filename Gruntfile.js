@@ -27,7 +27,10 @@ module.exports = function(grunt)	{
 			dist: {
 				files: [{
 					dot: true,
-					src: ['<%= config.dist %>/*', '<%= config.tmp %>/*']
+					src: [
+						'<%= config.tmp %>/*',
+						'<%= config.dist %>/*'
+					]
 				}]
 			}
 		},
@@ -197,9 +200,9 @@ module.exports = function(grunt)	{
 			'useminPrepare',
 			'shell:jekyllBuild',
 			'autoprefixer',
-			'concat',
-			'uglify',
-			'cssmin',
+			// 'concat',
+			// 'uglify',
+			// 'cssmin',
 			'imagemin',
 			'usemin'
 		]
