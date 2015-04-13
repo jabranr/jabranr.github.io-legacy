@@ -137,7 +137,7 @@ module.exports = function(grunt)	{
 	 * Register default tasks
 	 */
 	grunt.registerTask( 'default', [
-			// 'shell:jekyllServe',
+			'shell:jekyllServe',
 			'watch'
 		]
 	);
