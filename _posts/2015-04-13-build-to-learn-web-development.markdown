@@ -11,7 +11,7 @@ comment: true
 private: false
 ---
 
-`socialmedia.js (Socialmedia)` is a very small framework or a wrapper built around Software Development Kits (SDKs) of various famous social media platforms – making a developer's job easier – to use any required SDKs and it's native methods. There were following few reasons to build Socialmedia:
+`socialmedia.js` (Socialmedia) is a very small framework or a wrapper built around Software Development Kits (SDKs) of various famous social media platforms – making a developer's job easier – to use any required SDKs and it's native methods. There were following few reasons to build Socialmedia:
 
 1. Shorter and clean code to use multiple social media SDKs in web apps
 2. Based on reusable code for a daily workflow
@@ -25,7 +25,7 @@ In addition to that, I had a chance to learn JavaScript itself in depth and unde
 
 So how actually Socialmedia can benefit a project? I will give a brief introduction here by going through it's installation and setup—to demonstrate the (potential) benefits by comparing the native and Socialmedia way of doing it.
 
-At the time of writing, Socialmedia supports following four social platforms:
+At the time of writing, Socialmedia [supports](https://github.com/jabranr/socialmedia/wiki/API-Reference) following four social platforms:
 
 + Facebook
 + Twitter
