@@ -87,6 +87,21 @@ module.exports = function(grunt)	{
 		// 	}
 		// },
 
+		htmlmin: {
+			dist: {
+				options: {
+					removeComments: true,
+					collapseWhitespace: true
+				},
+				files: [{
+					expand: true,
+					cwd: '<%= config.dist %>',
+					src: '{,*/}*.html',
+					dest: '<%= config.dist %>'
+				}]
+			}
+		},
+
 		imagemin: {
 			dist: {
 				files: [{
@@ -201,9 +216,10 @@ module.exports = function(grunt)	{
 			'shell:jekyllBuild',
 			'autoprefixer',
 			// 'concat',
-			// 'uglify',
-			// 'cssmin',
+			'uglify',
+			'cssmin',
 			'imagemin',
+			'htmlmin',
 			'usemin'
 		]
 	);
