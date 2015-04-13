@@ -195,13 +195,13 @@ module.exports = function(grunt)	{
 			'clean',
 			'sass',
 			'useminPrepare',
-			'shell:jekyllBuild'
+			'shell:jekyllBuild',
 			'autoprefixer',
 			'concat',
 			'uglify',
 			'cssmin',
 			'imagemin',
-			'usemin',
+			'usemin'
 		]
 	);
 };
