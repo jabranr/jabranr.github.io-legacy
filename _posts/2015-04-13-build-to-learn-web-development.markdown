@@ -86,12 +86,12 @@ This website already uses Socialmedia therefore I can just go ahead and setup so
 ##### Example 1:
 + Following button lets you invite your Facebook friends to read this article&mdash;provided your are already logged into Facebook otherwise it will ask you to login first.
 
-<button class="btn btn-sm btn-primary" type="button" id="inviteFriends">Invite friends to reach article</button>
+<button class="btn btn-sm btn-primary" type="button" id="inviteFriends">Invite friends to read article</button>
 
 The code used for this example is as following:
 
 ```html
-<button class="btn btn-sm btn-primary" type="button" id="inviteFriends">Invite friends to reach article</button>
+<button class="btn btn-sm btn-primary" type="button" id="inviteFriends">Invite friends to read article</button>
 
 <script type="text/javascript">
 	var inviteFriends = document.querySelector('#inviteFriends');
