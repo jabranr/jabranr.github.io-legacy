@@ -4,15 +4,9 @@ module.exports = function(grunt)	{
 
 	var config = {
 		app: '.',
-		tmp: '.tmp',
+		tmp: '.jekyll',
 		dist: '_site',
-		libs: 'jQuery, Socialmedia',
-		browsers: [
-			'> 1%',
-			'last 2 versions',
-			'Firefox ESR',
-			'Opera 12.1'
-		]
+		libs: 'jQuery, Socialmedia'
 	};
 
 	require('time-grunt')(grunt);
@@ -37,9 +31,13 @@ module.exports = function(grunt)	{
 
 		sass: {
 			dist: {
-				files: {
-					'<%= config.app %>/css/main.css':'<%= config.app %>/_scss/main.scss'
-				},
+				files: [{
+					expand: true,
+					cwd: '<%= config.app %>/_scss',
+					src: ['{,*/}*.{scss,sass}'],
+					dest: '<%= config.app %>/css',
+					ext: '.css'
+				}],
 				options:{
 					style: 'expanded'
 				}
@@ -96,7 +94,7 @@ module.exports = function(grunt)	{
 				files: [{
 					expand: true,
 					cwd: '<%= config.dist %>',
-					src: '{,*/}*.html',
+					src: '{,*/,*/}*.html',
 					dest: '<%= config.dist %>'
 				}]
 			}
@@ -117,16 +115,13 @@ module.exports = function(grunt)	{
 			dist: {
 				files: [{
 					expand: true,
-					cwd: '<%= config.tmp %>/concat/css',
-					src: '{,*/}*.css',
-					dest: '<%= config.tmp %>/concat/css'
+					cwd: '<%= config.app %>/concat/css',
+					src: ['{,*/}*.css', '!{,*/}*.min.css'],
+					dest: '<%= config.app %>/concat/css'
 				}]
 			},
 			options: {
-				browsers: config.browsers,
-				map: {
-					prev: '<%= config.tmp %>/concat/css/'
-				}
+				browsers: ['> 1%', 'last 2 versions', 'Firefox ESR', 'Opera 12.1']
 			}
 		},
 
@@ -134,7 +129,7 @@ module.exports = function(grunt)	{
 			options: {
 				dest: '<%= config.dist %>',
 			},
-			html: ['<%= config.app %>/{,*/}*.html']
+			html: ['<%= config.app %>/{,*/,*/}*.html']
 		},
 
 		usemin: {
@@ -145,16 +140,51 @@ module.exports = function(grunt)	{
 					'<%= config.dist %>/css',
 				]
 			},
-			html: ['<%= config.dist %>/{,*/}*.html'],
+			html: ['<%= config.dist %>/{,*/,*/}*.html'],
 			css: ['<%= config.dist %>/css/{,*/}*.css']
 		},
 
 		shell: {
 			jekyllServe: {
-				command: 'jekyll serve --watch'
+				command: 'jekyll serve'
 			},
 			jekyllBuild: {
 				command: 'jekyll build'
+			}
+		},
+
+		// jekyll: {
+		// 	options: {
+		// 		src: '<%= config.app %>'
+		// 	},
+		// 	serve: {
+		// 		options: {
+		// 			livereload: true,
+		// 			serve: true
+		// 		}
+		// 	},
+		// 	dev: {
+		// 		options: {
+		// 			dest: '<%= config.tmp %>',
+		// 		}
+		// 	},
+		// 	dist: {
+		// 		options: {
+		// 			dest: '<%= config.dist %>'
+		// 		}
+		// 	}
+		// },
+
+		concurrent: {
+			sass: ['sass:dist'],
+			server: ['shell:jekyllServe'],
+			jekyll: ['shell:jekyllBuild'],
+			test: ['csslint'],
+			cssmin: ['cssmin'],
+			imagemin: ['imagemin'],
+			htmlmin: ['htmlmin'],
+			options: {
+				logConcurrentOutput: true
 			}
 		},
 
@@ -163,6 +193,7 @@ module.exports = function(grunt)	{
 				files: [
 					'<%= config.app %>/js/{,/*}*.js',
 					'<%= config.app %>/Gruntfile.js',
+					'<%= config.app %>/package.json'
 				],
 				options: {
 					spawn: false,
@@ -172,15 +203,16 @@ module.exports = function(grunt)	{
 
 			sass: {
 				files: ['<%= config.app %>/_scss/{,/*}*.scss'],
-				tasks: ['sass:dist', 'autoprefixer:dist'],
+				tasks: ['concurrent:sass', 'autoprefixer:dist'],
 				options: {
 					spawn: false,
 					livereload: true
 				}
 			},
 
-			files: {
-				files: ['<%= config.app %>/{,/*}*.{yml,html,md,mkd,markdown}'],
+			jekyll: {
+				files: ['<%= config.app %>/{,/*,/*}*.{yml,html,md,mkd,markdown}'],
+				tasks: ['concurrent:jekyll'],
 				options: {
 					spawn: false,
 					livereload: true
@@ -192,34 +224,28 @@ module.exports = function(grunt)	{
 	/**
 	 * Register test tasks
 	 */
-	grunt.registerTask( 'test', [
-			'csslint'
-		]
-	);
+	grunt.registerTask('test', ['concurrent:test']);
 
 	/**
 	 * Register default tasks
 	 */
-	grunt.registerTask( 'default', [
-			// 'shell:jekyllServe',
-			'watch'
-		]
-	);
+	// grunt.registerTask('default', ['concurrent:jekyll', 'watch']);
+	grunt.registerTask('default', ['concurrent:server', 'watch']);
 
 	/**
 	 * Register build tasks
 	 */
 	grunt.registerTask( 'build', [
 			'clean',
-			'sass',
+			'concurrent:sass',
+			'autoprefixer:dist',
 			'useminPrepare',
-			'shell:jekyllBuild',
-			'autoprefixer',
+			'jekyll:build',
 			// 'concat',
 			'uglify',
-			'cssmin',
-			'imagemin',
-			'htmlmin',
+			'concurrent:cssmin',
+			'concurrent:imagemin',
+			'concurrent:htmlmin',
 			'usemin'
 		]
 	);
