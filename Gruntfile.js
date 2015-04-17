@@ -145,44 +145,53 @@ module.exports = function(grunt)	{
 		},
 
 		shell: {
-			jekyllServe: {
-				command: 'jekyll serve'
+			options: {
+				src: '<%= config.app %>',
+				config: '<%= config.app %>/_config.yml',
+				livereload: true
 			},
-			jekyllBuild: {
-				command: 'jekyll build'
+			server: {
+				command: 'jekyll serve --dest <%= config.tmp %>'
+			},
+			watch: {
+				command: 'jekyll build --dest <%= config.tmp %>'
+			},
+			dist: {
+				command: 'jekyll build --dest <%= config.dist %>'
 			}
 		},
 
 		// jekyll: {
 		// 	options: {
-		// 		src: '<%= config.app %>'
-		// 	},
-		// 	serve: {
-		// 		options: {
-		// 			livereload: true,
-		// 			serve: true
-		// 		}
-		// 	},
-		// 	dev: {
-		// 		options: {
-		// 			dest: '<%= config.tmp %>',
-		// 		}
+		// 		src: '<%= config.app %>',
+		// 		config: '<%= config.app %>/_config.yml'
 		// 	},
 		// 	dist: {
 		// 		options: {
 		// 			dest: '<%= config.dist %>'
 		// 		}
+		// 	},
+		// 	server: {
+		// 		options: {
+		// 			dest: '<%= config.tmp %>'
+		// 		}
+		// 	},
+		// 	check: {
+		// 		options: {
+		// 			doctor: true
+		// 		}
 		// 	}
 		// },
 
 		concurrent: {
-			sass: ['sass:dist'],
-			server: ['shell:jekyllServe'],
-			jekyll: ['shell:jekyllBuild'],
 			test: ['csslint'],
-			cssmin: ['cssmin'],
-			imagemin: ['imagemin'],
-			htmlmin: ['htmlmin'],
+			sass: ['sass:dist'],
+			server: ['shell:server'],
+			watch: ['watch'],
+			dist: [
+				'sass:dist',
+				'imagemin'
+			],
 			options: {
 				logConcurrentOutput: true
 			}
@@ -203,7 +212,7 @@ module.exports = function(grunt)	{
 
 			sass: {
 				files: ['<%= config.app %>/_scss/{,/*}*.scss'],
-				tasks: ['concurrent:sass', 'autoprefixer:dist'],
+				tasks: ['concurrent:server'],
 				options: {
 					spawn: false,
 					livereload: true
@@ -212,7 +221,7 @@ module.exports = function(grunt)	{
 
 			jekyll: {
 				files: ['<%= config.app %>/{,/*,/*}*.{yml,html,md,mkd,markdown}'],
-				tasks: ['concurrent:jekyll'],
+				tasks: ['concurrent:server'],
 				options: {
 					spawn: false,
 					livereload: true
@@ -230,22 +239,21 @@ module.exports = function(grunt)	{
 	 * Register default tasks
 	 */
 	// grunt.registerTask('default', ['concurrent:jekyll', 'watch']);
-	grunt.registerTask('default', ['concurrent:server', 'watch']);
+	grunt.registerTask('default', ['concurrent:watch', 'concurrent:server']);
 
 	/**
 	 * Register build tasks
 	 */
 	grunt.registerTask( 'build', [
 			'clean',
-			'concurrent:sass',
-			'autoprefixer:dist',
+			'concurrent:dist',
 			'useminPrepare',
-			'jekyll:build',
+			'autoprefixer:dist',
+			'jekyll:dist',
 			// 'concat',
 			'uglify',
-			'concurrent:cssmin',
-			'concurrent:imagemin',
-			'concurrent:htmlmin',
+			'cssmin',
+			'htmlmin',
 			'usemin'
 		]
 	);
