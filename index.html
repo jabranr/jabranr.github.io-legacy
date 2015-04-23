@@ -5,16 +5,23 @@ description: 'web developer, cartographer'
 ---
 
 
-<div class="col-md-3 about-content clearfix">
-	{% include about.html %}
+<div class="row">
+	<div class="col-md-3 about-content clearfix">
+		{% include about.html %}
+	</div>
+	<div class="col-md-9 about-content clearfix">
+		{% include about.html %}
+	</div>
 </div>
 
-<div class="col-md-6 blog-content clearfix"
-	{% if page.title == 'Home' %} ontouchstart="this.classList.add('hover');" ontouchend="this.classList.remove('hover');"{% endif %}>
-	{% include articles.html %}
-</div>
+<div class="row">
+	<div class="col-md-6 blog-content clearfix"
+		{% if page.title == 'Home' %} ontouchstart="this.classList.add('hover');" ontouchend="this.classList.remove('hover');"{% endif %}>
+		{% include articles.html %}
+	</div>
 
-<div class="col-md-3 project-content clearfix"
-	{% if page.title == 'Home' %} ontouchstart="this.classList.add('hover');" ontouchend="this.classList.remove('hover');"{% endif %}>
-	{% include projects.html %}
+	<div class="col-md-6 project-content clearfix"
+		{% if page.title == 'Home' %} ontouchstart="this.classList.add('hover');" ontouchend="this.classList.remove('hover');"{% endif %}>
+		{% include projects.html %}
+	</div>
 </div>

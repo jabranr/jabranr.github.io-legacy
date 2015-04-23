@@ -98,7 +98,5 @@
     <![endif]-->
 
   </head>
-  <body>
-
+  <body{% if page.title == 'Home' %}class="home front-page"{% endif %}>
 	<div class="container">
-		<div class="row{% if page.title == 'Home' %} home{% endif %}">
