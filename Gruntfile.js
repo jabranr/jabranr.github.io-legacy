@@ -1,6 +1,6 @@
 module.exports = function(grunt)	{
 	grunt.initConfig({
-		
+
 		// read the package.json
 		pkg: grunt.file.readJSON('package.json'),
 
@@ -56,10 +56,10 @@ module.exports = function(grunt)	{
 
 		// minify images
 		imagemin: {
-			dynamic: {
+			dist: {
 				files: [{
 					expand: true,
-					cwd: '_dev/img/',
+					cwd: 'img/',
 					src: ['**/*.{png,jpg,jpeg,gif,ico}'],
 					dest: 'img/'
 				}]
