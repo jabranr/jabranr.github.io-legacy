@@ -42,10 +42,6 @@ The code of app is open source and [available at Github](https://github.com/jabr
 * Grunt
 * Bower
 
-Fork the repository using:
-```shell
-git clone https://github.com/jabranr/guess-where.git
-```
-Once ready, use `grunt` for development workflow and `grunt build` for production build. If you have something to fix or add, then please do not make a production build but open a pull request with only development changes.
+Fork the repository using `git clone https://github.com/jabranr/guess-where.git`. Once ready, use `grunt` for development workflow and `grunt build` for production build. If you have something to fix or add, then please do not make a production build but open a pull request with only development changes.
 
 Happy guessing!
