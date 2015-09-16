@@ -11,7 +11,7 @@ comment: true
 private: false
 ---
 
-A week ago I came across an interesting [geo quiz by The Independent](http://www.telegraph.co.uk/travel/citybreaks/11825481/Quiz-Can-you-identify-these-cities.html). The quiz that used 15 static unmarked map views of famous capitals from around the world - requires you to guess the name of those capitals - ultimately challenging your geographical skills. Despite being maps enthusiast, I could only guess 6 correctly out of 15. I would blame it on playing it straight after waking up in the morning.
+A week ago I came across an interesting [geo quiz by Telegraph](http://www.telegraph.co.uk/travel/citybreaks/11825481/Quiz-Can-you-identify-these-cities.html). The quiz that used 15 static unmarked map views of famous capitals from around the world - requires you to guess the name of those capitals - ultimately challenging your geographical skills. Despite being maps enthusiast, I could only guess 6 correctly out of 15. I would blame it on playing it straight after waking up in the morning.
 
 Nevertheless, I immediately thought, how great it would be to have a live, interactive and dynamic version of it. Well, I also thought why not build it. So here it is at [http://jabran.me/guess-where/](http://jabran.me/guess-where/) Go ahead and give it a go!
 
