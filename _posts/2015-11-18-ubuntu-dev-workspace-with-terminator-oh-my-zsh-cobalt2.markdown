@@ -26,19 +26,19 @@ Now next steps were to bring Terminator to life from its default (IMO a bit dull
 
 Install Terminator ([Official guidelines](http://gnometerminator.blogspot.co.uk/p/introduction.html)):
 
-``` shell
+```
 $ sudo apt-get install terminator
 ```
 
 Open Terminator and install ZSH shell:
 
-``` shell
+```
 $ sudo apt-get install zsh
 ```
 
 Confirm ZSH global installation path:
 
-``` shell
+```
 $ which zsh
 ```
 
@@ -46,7 +46,7 @@ It should return path to ZSH i.e. `/usr/bin/zsh`.
 
 Switch to ZSH shell:
 
-``` shell
+```
 $ chsh
 ```
 
@@ -54,13 +54,13 @@ Enter admin password and then write path to ZSH as confirmed above i.e. `/usr/bi
 
 If you are a network user then you may not be able to change shell using above method. In such case, you should append `.profile` file in your user root with path to ZSH. Open `.profile ` in an editor:
 
-``` shell
+```
 $ nano ~/.profile
 ```
 
 At the end of the file, add following two lines:
 
-``` shell
+```
 ...
 # Use ZSH as default shell
 /usr/bin/zsh
@@ -72,44 +72,44 @@ Now we can install [Oh My ZSH](http://ohmyz.sh)(OMZ). Copy the appropriate comma
 
 Using cURL:
 
-``` shell
+```
 $ sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 ```
 
 Using wget:
 
-``` shell
+```
 $ sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
 ```
 
 Once done, Terminator will confirm the successful installation with a OMZ funky message. Next step is to install Cobalt2 theme for OMZ.Naviagte your browser to [Wesbos Cobalt2 theme for iTerm2](https://github.com/wesbos/cobalt2-iterm/tree/master/cobalt2-theme.iterm). Select all and copy the text to the clipboard. Create a new OMZ theme file in Terminator:
 
-``` shell
+```
 $ nano ~/.oh-my-zsh/themes/cobalt2.zsh-theme
 ```
 
 Paste the copied text (Ctrl Shift v) and save the changes (Ctrl x). Cobalt2 theme requires Powerline fonts in order to work perfectly. Download the Powerline fonts repo:
 
-``` shell
+```
 $ cd  ~/
 $ wget -O powerline-fonts.zip https://github.com/powerline/fonts/archive/master.zip
 ```
 
 Unzip the dowloaded file:
 
-``` shell
+```
 $ unzip powerline-fonts.zip
 ```
 
 Install Powerline fonts:
 
-``` shell
+```
 $ bash ./powerline-fonts/install.sh
 ```
 
 Remove installation files:
 
-``` shell
+```
 $ rm -rf powerline-fonts
 $ rm powerline-fonts.zip
 ```
@@ -127,15 +127,15 @@ Now last things are to set the color profile for Cobalt2 theme and optionally cu
 
 Open the Terminator config file:
 
-``` shell
+```
 $ nano ~/.config/terminator/config
 ```
 
 Paste (Ctrl Shift v) all copied text just under the `[[default]]` block and make sure that it is properly indented using spaces. Save (Ctrl x) the config file, confirm changes and filename to exit the editor. Restart the Terminator and right click anywhere on it to open context menu and select Preferences. In Terminator Preferences dialog box, go to Profiles tab, select Cobalt2 and you have Terminator on Ubuntu 14.4 LTS running with Cobalt2 theme.
 
-Extras: you can make changes to the prompt f.e. I replaced the default cross with a heart shape. To make such changes, you will need to edit Cobalt2 theme file.
+**Extras:** you can make changes to the prompt f.e. I replaced the default cross with a heart shape. To make such changes, you will need to edit Cobalt2 theme file.
 
-``` shell
+```
 $ nano ~/.oh-my-zsh/themes/cobalt2.zsh-theme
 ```
 
