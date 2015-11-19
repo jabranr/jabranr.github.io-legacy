@@ -52,7 +52,7 @@ $ chsh
 
 Enter admin password and then write path to ZSH as confirmed above i.e. `/usr/bin/zsh`.
 
-If you are a network user then you may not be able to change shell using above method. In such case, you should append `.profile` file in your user root with path to ZSH. Open `.profile ` in an editor:
+If you are a network user or you get the message saying `chsh: user '...' does not exist in /etc/passwd` then you may not be able to change shell using above method. In such a case, you should append `.profile` file in your user root with path to ZSH. Open the `.profile` file in an editor:
 
 ```
 $ nano ~/.profile
