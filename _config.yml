@@ -18,4 +18,4 @@ paginate: 10
 markdown: redcarpet
 pygments: true
 
-exclude: ['node_modules', 'bower_components', '_dev', '_site']
+exclude: ['node_modules', 'bower_components', '_dev', '_site', 'vendor']
