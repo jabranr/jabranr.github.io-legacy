@@ -15,7 +15,7 @@ avatar: http://jabran.me/img/avatar.png
 paginate: 10
 
 # Dependencies
-markdown: redcarpet
+markdown: kramdown
 pygments: true
 
 exclude: ['node_modules', 'bower_components', '_dev', '_site', 'vendor']
