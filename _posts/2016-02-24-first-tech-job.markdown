@@ -8,7 +8,7 @@ excerpt: 'Recent involvement in #FirstTechJob discussion on Twitter brought out 
 permalink:
 thumbnail: 
 comment: true
-private: true
+private: false
 ---
 
 Until the year of 1999, I didn't know anything about computers apart from believing that they play some important roles somewhere. 
