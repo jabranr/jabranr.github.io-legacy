@@ -4,5 +4,6 @@ _dev
 _site
 .DS_Store
 .sass-cache
+*.lock
 node_modules
 bower_components
