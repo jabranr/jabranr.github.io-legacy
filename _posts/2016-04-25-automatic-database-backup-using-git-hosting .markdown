@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'Automatic database backup using Git (Bitbucket/GitLab/Github)'
+title: 'Automatic database backup with version control using Git (Bitbucket/GitLab/Github)'
 date: 2016-04-25 8:00:00
 categories: articles
 tags: ['database', 'backup', 'version control', 'github', 'bitbucket', 'gitlab', 'bash', 'cron', 'git', 'Ubuntu', 'Linux']
