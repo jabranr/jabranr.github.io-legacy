@@ -1,0 +1,45 @@
+# Site metadata
+title: 'Jabran Rafique'
+email: 'hello@jabran.me'
+description: > # Ignore newlines until next prop
+ I am a Full-stack Web developer based in England, UK. Full-stack web developer passionate about fascinating world of WWW and it’s impact on day-to-day life. Specialized in developing high-performance, scalable, dynamic and interactive web applications.
+tagline: FULL-STACK WEB DEVELOPER
+baseurl: '/' # the subpath of site, e.g. /blog/
+url: 'http://127.0.0.1:4000' # the base hostname & protocol for site
+debug: true
+gravatar: 'https://s.gravatar.com/avatar/51253538589838978a4372bfda814c21?s=250'
+
+# Social metadata
+facebook_username: 'https://facebook.com/jabranr'
+twitter_username: 'https://twitter.com/jabranr'
+github_username: 'https://github.com/jabranr'
+
+# Availability status
+hire_me: true
+hire_no: [2]
+hire_maybe: [3,11,12]
+hire_yes: [4,5,6,7,8,9,10]
+
+# Site pagination
+paginate: 10
+paginate_path: '/page/:num/'
+
+# Github auto feed
+gems:
+ - jekyll-feed
+
+# Build settings
+markdown: kramdown
+exclude: [
+	'_site',
+	'node_modules',
+	'bower_components',
+	'bower.json',
+	'Gruntfile.js',
+	'package.json',
+	'readme.md',
+	'todo.md',
+	'*.log',
+	'.DS_Store',
+	'.sass-cache'
+]

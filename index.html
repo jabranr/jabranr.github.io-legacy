@@ -1,0 +1,74 @@
+---
+layout: default
+---
+
+<div class="container">
+  <div class="masthead-stack clearfix">
+    <p class="lead masthead-stack__text">Looking for carefully engineered web architecture with semantic, beautiful and scalable code? Look no further and <a href="{{ site.url }}/contact">get in touch</a>!</p>
+
+    <p class="lead">I work with companies to design, build, maintain or improve web products. Whether they are starting from scratch with a new ideas, improving any existing product or migrating to modern, my services offer help to design the architecture, development, deployment and maintenance of the product utilizing best practices and standards.</p>
+
+    <!-- {% include hero-cta.html %} -->
+    <!-- {% include clients.html %} -->
+
+  </div>
+
+  <div class="page-content clearfix">
+
+    <div class="row">
+      <div class="col-sm-8 col-sm-offset-2 section-about">
+        <p class="lead">{% if site.gravatar %}<img src="{{ site.gravatar }}" alt="{{ site.title }}" class="section-about__gravatar">{% endif %}Hello! I am Jabran, a <strong>full-stack web developer</strong>, consultant, digital cartographer and speaker.</p>
+
+        <p>I am based in London, UK and specialize in developing high-end, scalable web applications with an experience of more than 4 years. I work with clients across the globe to help them achieve their goals.</p>
+
+        <p>Currently I work as <strong>Front-End Web Developer</strong> at <a href="http://ratedpeople.com" target="_blank">Rated People</a>. I am passionate about the web and it’s amazing impact on day to day life. I <a href="{{ site.github_username }}" target="_blank">share code at Github</a> and <a href="{{ site.twitter_username }}" target="_blank">thoughts at Twitter</a>.</p>
+
+        <blockquote>I like to develop on ideas that are useful and beneficial to everyone.</blockquote>
+      </div>
+
+      <div class="col-sm-10 col-sm-offset-1 section-service">
+        <h3>Service</h3>
+        <p></p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-6 section-project">
+        <h3>Projects</h3>
+        <ul class="list-unstyled">
+          {% for project in paginator.projects %}
+          <li>
+            <div class="project-meta">{{ project.date | date: "%B %-d, %Y" }}</div>
+            <h2 class="project-title">
+              <a class="project-link" href="{{ project.url | prepend: site.url }}">{{ project.title }}</a>
+            </h2>
+            <p>{{ project.excerpt }}</p>
+          </li>
+          {% endfor %}
+          <li>
+            <a href="{{ site.url }}/projects/">More projects &raquo;</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="col-sm-6 section-blog">
+        <h3>Articles</h3>
+        <ul class="list-unstyled">
+          {% for post in paginator.posts %}
+          <li>
+            <div class="post-meta">{{ post.date | date: "%B %-d, %Y" }}</div>
+            <h2 class="post-title">
+              <a class="post-link" href="{{ post.url | prepend: site.url }}">{{ post.title }}</a>
+            </h2>
+            <p>{{ post.excerpt }}</p>
+          </li>
+          {% endfor %}
+          <li>
+            <a href="{{ site.url }}/blog/">Read more &raquo;</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</div>

@@ -1,0 +1,39 @@
+{
+  "name": "jabranr.github.io",
+  "version": "2.0.0",
+  "description": "Personal website and blog",
+  "author": "Jabran Rafique <hello@jabran.me>",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jabranr/jabranr.github.io"
+  },
+  "keywords": [
+    "Jabran",
+    "Rafique",
+    "Blog",
+    "Website",
+    "Portfolio"
+  ],
+  "license": "MIT License",
+  "bugs": {
+    "url": "https://github.com/jabranr/jabranr.github.io/issues"
+  },
+  "homepage": "http://jabran.me",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-autoprefixer": "^3.0.3",
+    "grunt-concurrent": "^2.0.4",
+    "grunt-contrib-clean": "^0.6.0",
+    "grunt-contrib-cssmin": "^0.14.0",
+    "grunt-contrib-imagemin": "^0.9.4",
+    "grunt-contrib-uglify": "^0.10.0",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-shell": "^1.1.2",
+    "load-grunt-tasks": "^3.2.0",
+    "time-grunt": "^1.2.1"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "name": "jabranr.github.io",
+  "version": "2.0.0",
+  "authors": [
+    "Jabran Rafique <hello@jabran.me>"
+  ],
+  "description": "Personal website and blog",
+  "keywords": [
+    "Jabran",
+    "Rafique",
+    "Blog",
+    "Website",
+    "Portfolio"
+  ],
+  "license": "MIT License",
+  "homepage": "http://jabran.me",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "bootstrap-sass": "~3.3.5"
+  }
+}

@@ -1,0 +1,33 @@
+---
+layout: default
+---
+
+<div class="masthead-stack clearfix">
+	<div class="container">
+		<div class="col-sm-12">
+			<p>I write about random stuff mostly related to web development, digital cartography, Urdu, open source and government.</p>
+		</div>
+	</div>
+</div>
+
+<div class="container">
+	<div class="page-content clearfix">
+		<div class="col-sm-12 section-article">
+			<h3>Articles</h3>
+			<ul class="list-unstyled">
+				{% for post in site.posts %}
+				<li>
+					<div class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</div>
+					<h2 class="post-title">
+						<a class="post-link" href="{{ post.url | prepend: site.url }}">{{ post.title }}</a>
+					</h2>
+					<p>{{ post.excerpt }}</p>
+				</li>
+				{% endfor %}
+				<li>
+					<a href="{{ site.baseurl }}/blog/">Read more &raquo;</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>

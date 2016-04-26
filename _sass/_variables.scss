@@ -1,0 +1,25 @@
+
+// Custom vars
+$blue-color: #337ab7;
+$green-color: #4cab55;
+$red-color: #cc3300;
+$purple-color: #873241;
+$orange-color: #ff9900;
+
+// Override Bootstrap variables
+$font-family-sans-serif: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-size-base: 18px;
+$body-bg: #fafafa;
+$text-color: #444;
+$brand-color: #2a7ae2;
+$headings-color: $purple-color;
+$link-color: $green-color;
+
+// Reuse Bootstrap vars and mixins
+@import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/variables";
+@import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins";
+
+// Reusable elements
+%uppercase { text-transform: uppercase }
+%willchange { will-change: transform }
+%letterspacing { letter-spacing: 1px }

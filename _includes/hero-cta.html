@@ -1,0 +1,28 @@
+<p class="hero-cta">
+  {% if site.hire_me != false %}
+    <a href="{{ site.url }}/contact">HIRE ME</a>
+  {% endif %}
+</p>
+
+<ul class="hire-when list-inline">
+  <li>January</li>
+  {% assign m = site.time | date: '%-m' | plus: '0' %}
+  {% for i in (1..12) %}
+    {% if i < m %}
+      <li class="hire-when__m hire-when--no">:(</li>
+    {% elsif i == m %}
+      {% if site.hire_maybe contains i %}
+        <li class="hire-when__m hire-when--maybe">:|</li>
+      {% else %}
+        <li class="hire-when__m hire-when--no">:(</li>
+      {% endif %}
+    {% else %}
+      {% if site.hire_yes contains i %}
+        <li class="hire-when__m hire-when--yes">:)</li>
+      {% elsif site.hire_maybe contains i %}
+        <li class="hire-when__m hire-when--maybe">:|</li>
+      {% endif %}
+    {% endif %}
+  {% endfor %}
+  <li>December</li>
+</ul>
