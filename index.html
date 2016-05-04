@@ -1,0 +1,58 @@
+---
+layout: default
+class: home
+---
+<div class="home__hero container">
+  <div class="row">
+    <div class="home__hero-about col-xs-12 col-sm-10 col-sm-offset-1 col-lg-8 col-lg-offset-2 text-center">
+        {% include intro-as-per-hire-status.html %}
+    </div>
+    <div class="col-xs-12 col-sm-4 col-sm-offset-2">
+      <p>I work as <strong>Front-End Web Developer</strong> at <strong><a href="http://ratedpeople.com" target="_blank">Rated People</a></strong> &ndash; a platform that connects homeowners and professional tradespersons in the UK. Nowadays I regularly interact with following technologies on daily basis:</p>
+      {% include current-stack.html %}
+    </div>
+    <div class="col-xs-12 col-sm-4">
+      I offer services for architecture design, development, deployment, maintenance and improvement of products within bound of best practices and standards &ndash; whether they are starting from scratch, improving any existing product or migrating a legacy products.
+    </div>
+  </div>
+</div>
+
+{% include clients.html %}
+
+<div class="home__content container">
+  <div class="row">
+
+    {% include sidebar.html class="visible-xs" %}
+
+    <div class="col-xs-12 col-sm-8 home__articles">
+      <header class="home__articles-header">
+        <h2 class="home__articles-title">Articles</h2>
+      </header>
+
+      {% for article in site.categories.articles limit:5 %}
+        {% if article.private != true %}
+          <article class="home__article">
+            <header class="home__article-header">
+              <h3 class="home__article-title">
+                <a class="home__article-anchor" href="{{ article.url }}">{{ article.title }}</a>
+              </h3>
+            </header>
+            <p class="home__article-excerpt">{{ article.excerpt | strip_html }}</p>
+            <footer class="home__article-footer">
+              <em class="home__article-publish__date">{{ article.date | date_to_long_string }}</em>
+              {% if article.author %}
+              <em class="home__article-author">&bull; {{ article.author }}</em>
+              {% endif %}
+            </footer>
+          </article>
+        {% endif %}
+      {% endfor %}
+      <div class="home__articles-more">
+        <a href="{{ '/archives/' | prepend: site-baseurl }}">More articles &raquo;</a>
+      </div>
+    </div>
+
+    {% include sidebar.html class="hidden-xs" %}
+
+  </div>
+</div>

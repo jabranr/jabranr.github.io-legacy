@@ -1,0 +1,78 @@
+# Site settings
+title: Jabran Rafique
+email: hello@jabran.me
+profession: Full-stack web engineer
+tagline: I like to develop on ideas that are useful and beneficial to everyone.
+description: >
+  Currently I am Front-end web developer at Rated People, an
+  Advocate and Regional Lead for Google Map Maker.
+
+version: 2.0.0
+baseurl: ''
+url: http://jabran.me
+gravatar: 'https://s.gravatar.com/avatar/51253538589838978a4372bfda814c21?s=250'
+
+permalink: /:categories/:title/
+paginate_path: '/page/:num/'
+paginate: 10
+
+markdown: kramdown
+exclude:
+  - '.bowerrc'
+  - '_site'
+  - 'vendor'
+  - 'bower.json'
+  - 'node_modules'
+  - 'bower_components'
+  - 'README.md'
+
+gems: [jekyll-paginate]
+# gems: [jekyll-paginate, github-pages]
+
+compress_html:
+  ignore:
+    envs: development
+
+# ------------------------------- #
+# Configs that can change anytime #
+# ------------------------------- #
+
+sass:
+  sass_dir: _scss
+  # style: compressed
+
+facebook:
+  username: jabranr
+  app_id:   453078498112064
+
+twitter:
+  username: jabranr
+  app_id:   4503599628147464
+
+github:
+  username: jabranr
+
+google:
+  username: JabranRafique
+  analytics: UA-9809111-15
+  gtm: GTM-MHKHDT
+  mapmaker: '?gw=66&uid=208599960765438642668'
+
+hire: false
+
+current_stack:
+  - LAM(PHP) stack
+  - Symfony2
+  - JavaScript
+
+clients:
+  - Pathé
+  - Arcadia Group
+  - London Riviera
+  - Thomas Cook
+  - OnBlackheath
+  - Outfit Fashion
+  - ShopStyle
+  - Tweepforce
+  - Multinet Group
+  - Thomas Cook Airlines

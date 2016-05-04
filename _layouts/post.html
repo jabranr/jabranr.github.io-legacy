@@ -1,0 +1,36 @@
+---
+layout: default
+---
+<div class="article">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-lg-8 col-lg-offset-2 ">
+        <article itemscope itemtype="http://schema.org/BlogPosting">
+
+          <header class="article__header">
+            <h1 class="article__title" itemprop="name headline">{{ page.title }}</h1>
+            <p class="article__meta">
+              <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date_to_long_string }}</time>
+
+              {% if page.author %}
+                &bull; <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <span itemprop="name">{{ page.author }}</span></span>
+              {% endif %}
+
+              {% if page.path %}
+                &bull; <span class="article__edit"><a href="//github.com/jabranr/jabranr.github.io/blob/gh-pages/{{ page.path }}" target="_blank">Update this article</a></span></p>
+              {% endif %}
+          </header>
+
+          <div class="article__content" itemprop="articleBody">
+            {{ content }}
+          </div>
+
+        </article>
+
+        {% include disqus.html %}
+
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,16 @@
+$font-family-monospace: 'Roboto Mono', Menlo, Monaco, Consolas, 'Courier New', monospace !default;
+$font-family-base: $font-family-monospace;
+
+// $font-size-base: 16px;
+$brand-primary: #228B22;
+$brand-secondary: #9dbf8e;
+$brand-orange: #e9967a;
+$brand-pink: #fcf7f7;
+$brand-golden: #c88f15;
+
+// Override
+$line-height-base: 1.5;
+$headings-color: $brand-primary;
+$headings-font-weight: 400;
+$blockquote-border-color: $brand-golden;
+$code-bg: $brand-pink;

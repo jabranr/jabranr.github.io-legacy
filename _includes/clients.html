@@ -1,0 +1,13 @@
+<div class="clients text-center clearfix">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+        <ul class="clients__list">
+          {% for client in site.clients %}
+           <li class="clients__client clients__client--{{ client | slugify }}">{{ client }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

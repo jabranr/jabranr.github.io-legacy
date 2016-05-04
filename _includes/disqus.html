@@ -1,0 +1,23 @@
+{% if page.comment == true %}
+  <div class="disqus__comments">
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+      {% if page.permalink %}
+      var disqus_url = "{{ page.permalink | prepend: '/' | prepend: site.url }}".replace("/\/$/", "");
+      {% else %}
+      var disqus_url = "{{ page.url | prepend: site.baseurl | prepend: site.url }}".replace("/\/$/", "");
+      {% endif %}
+      var disqus_title = "{{ page.title }}";
+      var disqus_shortname = "{{ site.github.username }}";
+
+      (function() {
+          var dsq = document.createElement('script');
+          dsq.type = 'text/javascript';
+          dsq.async = true;
+          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+    <noscript>JavaScript is disabled. Comments could not be displayed.</noscript>
+  </div>
+{% endif %}

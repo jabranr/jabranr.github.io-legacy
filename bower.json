@@ -1,0 +1,24 @@
+{
+  "name": "jabranr.github.io",
+  "homepage": "https://github.com/jabranr/jabranr.github.io",
+  "authors": [
+    "Jabran Rafique <hello@jabran.me>"
+  ],
+  "description": "Web portfolio",
+  "main": "_site/index.html",
+  "keywords": [""],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "vendor",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "socialmedia": "^1.7.8",
+    "bootstrap-sass": "^3.3.6"
+  }
+}

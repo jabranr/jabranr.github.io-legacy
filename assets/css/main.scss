@@ -1,0 +1,313 @@
+---
+# Keep this!
+---
+
+@charset "utf-8";
+
+// Import partials
+@import "variables";
+// @import "syntax-highlighting";
+@import "bootstrap";
+
+
+// Custom styling and overrides
+a {
+  color: darken($brand-orange, 10%);
+
+  &:hover,
+  &:active {
+    color: #c30;
+  }
+}
+
+b,
+strong,
+.lead {
+  font-weight: 500;
+}
+
+
+blockquote {
+  color: $brand-golden;
+  background-color: $brand-pink;
+}
+
+.invert {
+  background-color: $text-color;
+  color: #ccc;
+}
+
+.site__masthead {
+  @extend .invert;
+  min-height: 300px;
+  background: {
+    repeat: no-repeat;
+    position: center center;
+    size: cover;
+  }
+
+  &--speaker {
+    background-image: url(../images/site_masthead_background_speaker.png);
+  }
+
+  &--developer {
+    background-image: url(../images/site_masthead_background_developer.png);
+  }
+
+  &--cartographer {
+    background-image: url(../images/site_masthead_background_cartographer.png);
+  }
+
+  &-title {
+    margin-top: 85px;
+    background: {
+      image: url(../images/apple-touch-icon-120x120.png);
+      repeat: no-repeat;
+      position: 0 50%;
+    }
+    width: 160px;
+    height: 60px;
+    margin: 24px 0 0;
+    color: inherit;
+    font-size: 24px;
+    font-weight: normal;
+    background-size: 60px;
+    display: inline-block;
+    text-transform: uppercase;
+    padding: {
+      top: 5px;
+      left: 65px;
+    }
+
+  }
+
+  &-anchor {
+    color: inherit;
+    display: inline-block;
+    text-decoration: none;
+
+    &:hover,
+    &:active {
+      text-decoration: none;
+      color: inherit;
+    }
+  }
+
+  &-subtitle {
+    font-weight: normal;
+    color: inherit;
+    margin: {
+      top: 80px;
+      bottom: 24px;
+    }
+
+    @media (min-width: $screen-xs) {
+      margin-top: 100px;
+    }
+  }
+}
+
+.hire__status {
+  font-family: $font-family-monospace;
+  font-size: $font-size-small;
+  word-break: break-word;
+  padding: 5px 10px;
+  border-radius: 2px;
+  background-color: $brand-pink;
+
+  &--available {
+    color: $brand-primary;
+  }
+
+  &--not-available {
+    color: $brand-danger;
+  }
+}
+
+.home__hero {
+  &-about {
+    margin-top: 24px;
+    padding-top: 18px;
+  }
+}
+
+.home__articles {
+  &-more {
+    margin: {
+      top: 10px;
+      bottom: 10px;
+    }
+  }
+}
+
+.home__article {
+  margin-top: 18px;
+  padding-bottom: 10px;
+  border-bottom: 1px dotted rgba($brand-secondary, .5);
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  &-title {
+    word-break: break-word;
+  }
+
+  &-anchor {
+  transition: color 200ms ease-in-out;
+
+    @media(min-width: $screen-xs) {
+      &:after {
+        content: '\00bb';
+        display: inline-block;
+        visibility: hidden;
+        margin-left: 5px;
+        transition: visibility 200ms ease-in-out;
+      }
+
+      &:hover,
+      &:active {
+        text-decoration: none;
+
+        &:after {
+          visibility: visible;
+        }
+      }
+    }
+  }
+
+  &-excerpt {
+    color: #999;
+  }
+
+  &-footer {
+    color: #888;
+    margin-top: 10px;
+  }
+}
+
+.site__footer {
+  @extend .invert;
+  font-size: small;
+  margin-top: 24px;
+  padding: {
+    top: 24px;
+    bottom: 24px;
+  }
+}
+
+.clients {
+  @extend .invert;
+  line-height: 2;
+  letter-spacing: -1px;
+  font-family: $font-family-monospace;
+  font-weight: 500;
+  padding: {
+    top: 24px;
+    bottom: 24px;
+  }
+
+  margin: {
+    top: 24px;
+    bottom: 36px;
+  }
+
+  @media (min-width: $screen-sm) {
+    font-size: 24px;
+  }
+
+  &__list {
+    text-align: left;
+    list-style-type: none;
+    padding: 0;
+
+    @media (min-width: $screen-sm) {
+      text-align: center;
+    }
+
+  }
+
+  &__client {
+    padding: 0;
+    width: 160px;
+    display: inline-block;
+    vertical-align: top;
+    white-space: pre;
+
+    @media (min-width: $screen-xs) {
+      width: 220px;
+      white-space: normal;
+    }
+
+    @media (min-width: $screen-sm) {
+      width: auto;
+
+      &:before {
+        content: '\2022';
+        display: inline-block;
+        margin-right: 12px;
+        color: $gray-light;
+      }
+
+      &:first-child {
+        &::before {
+          content: ' ';
+        }
+      }
+    }
+  }
+}
+
+.current__stack{
+  &-list {
+    font-weight: 500;
+  }
+
+  &-technology {
+    padding: 0;
+
+    &:after {
+      content: '\2022';
+      display: inline-block;
+      margin-left: 10px;
+    }
+
+    &:first-child {
+      padding-left: 5px;
+    }
+
+    &:last-child {
+      &::after {
+        content: ' ';
+        margin-left: 0;
+      }
+    }
+  }
+}
+
+.article {
+  &__title {
+    margin-top: 50px;
+  }
+
+  &__meta {
+    margin: {
+      top: 18px;
+      bottom: 18px;
+    }
+  }
+}
+
+.four-o-four {
+  .page__content {
+    margin-bottom: 150px;
+  }
+
+  .page__title {
+    margin-bottom: 50px;
+  }
+}
+
+.disqus__comments {
+  margin-top: 24px;
+}

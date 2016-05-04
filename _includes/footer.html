@@ -1,0 +1,35 @@
+<footer class="site__footer clearfix">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-6 col-md-4">
+
+        <div class="site__footer-content text-centeer">
+          <p>&copy; {{ site.time | date: '%Y'}} &ndash; {{ site.title }}</p>
+          <p>{{ site.tagline }} All contents and code sample are licensed under the MIT License unless stated otherwise.</p>
+
+          <ul class="list-inline site__footer-social">
+            <li><a href="https://github.com/{{ site.github.username }}" target="_blank">Github</a></li>
+            <li><a href="https://twitter.com/@{{ site.twitter.username }}" target="_blank">Twitter</a></li>
+            <li><a href="https://google.com/+{{ site.google.username }}" target="_blank">Google+</a></li>
+            <li><a href="https://google.com/mapmaker{{ site.google.mapmaker }}" target="_blank">Google Map Maker</a></li>
+          </ul>
+
+          <ul class="list-inline site__footer-showcase">
+
+            {% comment %}
+            <li class="hide"><a href="{{ '/about/' | prepend: site.baseurl }}">About</a></li>
+            <li class="hide"><a href="{{ '/projects/' | prepend: site.baseurl }}">Projects</a></li>
+            <li class="hide"><a href="{{ '/speaking/' | prepend: site.baseurl }}">Speaking</a></li>
+            {% endcomment %}
+
+            <li><a href="mailto:{{ site.email }}">Contact</a></li>
+            <li><a href="{{ '/feed.xml' | prepend: site.baseurl }}">RSS</a></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</footer>
+
+{% include gtm.html %}
