@@ -1,8 +1,8 @@
 language: ruby
 rvm:
   - 2.1
-install: gem install jekyll html-proofer
-script: bundle install && bundle exec jekyll build && htmlproof ./_site --disable-external
+install: bundle install
+script: bundle exec jekyll build
 
 branches:
   only:
