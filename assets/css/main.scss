@@ -296,6 +296,10 @@ blockquote {
       bottom: 18px;
     }
   }
+
+  &__content {
+    word-break: break-word;
+  }
 }
 
 .four-o-four {
