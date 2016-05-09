@@ -1,7 +1,7 @@
 # Site settings
 title: Jabran Rafique
 email: hello@jabran.me
-profession: Full-stack web engineer
+profession: Web engineer
 tagline: I like to develop on ideas that are useful and beneficial to everyone.
 description: >
   Currently I am Front-end web developer at Rated People, an
@@ -39,7 +39,7 @@ compress_html:
 
 sass:
   sass_dir: _scss
-  # style: compressed
+  style: compressed
 
 facebook:
   username: jabranr
