@@ -10,10 +10,9 @@
         <h1 class="site__masthead-title">{{ site.title }}</h1>
         {% endif %}
         <h2 class="site__masthead-subtitle">{{ site.profession }}</h2>
-        {% if site.hire != true %}
-          <span class="hire__status hire__status--not-available">Currently not taking any projects</span>
-        {% else %}
-          <span class="hire__status hire__status--available">Available!</span>
+
+        {% if page.private != true %}
+          {% include hire-status.html %}
         {% endif %}
       </div>
     </div>

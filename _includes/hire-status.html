@@ -1,5 +1,9 @@
 {% if site.hire != true %}
-  <div class="col-xs-12 text-center hire__status hire__status--not-available clearfix">
-    Currently not taking any projects
-  </div>
+  <span class="hire__status hire__status--not-available">
+    Not accepting projects &ndash; <a class="hire__status-reason" href="/hire-me">why?</a>
+  </span>
+{% else %}
+  <span class="hire__status hire__status--available">
+    Accepting projects! &ndash; <a class="hire__status-reason" href="/hire-me">Details &raquo;</a>
+  </span>
 {% endif %}

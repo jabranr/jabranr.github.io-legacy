@@ -12,12 +12,12 @@ layout: default
             <p class="article__meta">
               <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date_to_long_string }}</time>
 
-              {% if page.author %}
+              {% if page.author and page.private != true %}
                 &bull; <span itemprop="author" itemscope itemtype="http://schema.org/Person">
                 <span itemprop="name">{{ page.author }}</span></span>
               {% endif %}
 
-              {% if page.path %}
+              {% if page.path and page.private != true %}
                 &bull; <span class="article__edit"><a href="//github.com/jabranr/jabranr.github.io/blob/gh-pages/{{ page.path }}" target="_blank">Update this article</a></span></p>
               {% endif %}
           </header>
