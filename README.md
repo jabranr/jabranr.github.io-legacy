@@ -1,4 +1,4 @@
-# jabran.github.io
+# jabran.github.io [![Build Status](https://travis-ci.org/jabranr/jabranr.github.io.svg?branch=master)](https://travis-ci.org/jabranr/jabranr.github.io)
 
 Uncompiled [Jekyll](http://jekyllrb.com) source code for [jabran.me](http://jabran.me).
 

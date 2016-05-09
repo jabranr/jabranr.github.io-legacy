@@ -96,6 +96,7 @@ blockquote {
   &-subtitle {
     font-weight: normal;
     color: inherit;
+    letter-spacing: -1px;
     margin: {
       top: 80px;
       bottom: 24px;
@@ -113,76 +114,90 @@ blockquote {
   word-break: break-word;
   padding: 5px 10px;
   border-radius: 2px;
-  background-color: $brand-pink;
+  color: $brand-pink;
 
   &--available {
-    color: $brand-primary;
+    background-color: $brand-primary;
   }
 
   &--not-available {
-    color: $brand-danger;
+    background-color: $brand-danger;
   }
-}
 
-.home__hero {
-  &-about {
-    margin-top: 24px;
-    padding-top: 18px;
-  }
-}
+  &-reason {
+    color: $brand-gold;
 
-.home__articles {
-  &-more {
-    margin: {
-      top: 10px;
-      bottom: 10px;
+    &:hover,
+    &:active {
+      color: lighten($brand-gold, 20%);
     }
   }
 }
 
-.home__article {
-  margin-top: 18px;
-  padding-bottom: 10px;
-  border-bottom: 1px dotted rgba($brand-secondary, .5);
-
-  &:last-child {
-    border-bottom: none;
+.home {
+  &__hero {
+    &-about {
+      margin-top: 24px;
+      padding-top: 18px;
+    }
   }
 
-  &-title {
-    word-break: break-word;
-  }
-
-  &-anchor {
-  transition: color 200ms ease-in-out;
-
-    @media(min-width: $screen-xs) {
-      &:after {
-        content: '\00bb';
-        display: inline-block;
-        visibility: hidden;
-        margin-left: 5px;
-        transition: visibility 200ms ease-in-out;
+  &__articles {
+    &-more {
+      margin: {
+        top: 10px;
+        bottom: 10px;
       }
+    }
+  }
+}
 
-      &:hover,
-      &:active {
-        text-decoration: none;
+.home,
+.archives {
+  &__article {
+    margin-top: 18px;
+    padding-bottom: 10px;
+    border-bottom: 1px dotted rgba($brand-secondary, .5);
 
+    &:last-child {
+      border-bottom: none;
+    }
+
+    &-title {
+      word-break: break-word;
+    }
+
+    &-anchor {
+    transition: color 200ms ease-in-out;
+
+      @media(min-width: $screen-xs) {
         &:after {
-          visibility: visible;
+          content: '\00bb';
+          display: inline-block;
+          visibility: hidden;
+          margin-left: 5px;
+          transition: visibility 200ms ease-in-out;
+        }
+
+        &:hover,
+        &:active {
+          text-decoration: none;
+
+          &:after {
+            visibility: visible;
+          }
         }
       }
     }
-  }
 
-  &-excerpt {
-    color: #999;
-  }
+    &-excerpt {
+      color: #999;
+    }
 
-  &-footer {
-    color: #888;
-    margin-top: 10px;
+    &-footer {
+      color: #888;
+      margin-top: 10px;
+    }
   }
 }
 
