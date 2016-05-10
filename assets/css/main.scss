@@ -5,9 +5,9 @@
 @charset "utf-8";
 
 // Import partials
-@import "variables";
-// @import "syntax-highlighting";
-@import "bootstrap";
+@import "_variables";
+@import "_syntax-highlighting";
+@import "_bootstrap";
 
 
 // Custom styling and overrides
@@ -30,6 +30,7 @@ strong,
 blockquote {
   color: $brand-golden;
   background-color: $brand-pink;
+  margin-top: 10px;
 }
 
 .invert {

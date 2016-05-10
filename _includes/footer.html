@@ -5,7 +5,7 @@
 
         <div class="site__footer-content text-centeer">
           <p>&copy; {{ site.time | date: '%Y'}} &ndash; {{ site.title }}</p>
-          <p>{{ site.tagline }} All contents and code sample are licensed under the MIT License unless stated otherwise.</p>
+          <p>{{ site.tagline }} All contents and code samples are licensed under the MIT License unless stated otherwise.</p>
 
           <ul class="list-inline site__footer-social">
             <li><a href="https://github.com/{{ site.github.username }}" target="_blank">Github</a></li>
@@ -24,6 +24,7 @@
 
             <li><a href="mailto:{{ site.email }}">Contact</a></li>
             <li><a href="{{ '/feed.xml' | prepend: site.baseurl }}">RSS</a></li>
+            <li><a target="_blank" href="https://github.com/jabranr/jabranr.github.io/issues?q=milestone%3A{{ site.version }}">v{{ site.version }}</a></li>
           </ul>
         </div>
 

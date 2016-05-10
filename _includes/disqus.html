@@ -1,4 +1,4 @@
-{% if page.comment == true %}
+{% if page.comment == true and jekyll.environment != 'development' %}
   <div class="disqus__comments">
     <div id="disqus_thread"></div>
     <script type="text/javascript">
