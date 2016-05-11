@@ -14,17 +14,17 @@ class: projects
 
 	{% for project in site.categories.projects %}
 	  {% if project.private != true %}
-	    <article class="project__article">
-	      <header class="project__article-header">
-	        <h3 class="project__article-title">
+	    <article class="projects__article">
+	      <header class="projects__article-header">
+	        <h3 class="projects__article-title">
 	          <a href="{{ project.url }}">{{ project.title }}</a>
 	        </h3>
 	      </header>
-	      <p class="project__article-excerpt">{{ project.excerpt | strip_html }}</p>
-	      <footer class="project__article-footer">
-	        <em class="project__article-publish-date">{{ project.date | date_to_long_string }}</em>
+	      <p class="projects__article-excerpt">{{ project.excerpt | strip_html }}</p>
+	      <footer class="projects__article-footer">
+	        <em class="projects__article-publish-date">{{ project.date | date_to_long_string }}</em>
 	        {% if project.author %}
-	        <em class="project__article-author">&bull; {{ project.author }}</em>
+	        <em class="projects__article-author">&bull; {{ project.author }}</em>
 	        {% endif %}
 	      </footer>
 	    </article>

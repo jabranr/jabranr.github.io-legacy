@@ -10,7 +10,6 @@ private: false
 stage: stable
 version: 1.0.7
 thumbnail: fetchwitter-1024x1024-transparent.png
-featured: true
 ---
 
 Fetchwitter makes it easier to fetch Tweets from a Twitter API v1.1 and OAuth authentication/authorization
