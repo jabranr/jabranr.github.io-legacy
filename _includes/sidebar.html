@@ -1,9 +1,16 @@
-<aside class="col-xs-12 col-sm-4 home__sidebar {{ include.class }}">
+<aside class="home__sidebar {{ include.class }}">
+  <div class="col-xs-12 col-sm-4 home__sidebar-about">
+    <p>I am based in London, UK and specialize in developing high-end, scalable web applications with an experience of more than 4 years. I work with clients across the globe to help them achieve their goals. I am passionate about the web and it’s amazing impact on day to day life.</p>
+    <hr>
 
-  <p>I am based in London, UK and specialize in developing high-end, scalable web applications with an experience of more than 4 years. I work with clients across the globe to help them achieve their goals. I am passionate about the web and it’s amazing impact on day to day life.</p>
+    <p>I am also a digital <a href="https://google.com/mapmaker{{ site.google.mapmaker }}" target="_blank">cartographer, Advocate &amp; Regional Lead</a> at <a href="http://google.com/mapmaker" target="_blank">Google Map Maker</a> where I help create digital maps for everyone around the world.</p>
 
-  <p>I am also a digital <a href="https://google.com/mapmaker{{ site.google.mapmaker }}" target="_blank">cartographer, Advocate &amp; Regional Lead</a> at <a href="http://google.com/mapmaker" target="_blank">Google Map Maker</a> where I help create digital maps for everyone around the world.</p>
+    <p>I regularly <a href="https://twitter.com/@{{ site.twitter.username }}" target="_blank">tweet</a> interesting and useful stuff, and <a href="https://github.com/{{ site.github.username }}" target="_blank">share code</a> at Github.</p>
+    <hr>
+  </div>
 
-  <hr>
-  <p>I regularly <a href="https://twitter.com/@{{ site.twitter.username }}" target="_blank">tweet</a> interesting and useful stuff, and <a href="https://github.com/{{ site.github.username }}" target="_blank">share code</a> at Github.</p>
+  <div class="col-xs-12 col-sm-4 home__sidebar-projects">
+    <p class="lead">Few projects:</p>
+    {% include featured-projects.html %}
+  </div>
 </aside>

@@ -1,0 +1,14 @@
+<div class="featured__projects">
+  {% for project in site.categories.projects %}
+    {% if project.featured == true %}
+      <div class="featured__project">
+        <header class="featured__project-header">
+          <h4 class="featured__project-title">{{ project.title }}</h4>
+        </header>
+        <div class="featured__project-excerpt">{{ project.excerpt }}
+          <p><a href="{{ project.code }}" target="_blank">&raquo; View code</a></p>
+        </div>
+      </div>
+    {% endif %}
+  {% endfor %}
+</div>
