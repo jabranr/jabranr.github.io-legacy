@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: page
 title: Hire me &ndash; current status
 date: 2016-05-09 8:00:00
 categories: announcements
@@ -19,3 +19,5 @@ private: true
   <p class="lead">I am currently accepting small projects for <em>weekends</em> only!</p>
   <p>A small project can be a development of a web site, web app or consultancy services for a web projects that can be covered over a/few <strong>weekends</strong> only. If you would like me to involve in any of your awesome project then get in touch via <a href="mailto:{{ site.email }}">email</a> or <a href="https://twitter.com/@{{ site.twitter.username }}">Twitter</a>!</p>
 {% endif %}
+
+<p>Updated: <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date_to_long_string }}</time></p>
