@@ -37,7 +37,7 @@ The idea is to write minimum code to setup an SDK – and wherever possible – 
 ## Facebook SDK
 In order to use the Facebook SDKs into your web app, you will normally need following chunk of code from [Facebook developers docs](https://developers.facebook.com/docs/javascript/quickstart/v2.3).
 
-``` html
+{% highlight html %}
 <script>
   window.fbAsyncInit = function() {
     FB.init({
@@ -55,22 +55,22 @@ In order to use the Facebook SDKs into your web app, you will normally need foll
      fjs.parentNode.insertBefore(js, fjs);
    }(document, 'script', 'facebook-jssdk'));
 </script>
-```
+{% endhighlight %}
 
 Here is how it is done with Socialmedia.
 
-``` html
+{% highlight html %}
 <script src="path/to/socialmedia.min.js" type="text/javascript"></script>
 <script>
 	var facebook = new Socialmedia.Facebook({
 		appid: 'your-app-id'
 	});
 </script>
-```
+{% endhighlight %}
 
 At this stage – once all setup – web app will not only have all native objects and methods of SDK i.e. FB object but also additional easy-to-use helper methods built around some of most popular native methods. Here are some methods ([compelete API reference](https://github.com/jabranr/socialmedia/wiki/Facebook)) of the additional API that Socialmedia exposes in this case:
 
-```javascript
+{% highlight javascript %}
 facebook.AddToPage()
 facebook.Invite(...)
 facebook.Share(...)
@@ -78,7 +78,7 @@ facebook.ShareOpenGraph(...)
 facebook.Send(...)
 facebook.Pay(...)
 facebook.Feed(...)
-```
+{% endhighlight %}
 
 ### Examples:
 This website already uses Socialmedia therefore I can just go ahead and setup some live examples right here. Here are two examples to demonstrate the convenience of Socialmedia:
@@ -90,21 +90,21 @@ This website already uses Socialmedia therefore I can just go ahead and setup so
 
 The code used for this example is as following:
 
-```html
+{% highlight html %}
 <button class="btn btn-sm btn-primary" type="button" id="inviteFriends">Invite friends to read article</button>
 
 <script type="text/javascript">
 	var inviteFriends = document.querySelector('#inviteFriends');
 	if ( inviteFriends ) {
 		inviteFriends.addEventListener('click', function(e){
-			j__r.facebook.Invite({
+			facebook.Invite({
 				title: 'Invited friends to read this article',
 				message: document.title
 			});
 		}, false);
 	}
 </script>
-```
+{% endhighlight %}
 ##### Example 2:
 + Following button will get your Facebook basic information and display underneath&mdash;provided you are logged into Facebook already and given permissions (upon request) otherwise it will ask you to login first and to allow this app to get data from Facebook on your behalf.
 
@@ -116,7 +116,7 @@ The code used for this example is as following:
 
 The code used for this example is as following:
 
-```html
+{% highlight html %}
 <button class="btn btn-sm btn-primary" type="button" id="getInfo">Get basic info from Facebook</button>
 <textarea name="infoBox" id="infoBox" class="form-control" rows="5" style="resize: none;" placeholder="Info will appear here" disabled></textarea>
 
@@ -147,14 +147,20 @@ The code used for this example is as following:
 		}
 	}
 </script>
-```
-
+{% endhighlight %}
+<script src="{{ '/vendor/socialmedia/dist/socialmedia.min.js' | prepend: site.baseurl }}">
 <script type="text/javascript">
+	window.jabranr = window.jabranr || {};
+
+	jabranr.facebook = new Socialmedia.Facebook({
+		appid: '{{ site.facebook.app_id }}'
+	});
+
 	var inviteFriends = document.querySelector('#inviteFriends');
 	var getInfo = document.querySelector('#getInfo');
 	if ( inviteFriends ) {
 		inviteFriends.addEventListener('click', function(e){
-			j__r.facebook.Invite({
+			jabranr.facebook.Invite({
 				title: 'Invited friends to read this article',
 				message: document.title
 			});
@@ -191,7 +197,7 @@ Socialmedia works similarly for other supported social media platforms too. Here
 ## Twitter SDK
 For Twitter, it would be as following and few of the API methods ([complete API reference](https://github.com/jabranr/socialmedia/wiki/Twitter)):
 
-``` html
+{% highlight html %}
 <script src="path/to/socialmedia.min.js" type="text/javascript"></script>
 <script>
 	var twitter = new Socialmedia.Twitter();
@@ -201,12 +207,12 @@ For Twitter, it would be as following and few of the API methods ([complete API 
 twitter.Tweet()
 twitter.Hashtag()
 twitter.Mention()
-```
+{% endhighlight %}
 
 ## Google+ SDK
 For Google+, it would be as following and few of the API methods ([complete API reference](https://github.com/jabranr/socialmedia/wiki/Google-Plus)):
 
-``` html
+{% highlight html %}
 <script src="path/to/socialmedia.min.js" type="text/javascript"></script>
 <script>
 	var gplus = new Socialmedia.GooglePlus();
@@ -214,12 +220,12 @@ For Google+, it would be as following and few of the API methods ([complete API 
 
 // Exposes following API to use with Google+ SDK:
 gplus.Share()
-```
+{% endhighlight %}
 
 ## Pinterest SDK
 For Pinterest, it would be as following and few of the API methods ([complete API reference](https://github.com/jabranr/socialmedia/wiki/Pinterest)):
 
-``` html
+{% highlight html %}
 <script src="path/to/socialmedia.min.js" type="text/javascript"></script>
 <script>
 	var pinterest = new Socialmedia.Pinterest();
@@ -227,7 +233,7 @@ For Pinterest, it would be as following and few of the API methods ([complete AP
 
 // Exposes following API to use withPinterest SDK:
 pinterest.Pinit()
-```
+{% endhighlight %}
 
 Socialmedia is very stable for the purposes it is built – all thanks to it's Test Driven Development (TDD) – yet it's intensive use in basic to complex (in production) projects has further strengthened its stability.
 

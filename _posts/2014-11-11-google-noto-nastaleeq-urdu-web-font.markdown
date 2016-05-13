@@ -23,24 +23,24 @@ The typeface is available to [download as a single True-Type Font](http://www.go
 
 Now comes the interesting part where you have a website in Urdu language and you would like to set Nastaleeq typeface as part of default `font-family`. You can get information on it from [Google Web Fonts Early Access](http://www.google.com/fonts/earlyaccess?utm_campaign=noto-urdu-1114&utm_source=jabran.me) page. Grab the CSS from the page or here you go:
 
-``` html
+{% highlight html %}
 <link rel="stylesheet" href="//fonts.googleapis.com/earlyaccess/notonastaliqurdudraft.css">
-```
+{% endhighlight %}
 
 or Import into CSS:
 
-``` css
+{% highlight css %}
 @import url(http://fonts.googleapis.com/earlyaccess/notonastaliqurdudraft.css);
 
-```
+{% endhighlight %}
 
 Then update the `font-family` to include Noto Nastaleeq as suggested and you are good to go.
 
-``` html
+{% highlight html %}
 body {
 	font-family: 'Noto Nastaliq Urdu Draft', serif;
 }
-```
+{% endhighlight %}
 
 ### Reliability / Issues:
 

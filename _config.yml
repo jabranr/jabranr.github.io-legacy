@@ -20,7 +20,6 @@ markdown: kramdown
 exclude:
   - '.bowerrc'
   - '_site'
-  - 'vendor'
   - 'bower.json'
   - 'node_modules'
   - 'bower_components'

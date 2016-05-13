@@ -33,6 +33,11 @@ blockquote {
   margin-top: 10px;
 }
 
+pre {
+  background-color: $brand-code;
+  border: none;
+}
+
 .invert {
   background-color: $text-color;
   color: #ccc;

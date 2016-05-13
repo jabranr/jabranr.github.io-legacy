@@ -13,7 +13,7 @@ private: false
 
 Around three weeks ago, we ([Ben Chalk](https://twitter.com/_Bchalk) and myself) were given the task to redesign and redevelop the United website. The website have not been touched in months and totally required an overhaul. This was a very basic website spanned over a single page – with information about clients, services and contact. So basically by keeping the original set of contents and with a new section showcasing United work/case studies – idea was to give it a whole new vibrant look and make it more widely usable in terms of accessibility and user experience. Here is what we started with:
 
-<img src="{{ 'assets/images/united-agency-old-website.png' | prepend: site.baseurl }}" alt="" class="img-responsive">
+<img src="{{ '/assets/images/united-agency-old-website.png' | prepend: site.baseurl }}" alt="" class="img-responsive">
 
 ### Design &amp; Wireframes
 
@@ -44,7 +44,7 @@ Sass provides an excellent support for manipulating and customizing the default 
 
 Merging different CSS files into single output file helps to enhance the performance by saving on HTTP round trips.
 
-<img src="{{ 'assets/images/bootstrap-sass-selective-modules.png' | prepend: site.baseurl }}" alt="" class="img-responsive">
+<img src="{{ '/assets/images/bootstrap-sass-selective-modules.png' | prepend: site.baseurl }}" alt="" class="img-responsive">
 
 This awesomeness of selecting only required modules doesn't just stop at Bootstrap or Sass! It continues to other front-end tools used in this project as well i.e. jQuery, jQuery Mobile, Animate.css, Bootstrap.js etc. In addition to these, I also used a selective set of font icons from [IcoMoon](http://icomoon.io) that enables the social media links at the website. Once again, it is important to only import the glyphs that are required rather than loading a complete font file.
 
@@ -54,22 +54,22 @@ This awesomeness of selecting only required modules doesn't just stop at Bootstr
 
 The contact section has feeds from Instagram and Twitter channels.
 
-<img src="{{ 'assets/images/united-agency-contact.png' | prepend: site.baseurl }}" alt="" class="img-responsive">
+<img src="{{ '/assets/images/united-agency-contact.png' | prepend: site.baseurl }}" alt="" class="img-responsive">
 
 #### Instagram Feed:
 
-[Instagram API](http://instagram.com/developer/) now provides a very convenient way to grab a user feed with [a new addition](http://instagram.com/developer/endpoints/users/#get_users_media_recent_with_client_id) to its <kbd>/users</kbd> endpoint. I used `jQuery.getJSON` method as exampled below to grab the feed. The `callback=?` parameter here is to get the response in JSONP type to bypass the cross-origin restrictions in a `XMLHttpRequest`.
+[Instagram API](http://instagram.com/developer/) now provides a very convenient way to grab a user feed with [a new addition](http://instagram.com/developer/endpoints/users/#get_users_media_recent_with_client_id) to its `/users` endpoint. I used `jQuery.getJSON` method as exampled below to grab the feed. The `callback=?` parameter here is to get the response in JSONP type to bypass the cross-origin restrictions in a `XMLHttpRequest`.
 
-``` javascript
-	var url = "https://api.instagram.com/v1/users/396527045/media/recent/";
-		url += "?client_id=012345689";
-		url += "&count=10";
-		url += "&callback=?";
+{% highlight javascript %}
+  var url = "https://api.instagram.com/v1/users/396527045/media/recent/";
+  url += "?client_id=012345689";
+  url += "&count=10";
+  url += "&callback=?";
 
-	$.getJSON(url, function(data) {
-		// Setup Instagram feed here.
-	});
-```
+  $.getJSON(url, function(data) {
+  // Setup Instagram feed here.
+  });
+{% endhighlight %}
 
 #### Twitter Feed:
 
@@ -80,14 +80,12 @@ Fetchwitter has built-in method `to_tweet` that formats plain text into proper t
 <p data-height="268" data-theme-id="6602" data-slug-hash="wBxGA" data-default-tab="result" class='codepen'>See the Pen <a href='http://codepen.io/jabranr/pen/wBxGA/'>Format text to tweet using JavaScript String prototyping</a> by Jabran Rafique (<a href='http://codepen.io/jabranr'>@jabranr</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
 <script async src="//codepen.io/assets/embed/ei.js"></script>
 
-See JavaScript code in <kbd>JS</kbd> tab. It is [also available as Gist](https://gist.github.com/jabranr/68515719cde0653d641d#file-format-text-string-to-tweet-with-javascript-string-prototype-js).
+See JavaScript code in `JS` tab. It is [also available as Gist](https://gist.github.com/jabranr/68515719cde0653d641d#file-format-text-string-to-tweet-with-javascript-string-prototype-js).
 
 ### Animations:
 
-I like to build stuff for usability and accessibility. To accomplish this, I normally build stuff with simplest and generally available technologies that are available to majority of users through variety of browsers. Then I would enhance the product accordingly with mantra of progressive enhancement by keeping the graceful degradation in mind. The last thing was to add the animations. We wanted to give this website a very subtle parallax type animation on scroll. <kbd>onscroll</kbd> is a very heavy event in DOM and to keep its use minimum, I used the jQuery and [Animate.css](http://daneden.github.io/animate.css/). Animate.css is a wonderful collection of beautiful CSS3 animations. I used the <kbd>Fading Entrances</kbd> and <kbd>Fading Exits</kbd> modules to create a easing parallax effect when scrolling down on this website. Animations are set to false once these animations are finished running as user scrolls down to the last section of page.
+I like to build stuff for usability and accessibility. To accomplish this, I normally build stuff with simplest and generally available technologies that are available to majority of users through variety of browsers. Then I would enhance the product accordingly with mantra of progressive enhancement by keeping the graceful degradation in mind. The last thing was to add the animations. We wanted to give this website a very subtle parallax type animation on scroll. `onscroll` is a very heavy event in DOM and to keep its use minimum, I used the jQuery and [Animate.css](http://daneden.github.io/animate.css/). Animate.css is a wonderful collection of beautiful CSS3 animations. I used the `Fading Entrances` and `Fading Exits` modules to create a easing parallax effect when scrolling down on this website. Animations are set to false once these animations are finished running as user scrolls down to the last section of page.
 
-> Visit new website at [http://united-agency.co.uk](http://united-agency.co.uk)!
+<p class="lead">Visit new website at <a href="http://united-agency.co.uk" target="_blank">http://united-agency.co.uk</a>!</p>
 
-<p>
-	Updated 11-06-2014: Last section has been updated with details on use of animations in this project.
-</p>
+Updated 11-06-2014: Last section has been updated with details on use of animations in this project.
