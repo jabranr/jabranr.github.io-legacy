@@ -7,7 +7,7 @@ description: >
   Currently I am Front-end web developer at Rated People, an
   Advocate and Regional Lead for Google Map Maker.
 
-version: 2.0.6
+version: 2.0.7
 baseurl: ''
 url: http://jabran.me
 gravatar: 'https://s.gravatar.com/avatar/51253538589838978a4372bfda814c21?s=250'
@@ -20,7 +20,6 @@ markdown: kramdown
 exclude:
   - '.bowerrc'
   - '_site'
-  - 'vendor'
   - 'bower.json'
   - 'node_modules'
   - 'bower_components'
@@ -76,3 +75,5 @@ clients:
   - Tweepforce
   - Multinet Group
   - Thomas Cook Airlines
+  - Brand USA
+  - Hobbs

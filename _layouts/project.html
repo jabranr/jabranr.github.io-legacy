@@ -1,0 +1,36 @@
+---
+layout: default
+---
+<div class="project">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-lg-8 col-lg-offset-2 ">
+        <article itemscope itemtype="http://schema.org/BlogPosting">
+
+          <header class="project__header">
+            <h1 class="project__title" itemprop="name headline">{{ page.title }}</h1>
+            <p class="project__meta">
+              <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date_to_long_string }}</time>
+
+              {% if page.author and page.private != true %}
+                &bull; <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <span itemprop="name">{{ page.author }}</span></span>
+              {% endif %}
+
+              {% if page.code %}
+                &bull; <span class="project__edit"><a href="{{ page.code }}/fork" target="_blank">Fork this project</a></span></p>
+              {% endif %}
+          </header>
+
+          <div class="project__content" itemprop="articleBody">
+            {{ content }}
+          </div>
+
+        </article>
+
+        {% include disqus.html %}
+
+      </div>
+    </div>
+  </div>
+</div>

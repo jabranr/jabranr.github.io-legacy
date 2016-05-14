@@ -26,45 +26,45 @@ Now next steps were to bring Terminator to life from its default (IMO a bit dull
 
 Install Terminator ([Official guidelines](http://gnometerminator.blogspot.co.uk/p/introduction.html)):
 
-```
+{% highlight bash %}
 $ sudo apt-get install terminator
-```
+{% endhighlight %}
 
 Open Terminator and install ZSH shell:
 
-```
+{% highlight bash %}
 $ sudo apt-get install zsh
-```
+{% endhighlight %}
 
 Confirm ZSH global installation path:
 
-```
+{% highlight bash %}
 $ which zsh
-```
+{% endhighlight %}
 
 It should return path to ZSH i.e. `/usr/bin/zsh`.
 
 Switch to ZSH shell:
 
-```
+{% highlight bash %}
 $ chsh
-```
+{% endhighlight %}
 
 Enter admin password and then write path to ZSH as confirmed above i.e. `/usr/bin/zsh`.
 
 If you are a network user or you get the message saying `chsh: user '...' does not exist in /etc/passwd` then you may not be able to change shell using above method. In such a case, you should append `.profile` file in your user root with path to ZSH. Open the `.profile` file in an editor:
 
-```
+{% highlight bash %}
 $ nano ~/.profile
-```
+{% endhighlight %}
 
 At the end of the file, add following two lines:
 
-```
+{% highlight bash %}
 ...
 # Use ZSH as default shell
 /usr/bin/zsh
-```
+{% endhighlight %}
 
 Save the changes with `CTRL x` and confirm changes to file and filename (if any). Restart the Terminator. Now when you launch Terminator again you will see a tilda `~` instead of usual prompt. This confirms that now ZSH is running as soon as you launch the app. You can also confirm the new shell in use by typing `$ echo $0` and it will respond with path of current shell in use i.e. `/usr/bin/zsh`.
 
@@ -72,71 +72,71 @@ Now we can install [Oh My ZSH](http://ohmyz.sh)(OMZ). Copy the appropriate comma
 
 Using cURL:
 
-```
+{% highlight bash %}
 $ sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-```
+{% endhighlight %}
 
 Using wget:
 
-```
+{% highlight bash %}
 $ sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
-```
+{% endhighlight %}
 
 Once done, Terminator will confirm the successful installation with a OMZ funky message. Next step is to install Cobalt2 theme for OMZ.Naviagte your browser to [Wesbos Cobalt2 theme for iTerm2](https://github.com/wesbos/cobalt2-iterm/tree/master/cobalt2-theme.iterm). Select all and copy the text to the clipboard. Create a new OMZ theme file in Terminator:
 
-```
+{% highlight bash %}
 $ nano ~/.oh-my-zsh/themes/cobalt2.zsh-theme
-```
+{% endhighlight %}
 
 Paste the copied text (Ctrl Shift v) and save the changes (Ctrl x). Cobalt2 theme requires Powerline fonts in order to work perfectly. Download the Powerline fonts repo:
 
-```
+{% highlight bash %}
 $ cd  ~/
 $ wget -O powerline-fonts.zip https://github.com/powerline/fonts/archive/master.zip
-```
+{% endhighlight %}
 
 Unzip the dowloaded file:
 
-```
+{% highlight bash %}
 $ unzip powerline-fonts.zip
-```
+{% endhighlight %}
 
 Install Powerline fonts:
 
-```
+{% highlight bash %}
 $ bash ./powerline-fonts/install.sh
-```
+{% endhighlight %}
 
 Remove installation files:
 
-```
+{% highlight bash %}
 $ rm -rf powerline-fonts
 $ rm powerline-fonts.zip
-```
+{% endhighlight %}
 
 Now last things are to set the color profile for Cobalt2 theme and optionally customize the prompt as you may like. Since there is no default official color profile for Terminator, we will use the color profile configuration by [Mark Badolato](https://github.com/mbadolato/iTerm2-Color-Schemes/blob/master/terminator/Cobalt2.config). Select all text below and copy to clipboard:
 
-```
+{% highlight bash %}
 [[Cobalt2]]
     palette = "#000000:#ff0000:#38de21:#ffe50a:#1460d2:#ff005d:#00bbbb:#bbbbbb:#555555:#f40e17:#3bd01d:#edc809:#5555ff:#ff55ff:#6ae3fa:#ffffff"
     background_color = "#132738"
     cursor_color = "#f0cc09"
     foreground_color = "#ffffff"
     background_image = None
-```
+{% endhighlight %}
 
 Open the Terminator config file:
 
-```
+{% highlight bash %}
 $ nano ~/.config/terminator/config
-```
+{% endhighlight %}
 
 Paste (Ctrl Shift v) all copied text just under the `[[default]]` block and make sure that it is properly indented using spaces. Save (Ctrl x) the config file, confirm changes and filename to exit the editor. Restart the Terminator and right click anywhere on it to open context menu and select Preferences. In Terminator Preferences dialog box, go to Profiles tab, select Cobalt2 and you have Terminator on Ubuntu 14.4 LTS running with Cobalt2 theme.
 
 **Extras:** you can make changes to the prompt f.e. I replaced the default cross with a heart shape. To make such changes, you will need to edit Cobalt2 theme file.
 
-```
+{% highlight bash %}
 $ nano ~/.oh-my-zsh/themes/cobalt2.zsh-theme
-```
+{% endhighlight %}
 
 Now you can have a complete joy of using an eye-catching commmand line.

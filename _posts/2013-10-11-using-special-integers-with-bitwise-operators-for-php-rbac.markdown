@@ -17,30 +17,30 @@ The very first method that came to my mind to build this system was from a book 
 Since I had more than 12 types of permissions to assign to various Roles, I thought it would be useful to have a list of special integers in hand. So I made following small PHP function and ran it through browser to get the list of special integers.
 
 {% highlight php %}
-/**
- * Converts the integer to binary and outputs list of integers that are power of 2
- * @param: Integer
- * @return: String
- */
+  /**
+   * Converts the integer to binary and outputs list of integers that are power of 2
+   * @param: Integer
+   * @return: String
+   */
 
-function get_special_binary( $decimal ) {
-  $binaries = '';
-  for ( $i = 1; $i < $decimal; $i++ ) {
-  	$special_num = pow(2, $i);
-  	$value = str_pad(base_convert($special_num, 10, 2), 8, '0', STR_PAD_LEFT);
-	$binaries .= $special_num . " = " . substr($value, 0, 4) . " " . substr($value, 4) . '<br>';
-  }
-  return $binaries;
-}
+    function get_special_binary( $decimal ) {
+      $binaries = '';
+      for ( $i = 1; $i < $decimal; $i++ ) {
+      	$special_num = pow(2, $i);
+      	$value = str_pad(base_convert($special_num, 10, 2), 8, '0', STR_PAD_LEFT);
+        $binaries .= $special_num . " = " . substr($value, 0, 4) . " " . substr($value, 4) . '<br>';
+      }
+      return $binaries;
+    }
 {% endhighlight %}
 
 I thought it might also be helpful for anyone else so I have put it on [Github Gist](https://gist.github.com/jabranr/7406258). Please feel free to use it to do wonders.
 
-### So What Exactly are Special Integers?
+### So what exactly are special integers?
 
 Special integers are special in way because they are power of 2 i.e. `2, 4, 8, 16` and so on. These special integers return amazing outcome due to their Binary structure when they are used with Bitwise operators. By analysing the following list of integers you can see that these integers (1, 2, 4, 8, 16) have only one digit “1” in their structure when converted to Binary.
 
-```
+{% highlight text %}
  1 – 0000 0001
  2 – 0000 0010
  3 – 0000 0011
@@ -57,22 +57,23 @@ Special integers are special in way because they are power of 2 i.e. `2, 4, 8, 1
 14 – 0000 1110
 15 – 0000 1111
 16 – 0001 0000
-```
+{% endhighlight %}
+
 So basically when used with Bitwise AND and OR operators, they provide very unique results. For example:
 
-```
-0000 0001 — 1 
+{% highlight text %}
+0000 0001 — 1
 AND
 0000 0010 — 2
 
 results
 
 0000 0000 = 0
-```
+{% endhighlight %}
 
 while:
 
-```
+{% highlight text %}
 0000 0001 — 1
 OR
 0000 0010 — 2
@@ -80,6 +81,6 @@ OR
 results
 
 0000 0011 = 3
-```
+{% endhighlight %}
 
 Pretty interesting! Hope this was informative. Happy programming!

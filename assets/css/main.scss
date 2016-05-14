@@ -33,6 +33,11 @@ blockquote {
   margin-top: 10px;
 }
 
+pre {
+  background-color: $brand-code;
+  border: none;
+}
+
 .invert {
   background-color: $text-color;
   color: #ccc;
@@ -143,7 +148,8 @@ blockquote {
     }
   }
 
-  &__articles {
+  &__articles,
+  &__projects {
     &-more {
       margin: {
         top: 10px;
@@ -154,7 +160,8 @@ blockquote {
 }
 
 .home,
-.archives {
+.archives,
+.projects {
   &__article {
     margin-top: 18px;
     padding-bottom: 10px;
@@ -330,4 +337,8 @@ blockquote {
 
 .disqus__comments {
   margin-top: 24px;
+}
+
+.featured__project {
+  border-bottom: 1px dotted rgba($brand-secondary, .5);
 }
