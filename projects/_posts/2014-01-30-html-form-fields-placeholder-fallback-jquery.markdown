@@ -17,18 +17,18 @@ To use the plugin, simple follow the steps in following example.
 
 * Add script reference to `jQuery` and plugin files in `head` section of HTML document.
 
-``` html
+{% highlight html %}
 <script src="path/to/jQuery.js"></script>
 <script src="path/to/jquery.placeholderfallback.js"></script>
-```
+{% endhighlight %}
 
 * Then call the `placeholderfallback()` plugin for form fields where falback support is required. You can link the form fields using any usual element identity attribute such as `id`, `class` or element itself.
 
-`$('#firstNameField').placeholderfallback();`
-
-`$('.first-name-field').placeholderfallback();`
-
-`$('input[type=text]').placeholderfallback();`
+{% highlight javascript %}
+$('#firstNameField').placeholderfallback();
+$('.first-name-field').placeholderfallback();
+$('input[type=text]').placeholderfallback();
+{% endhighlight %}
 
 Latter will provide fallback support to all `input` fields with `text` attribute. However, if you need to call the fallback support for multiple elements then you can pass multiple `id` and/or `class` like so.
 
@@ -36,7 +36,7 @@ Latter will provide fallback support to all `input` fields with `text` attribute
 
 Here is detailed example use:
 
-``` html
+{% highlight html %}
 <form>
     <input type="text" id="firstNameField" placeholder="First Name">
     <input type="text" id="lastNameField" placeholder="Last Name">
@@ -51,6 +51,6 @@ Here is detailed example use:
     </script>
 <![endif]-->
 
-```
+{% endhighlight %}
 
-Finally, in this detailed example, we have wrapped the plugin call between [Internet Explorer conditional tags](http://msdn.microsoft.com/en-gb/library/ms537512\(v=vs.85\).aspx) so it only works when it actually is required. 
+Finally, in this detailed example, we have wrapped the plugin call between [Internet Explorer conditional tags](http://msdn.microsoft.com/en-gb/library/ms537512\(v=vs.85\).aspx) so it only works when it actually is required.
