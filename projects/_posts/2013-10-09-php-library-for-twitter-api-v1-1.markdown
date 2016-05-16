@@ -12,7 +12,7 @@ version: 1.1.0
 ---
 
 
-<blockquote>This project is deprecated and no more maintained.</blockquote>
+> This project is deprecated and no more maintained.
 
 Please use the new improved version of this project named as “Fetchwitter” and available at [https://github.com/jabranr/fetchwitter](https://github.com/jabranr/fetchwitter)
 
