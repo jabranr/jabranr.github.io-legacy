@@ -1,0 +1,25 @@
+---
+layout: page
+title: Articles
+description: An archive collection of all articles written by Jabran Rafique
+class: archives
+---
+
+{% for article in site.categories.articles %}
+  {% if article.private != true %}
+    <article class="archives__article">
+      <header class="archives__article-header">
+        <h3 class="archives__article-title">
+          <a href="{{ article.url }}">{{ article.title }}</a>
+        </h3>
+      </header>
+      <p class="archives__article-excerpt">{{ article.excerpt | strip_html }}</p>
+      <footer class="archives__article-footer">
+        <em class="archives__article-publish-date">{{ article.date | date_to_long_string }}</em>
+        {% if article.author %}
+        <em class="archives__article-author">&bull; {{ article.author }}</em>
+        {% endif %}
+      </footer>
+    </article>
+  {% endif %}
+{% endfor %}
