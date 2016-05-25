@@ -25,7 +25,7 @@ Initialize the Google+ class and create a new instance.
 
 Let’s bind the `Google+ Share` action to a button’s click event.
 
-``` javascript
+{% highlight javascript %}
 // Initialize Google+ SDK
 var gplus = new Socialmedia.GooglePlus();
 
@@ -44,11 +44,11 @@ gplusButton.addEventListener('click', function(event) {
 		lang: 'ur'
 	});
 }, false);
-```
+{% endhighlight %}
 
 The `link` parameter takes in any link you like to share and `lang` parameter sets the Google+ interface language. If you do not provide any parameters then default value for `link` would be current page URL and for `lang` it would be `en` (English). Since this action is now bound with button click event, this will trigger a Google+ Share dialog with relevant data. That’s all it takes to setup the Google+ Share function.
 
-<img src="/img/google-plus-share-dialog-example.png" alt="" class="img-responsive">
+<img src="{{ '/assets/images/google-plus-share-dialog-example.png' | prepend: site.baseurl }}" alt="" class="img-responsive">
 <p class="help-block">An example of Google+ Share dialog on action call</p>
 
 You can also try a live demo of this library by using social media sharing links at end of this page.
