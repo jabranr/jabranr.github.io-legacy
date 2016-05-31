@@ -1,9 +1,5 @@
-{% if site.hire != true %}
-  <span class="hire__status hire__status--not-available">
-    Not accepting projects &ndash; <a class="hire__status-reason" href="/hire-me">why?</a>
-  </span>
-{% else %}
-  <span class="hire__status hire__status--available">
-    Accepting projects! &ndash; <a class="hire__status-reason" href="/hire-me">Details &raquo;</a>
-  </span>
-{% endif %}
+<span class="hire__status hire__status--{% if site.hire != true %}not-{% endif %}available">
+  <a class="hire__status-reason" href="/hire-me">
+    {% if site.hire != true %}Availability &raquo;{% else %}Details &raquo;{% endif %}
+  </a>
+</span>

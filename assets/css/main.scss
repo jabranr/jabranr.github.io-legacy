@@ -45,52 +45,89 @@ pre {
 
 .site__masthead {
   @extend .invert;
-  min-height: 300px;
   background: {
     repeat: no-repeat;
     position: center center;
     size: cover;
   }
 
+  &--featured {
+    min-height: 250px;
+    min-height: 55vh;
+
+    @media (min-width: $screen-sm) {
+      min-height: 400px;
+      min-height: 60vh;
+    }
+  }
+
   &--speaker {
-    background-image: url(../images/site_masthead_background_speaker.png);
+    background-image: url(../images/site_masthead_background_speaker@1x.jpg);
+
+    @media (min-width: $screen-sm) {
+      background-image: url(../images/site_masthead_background_speaker@2x.jpg);
+    }
   }
 
   &--developer {
-    background-image: url(../images/site_masthead_background_developer.png);
+    background-image: url(../images/site_masthead_background_developer@1x.jpg);
+
+    @media (min-width: $screen-sm) {
+      background-image: url(../images/site_masthead_background_developer@2x.jpg);
+    }
   }
 
   &--cartographer {
-    background-image: url(../images/site_masthead_background_cartographer.png);
+    background-image: url(../images/site_masthead_background_cartographer@1x.jpg);
+
+    @media (min-width: $screen-sm) {
+      background-image: url(../images/site_masthead_background_cartographer@2x.jpg);
+    }
   }
 
   &-title {
-    margin-top: 85px;
-    background: {
-      image: url(../images/apple-touch-icon-120x120.png);
-      repeat: no-repeat;
-      position: 0 50%;
-    }
     width: 160px;
     height: 60px;
-    margin: 24px 0 0;
     color: inherit;
     font-size: 24px;
     font-weight: normal;
     background-size: 60px;
     display: inline-block;
     text-transform: uppercase;
+    background: {
+      image: url(../images/apple-touch-icon-120x120.png);
+      repeat: no-repeat;
+      position: left 0 top 50%;
+    }
+
+    margin: {
+      top: 24px;
+      bottom: 0;
+    }
+
     padding: {
       top: 5px;
       left: 65px;
     }
+  }
 
+  &--right {
+    @extend .text-right;
+
+    .site__masthead-title {
+      background-position: left 100% top 50%;
+      padding: {
+        right: 85px;
+        left: 0;
+      }
+    }
   }
 
   &-anchor {
     color: inherit;
     display: inline-block;
     text-decoration: none;
+    margin-bottom: 25px;
 
     &:hover,
     &:active {
@@ -100,34 +137,41 @@ pre {
   }
 
   &-subtitle {
-    font-weight: normal;
     color: inherit;
+    font-size: 24px;
+    margin-top: 10px;
+    font-weight: normal;
     letter-spacing: -1px;
-    margin: {
-      top: 80px;
-      bottom: 24px;
-    }
-
-    @media (min-width: $screen-xs) {
-      margin-top: 100px;
-    }
   }
+
+  &-nav {
+    float: right;
+    padding: 0;
+    margin: 43px 0 0 0;
+    list-style-type: none;
+    display: inline-block;
+  }
+}
+
+.nav-item {
+  display: inline-block;
+  margin-right: 10px;
 }
 
 .hire__status {
   font-family: $font-family-monospace;
   font-size: $font-size-small;
   word-break: break-word;
-  padding: 5px 10px;
+  padding: 5px;
   border-radius: 2px;
   color: $brand-pink;
 
   &--available {
-    background-color: $brand-primary;
+    background-color: rgba($brand-primary, .35);
   }
 
   &--not-available {
-    background-color: $brand-danger;
+    background-color: rgba($brand-danger, .35);
   }
 
   &-reason {

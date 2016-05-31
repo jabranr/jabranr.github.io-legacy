@@ -1,20 +1,33 @@
-<header class="site__masthead">
+<header class="site__masthead {% if page.class == 'home' %}site__masthead--featured site__masthead--right site__masthead--speaker{% endif %}">
   <div class="container">
     <div class="row">
-      <div class="col-xs-12">
-        {% if page.title %}
-        <a class="site__masthead-anchor" rel="home" href="/">
+      <div class="col-xs-12 site__masthead-title-container">
+        {% if page.class == 'home' %}
           <h1 class="site__masthead-title">{{ site.title }}</h1>
-        </a>
         {% else %}
-        <h1 class="site__masthead-title">{{ site.title }}</h1>
-        {% endif %}
-        <h2 class="site__masthead-subtitle">{{ site.profession }}</h2>
+          <a class="site__masthead-anchor" rel="home" href="/">
+            <h1 class="site__masthead-title">{{ site.title }}</h1>
+          </a>
 
-        {% if page.private != true %}
-          {% include hire-status.html %}
+          <ul class="site__masthead-nav">
+            <li class="nav-item"><a href="{{ '/archives' | prepend: site.baseurl }}">Articles</a></li>
+            <li class="nav-item"><a href="{{ '/projects' | prepend: site.baseurl }}">Projects</a></li>
+            <li class="nav-item"><a target="_blank" href="https://twitter.com/@{{ site.twitter.username }}">Twitter</a></li>
+            <li class="nav-item"><a target="_blank" href="https://github.com/{{ site.github.username }}">GitHub</a></li>
+          </ul>
         {% endif %}
       </div>
+
+      {% if page.class == 'home' %}
+        <div class="col-xs-12 site__masthead-subtitle-container">
+          <h2 class="site__masthead-subtitle">{{ site.profession }}</h2>
+      <!--
+
+          {% include hire-status.html %}
+      -->
+        </div>
+      {% endif %}
+
     </div>
   </div>
 </header>
