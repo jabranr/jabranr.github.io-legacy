@@ -79,6 +79,14 @@ pre {
     }
   }
 
+  &--workshop {
+    background-image: url(../images/site_masthead_background_workshop@1x.jpg);
+
+    @media (min-width: $screen-sm) {
+      background-image: url(../images/site_masthead_background_workshop@2x.jpg);
+    }
+  }
+
   &--developer {
     background-image: url(../images/site_masthead_background_developer@1x.jpg);
 
