@@ -52,12 +52,22 @@ pre {
   }
 
   &--featured {
+    position: relative;
     min-height: 250px;
     min-height: 55vh;
 
     @media (min-width: $screen-sm) {
       min-height: 400px;
       min-height: 60vh;
+    }
+
+    &::after {
+      display: inline-block;
+      position: absolute;
+      color: white;
+      content: attr(title);
+      right: 10px;
+      bottom: 10px;
     }
   }
 
