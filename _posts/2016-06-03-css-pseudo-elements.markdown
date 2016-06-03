@@ -70,3 +70,19 @@ Now that bullet is added after each item in navigation, it looks a bit odd to ha
 }
 {% endhighlight %}
 
+In both cases we have basically hid the element or it's content but the element itself still exists. Using `:not` CSS selector instead will not create the pseudo element in first place &ndash; eliminating the need of extra efforts to hide it. Here is an example using `:not` CSS selector:
+
+{% highlight css %}
+.site__nav-item:not(:last-child)::after {
+  position: absolute;
+  display: inline-block;
+  content: '\2022';
+  color: #ddd;
+  line-height: inherit;
+  margin-left: 10px;
+}
+{% endhighlight %}
+
+I am not sure what impact it might have on performance as I have not tested it but nontheless it seems like a better option to go with.
+
+
