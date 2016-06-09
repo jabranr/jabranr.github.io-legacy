@@ -104,16 +104,16 @@ pre {
   }
 
   &-title {
-    width: 160px;
-    height: 60px;
+    width: 133px;
+    height: 50px;
     color: inherit;
-    font-size: 24px;
+    font-size: 20px;
     font-weight: normal;
-    background-size: 60px;
     display: inline-block;
     text-transform: uppercase;
     background: {
-      image: url(../images/apple-touch-icon-120x120.png);
+      image: url(../images/apple-touch-icon-76x76.png);
+      size: 50px;
       repeat: no-repeat;
       position: left 0 top 50%;
     }
@@ -124,8 +124,23 @@ pre {
     }
 
     padding: {
-      top: 5px;
-      left: 65px;
+      top: 0;
+      left: 55px;
+    }
+
+    @media (min-width: $screen-xs) {
+      font-size: 24px;
+      width: 160px;
+      height: 60px;
+      background: {
+        image: url(../images/apple-touch-icon-120x120.png);
+        size: 60px;
+      }
+
+      padding: {
+        top: 5px;
+        left: 65px;
+      }
     }
   }
 
@@ -163,17 +178,54 @@ pre {
   }
 
   &-nav {
-    float: right;
-    padding: 0;
-    margin: 43px 0 0 0;
-    list-style-type: none;
     display: inline-block;
+    margin: 24px 0 0 0;
+    padding: 0 0 18px;
+    float: right;
+    text-align: right;
+    list-style-type: none;
+
+    @media (min-width: $screen-xs) {
+      margin-top: 43px;
+      text-align: left;
+    }
   }
 }
 
 .nav-item {
-  display: inline-block;
-  margin-right: 10px;
+  display: block;
+  position: relative;
+  margin: 0 0 10px 0;
+
+  @media (min-width: $screen-xs) {
+    display: inline-block;
+    margin: 0 10px;
+
+    &:not(:last-child)::after {
+      content: '\2022';
+      display: inline-block;
+      position: absolute;
+      color: rgba(white, .5);
+      margin-left: 10px;
+    }
+  }
+
+  &--social {
+    display: inline-block;
+    vertical-align: bottom;
+    margin-right: 0;
+
+    &:not(:last-child) {
+      margin: {
+        right: 5px;
+        left: 18px;
+      }
+
+      &::after {
+        display: none;
+      }
+    }
+  }
 }
 
 .hire__status {
@@ -228,13 +280,10 @@ pre {
     margin-top: 18px;
     padding-bottom: 10px;
     border-bottom: 1px dotted rgba($brand-secondary, .5);
+    word-break: break-word;
 
     &:last-child {
       border-bottom: none;
-    }
-
-    &-title {
-      word-break: break-word;
     }
 
     &-anchor {
@@ -327,17 +376,11 @@ pre {
     @media (min-width: $screen-sm) {
       width: auto;
 
-      &:before {
+      &:not(:first-child)::before {
         content: '\2022';
         display: inline-block;
         margin-right: 12px;
         color: $gray-light;
-      }
-
-      &:first-child {
-        &::before {
-          content: ' ';
-        }
       }
     }
   }
@@ -371,6 +414,8 @@ pre {
 }
 
 .article {
+  word-break: break-word;
+
   &__title {
     margin-top: 50px;
   }
@@ -380,10 +425,6 @@ pre {
       top: 18px;
       bottom: 18px;
     }
-  }
-
-  &__content {
-    word-break: break-word;
   }
 }
 
@@ -403,4 +444,13 @@ pre {
 
 .featured__project {
   border-bottom: 1px dotted rgba($brand-secondary, .5);
+}
+
+.icon {
+  &--twitter,
+  &--github {
+    width: 24px;
+    height: 24px;
+    display: block;
+  }
 }

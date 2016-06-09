@@ -12,8 +12,8 @@
           <ul class="site__masthead-nav">
             <li class="nav-item"><a href="{{ '/archives' | prepend: site.baseurl }}">Articles</a></li>
             <li class="nav-item"><a href="{{ '/projects' | prepend: site.baseurl }}">Projects</a></li>
-            <li class="nav-item"><a target="_blank" href="https://twitter.com/@{{ site.twitter.username }}">Twitter</a></li>
-            <li class="nav-item"><a target="_blank" href="https://github.com/{{ site.github.username }}">GitHub</a></li>
+            <li class="nav-item nav-item--social"><a class="icon icon--twitter" target="_blank" href="https://twitter.com/@{{ site.twitter.username }}">{% include icon-twitter.svg %}</a></li>
+            <li class="nav-item nav-item--social"><a class="icon icon--github" target="_blank" href="https://github.com/{{ site.github.username }}">{% include icon-github.svg %}</a></li>
           </ul>
         {% endif %}
       </div>
