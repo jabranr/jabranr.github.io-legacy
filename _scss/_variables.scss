@@ -1,7 +1,7 @@
 $font-family-monospace: 'Roboto Mono', Menlo, Monaco, Consolas, 'Courier New', monospace !default;
 $font-family-base: $font-family-monospace;
 
-// $font-size-base: 16px;
+// Colors
 $brand-primary: #228B22;
 $brand-secondary: #9dbf8e;
 $brand-orange: #e9967a;
@@ -10,7 +10,13 @@ $brand-code: #e3e9e9;
 $brand-gold: #ffd700;
 $brand-golden: #c88f15;
 
-// Override
+$brand-facebook: #365592 !default;
+$brand-twitter: #55acee !default;
+$brand-google-plus: #d73d32 !default;
+$brand-github: #828282 !default;
+
+// Overrides
+// $font-size-base: 16px;
 $line-height-base: 1.5;
 $headings-color: $brand-primary;
 $headings-font-weight: 400;
