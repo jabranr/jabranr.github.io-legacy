@@ -6,11 +6,9 @@ class: projects
 ---
 
 <div class="projects">
-	<p>
-		Here is list of my projects I work on from time to time. Hardly any of them would be a private project otherwise they are all public with open source licenses hosted at <a href="https://github.com/{{ site.github.username }}" target="_blank">GitHub</a> and free to use. You are most welcome to share your feedback, corrections and even enhancements. Relevant details to file an issue can be found in detailed page for each of these projects.
-	</p>
+	<p>Here is list of projects I work on from time to time. Most of these are open-source and hosted at <a href="https://github.com/{{ site.github.username }}" target="_blank">GitHub</a> &ndash; free to use and explore. You are most welcome to share your feedback, corrections and even enhancements to any of those.</p>
 
-	<p>I also use <a href="https://gist.github.com/{{ site.github.username }}" target="_blank">GitHub Gist</a> and <a href="https://codepen.io/{{ site.github.username }}" target="_blank">CodePen</a> to share experiments from day to day work.</p>
+	<p>I also use <a href="https://gist.github.com/{{ site.github.username }}" target="_blank">GitHub Gist</a> and <a href="https://codepen.io/{{ site.codepen.username }}" target="_blank">CodePen</a> to share experiments from day to day work.</p>
 
 	{% for project in site.categories.projects %}
 	  {% if project.private != true %}
