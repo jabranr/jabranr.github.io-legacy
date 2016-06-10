@@ -7,7 +7,7 @@ description: >
   Currently I am Front-end web developer at Rated People, an
   Advocate and Regional Lead for Google Map Maker.
 
-version: 2.0.11
+version: 2.0.12
 baseurl: ''
 url: http://jabran.me
 gravatar: 'https://s.gravatar.com/avatar/51253538589838978a4372bfda814c21?s=250'
@@ -51,13 +51,16 @@ twitter:
 github:
   username: jabranr
 
+codepen:
+  username: jabranr
+
 google:
   username: JabranRafique
   analytics: UA-9809111-15
   gtm: GTM-MHKHDT
   mapmaker: '?gw=66&uid=208599960765438642668'
 
-hire: false
+hire: true
 
 current_stack:
   - LAM(PHP) stack
