@@ -459,13 +459,16 @@ pre {
       display: inline-block;
       position: absolute;
       left: 0;
-      background-color: #ddd;
+      background-color: $brand-orange;
+      color: white;
       width: 28px;
       height: 28px;
       top: -4px;
       border-radius: 50%;
       text-align: center;
-      line-height: 1.5;
+      line-height: 1.95;
+      font-size: 14px;
+      padding-left: 1px;
     }
   }
 }
