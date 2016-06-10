@@ -60,7 +60,7 @@ google:
   gtm: GTM-MHKHDT
   mapmaker: '?gw=66&uid=208599960765438642668'
 
-hire: false
+hire: true
 
 current_stack:
   - LAM(PHP) stack
