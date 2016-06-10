@@ -442,8 +442,32 @@ pre {
   margin-top: 24px;
 }
 
+.featured__projects {
+  counter-reset: project-count;
+}
+
 .featured__project {
+  position: relative;
   border-bottom: 1px dotted rgba($brand-secondary, .5);
+
+  &-title {
+    counter-increment: project-count;
+    padding-left: 36px;
+
+    &::before {
+      content: counter(project-count);
+      display: inline-block;
+      position: absolute;
+      left: 0;
+      background-color: #ddd;
+      width: 28px;
+      height: 28px;
+      top: -4px;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 1.5;
+    }
+  }
 }
 
 .icon {

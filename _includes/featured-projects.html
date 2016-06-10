@@ -3,11 +3,11 @@
     {% if project.featured == true %}
       <div class="featured__project">
         <header class="featured__project-header">
-          <h4 class="featured__project-title">{{ project.title }}</h4>
+          <h4 class="featured__project-title">
+            <a href="{{ project.code }}" target="_blank">{{ project.title }}</a>
+          </h4>
         </header>
-        <div class="featured__project-excerpt">{{ project.excerpt }}
-          <p><a href="{{ project.code }}" target="_blank">&raquo; View project on GitHub</a></p>
-        </div>
+        <div class="featured__project-excerpt"><p>{{ project.excerpt }}</p></div>
       </div>
     {% endif %}
   {% endfor %}
