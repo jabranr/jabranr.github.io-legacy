@@ -79,6 +79,14 @@ pre {
     }
   }
 
+  &--speaker-kenya {
+    background-image: url(../images/site_masthead_background_speaker_kenya@1x.jpg);
+
+    @media (min-width: $screen-sm) {
+      background-image: url(../images/site_masthead_background_speaker@2x.jpg);
+    }
+  }
+
   &--workshop {
     background-image: url(../images/site_masthead_background_workshop@1x.jpg);
 
