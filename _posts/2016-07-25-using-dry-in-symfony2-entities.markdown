@@ -13,9 +13,11 @@ private: false
 
 <p class="lead">This is an effort to make Symfony2 workflow (bit more) [DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself) where Entities are mapped with Doctrine ORM.</p>
 
-Such mapped entities sometime share same attributes between them i.e. id, timestamps etc. In order to make it DRY, we can create a base entity and then every new entity can extend it to share the attributes. Let's start from beginning.
+Such mapped entities sometimes share same attributes between them i.e. `id`, `timestamps` etc. In order to use DRY concept here we can create a base entity and then every new entity can extend it to share those attributes. Let's start by creating two entities with repeated attributes.
 
-Assuming we have two Entities named User and Address. They are structured as following:
+> An Entity is simply a PHP class.
+
+Here are two Entities `User` and `Address`, and they are structured as following:
 
 {% highlight php %}
 <?php namespace Foo\Bar\Entity;
@@ -60,7 +62,7 @@ Assuming we have two Entities named User and Address. They are structured as fol
   }
 {% endhighlight %}
 
-> An Entity is a simple PHP class.
+Here is the `Address` entity class.
 
 {% highlight php %}
 <?php namespace Foo\Bar\Entity;
@@ -110,9 +112,9 @@ Assuming we have two Entities named User and Address. They are structured as fol
   }
 {% endhighlight %}
 
-As you can see that we have `id`, `createdAt` and `updatedAt` attributes that are being shared in both entities. To implement a DRY concept here we need a new base entity which can have the shared attributes and can be extended by any other entities. 
+As you can see that we have `id`, `createdAt` and `updatedAt` attributes that are being repeated in both entities. To implement a DRY concept here we are going to create a new entity class that will have the shared/repeated attributes and then can be extended by other entities. 
 
-Let's create a base entity by moving the shared values to a new Entity called `BaseEntity`.
+Let's create a `BaseEntity` class and move the repeated values to it.
 
 {% highlight php %}
 <?php namespace Foo\Bar\Entity;
@@ -145,7 +147,7 @@ class BaseEntity {
     // getters setters
 {% endhighlight %}
 
-Note a new annotation `@ORM\MappedSuperclass` at top of the `BaseEntity` that makes sure that attributes in this entity are properly extended into those extending it. Now we can remove these attributes from `User` and `Address` entities and extend the `BaseEntity` class into these. Our entities are already started to look cleaner.
+Note a new annotation `@ORM\MappedSuperclass` at top of the `BaseEntity` that makes sure that attributes in this entity are properly extended into sub-entities. Now we can remove these attributes from `User` and `Address` entities and extend our `BaseEntity` class into these.
 
 {% highlight php %}
 <?php namespace Foo\Bar\Entity;
@@ -204,7 +206,11 @@ Note a new annotation `@ORM\MappedSuperclass` at top of the `BaseEntity` that ma
   }
 {% endhighlight %}
 
-Now since we have some shared attributes in one entity, we can add further enhancements to it as required. Let's make sure that both timestamps `createdAt` and `updatedAt` are properly and automatically set before we persist or update the records to our database. For that we will use `@ORM\PrePersist` and `@ORM\PreUpdate` annotations in custom methods. We also need an additional annotation `@ORM\HasLifecycleCallbacks` at class root.
+Our entities are already started to look cleaner.
+
+Now since we have some shared attributes in one entity, this gives us flexibility to add further enhancements to it as required.
+
+Let's add some automation to make sure that both timestamps `createdAt` and `updatedAt` are properly set before we persist or update the records to our database. For that we will use `@ORM\PrePersist` and `@ORM\PreUpdate` annotations in custom methods. We also need an additional annotation `@ORM\HasLifecycleCallbacks` at class root level.
 
 {% highlight php %}
 <?php namespace Foo\Bar\Entity;
@@ -236,9 +242,11 @@ class BaseEntity {
     ...
 {% endhighlight %}
 
-Now we have two additional custom methods, `setTimestamps` and `setUpdatedTimestamp`. The names for these methods do not really matter so we can name those as we want. First method sets the values for `createdAt` and `updatedAt` attributes just before we persist a new record to database. We set the values as `DateTime` object and Symfony2/Doctrine will automatically convert those to required format for database entry. Second method only updates the `updatedAt` value when a record in database is updated.
+Now we have two additional custom methods, `setTimestamps` and `setUpdatedTimestamp`. The names for these methods do not really matter so we can name those as we want. First method sets the values for `createdAt` and `updatedAt` attributes just before we **persist a new record** to database. We set the values as `DateTime` object and Symfony2/Doctrine will automatically convert those to required format for database entry. Second method only updates the `updatedAt` value when a database **record is updated**.
 
-Now we can simply extend the `BaseEntity` to any entity and need not worry about generating a primary key attribute (`id`) and timestamps.
+> We can simply extend the `BaseEntity` to any entity and need not worry about generating a primary key attribute (`id`) and timestamps now on.
+
+### Additional enhancements:
 
 We can have as many as enhancement we like to the `BaseEntity` and those will be automatically extended to sub-entities. For example we can have a `save` method to persist the record by keeping all logic in `BaseEntity` instead of a controller. In current situation if we are creating a user we will use following steps inside a controller:
 
@@ -257,7 +265,7 @@ We can have as many as enhancement we like to the `BaseEntity` and those will be
   ...
 {% endhighlight %}
 
-By adding following helper method into our `BaseEntity` we can shorten it from 3 lines to 1.:
+By adding following helper method into our `BaseEntity` we can shorten it from 3 lines to 1:
 
 {% highlight php %}
 <?php namespace Foo\Bar\Entity;
@@ -292,27 +300,28 @@ class BaseEntity {
     ...
 {% endhighlight %}
 
-Now we can simple use:
+Now we can simply use the `save` method inside our controller:
 
 {% highlight php %}
 <?php
   ...
-
   $user = new User();
   $user->setName('Foo');
   $user->setEmail('foo@bar.co');
 
   $user->save();
+  ...
+{% endhighlight %}
 
-
+{% highlight php %}
+  ...
   $addr = new Address();
   $addr->setProperty('123');
   $addr->setStreet('Foo Road');
   $addr->setTown('Fondon');
 
   $addr->save();
-
   ...
 {% endhighlight %}
 
-Here is the complete [BaseEntity class as Gist](https://gist.github.com/jabranr/e74b80958a997ffc62b8f8173b7a1e3e).
+I hope that this was useful for anyone refactoring their Symfony2 project. Here is the complete [BaseEntity class as a Gist](https://gist.github.com/jabranr/e74b80958a997ffc62b8f8173b7a1e3e). Feel free to suggest any enhancements.
