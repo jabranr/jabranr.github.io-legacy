@@ -11,7 +11,7 @@ comment: true
 private: false
 ---
 
-<p class="lead">This is an effort to make Symfony2 workflow (bit more) DRY where Entities are mapped with Doctrine ORM.</p>
+<p class="lead">This is an effort to make Symfony2 workflow (bit more) [DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself) where Entities are mapped with Doctrine ORM.</p>
 
 Such mapped entities sometime share same attributes between them i.e. id, timestamps etc. In order to make it DRY, we can create a base entity and then every new entity can extend it to share the attributes. Let's start from beginning.
 
