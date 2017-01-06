@@ -24,8 +24,8 @@ b,
 strong,
 .lead {
   font-weight: 500;
+  line-height: inherit;
 }
-
 
 blockquote {
   color: $brand-golden;
@@ -45,63 +45,6 @@ pre {
 
 .site__masthead {
   @extend .invert;
-  background: {
-    repeat: no-repeat;
-    position: center center;
-    size: cover;
-  }
-
-  &--featured {
-    position: relative;
-    min-height: 250px;
-    min-height: 55vh;
-
-    @media (min-width: $screen-sm) {
-      min-height: 400px;
-      min-height: 60vh;
-    }
-
-    &::after {
-      display: inline-block;
-      position: absolute;
-      color: white;
-      content: attr(title);
-      right: 10px;
-      bottom: 10px;
-    }
-  }
-
-  &--speaker {
-    background-image: url(../images/site_masthead_background_speaker@1x.jpg);
-
-    @media (min-width: $screen-sm) {
-      background-image: url(../images/site_masthead_background_speaker@2x.jpg);
-    }
-  }
-
-  &--workshop {
-    background-image: url(../images/site_masthead_background_workshop@1x.jpg);
-
-    @media (min-width: $screen-sm) {
-      background-image: url(../images/site_masthead_background_workshop@2x.jpg);
-    }
-  }
-
-  &--developer {
-    background-image: url(../images/site_masthead_background_developer@1x.jpg);
-
-    @media (min-width: $screen-sm) {
-      background-image: url(../images/site_masthead_background_developer@2x.jpg);
-    }
-  }
-
-  &--cartographer {
-    background-image: url(../images/site_masthead_background_cartographer@1x.jpg);
-
-    @media (min-width: $screen-sm) {
-      background-image: url(../images/site_masthead_background_cartographer@2x.jpg);
-    }
-  }
 
   &-title {
     width: 133px;
@@ -120,8 +63,8 @@ pre {
 
     margin: {
       top: 24px;
-      bottom: 0;
-    }
+      bottom: 24px;
+    };
 
     padding: {
       top: 0;
@@ -160,21 +103,12 @@ pre {
     color: inherit;
     display: inline-block;
     text-decoration: none;
-    margin-bottom: 25px;
 
     &:hover,
     &:active {
       text-decoration: none;
       color: inherit;
     }
-  }
-
-  &-subtitle {
-    color: inherit;
-    font-size: 24px;
-    margin-top: 10px;
-    font-weight: normal;
-    letter-spacing: -1px;
   }
 
   &-nav {
@@ -268,6 +202,23 @@ pre {
       margin: {
         top: 10px;
         bottom: 10px;
+      }
+    }
+  }
+
+  &__sidebar {
+    &-about {
+      @media(max-width: $screen-sm-max) {
+        margin-top: 10px;
+        border: {
+          top: 1px solid #ddd;
+          bottom: 1px solid #ddd;
+        }
+
+        padding: {
+          top: 10px;
+          bottom: 10px;
+        }
       }
     }
   }
@@ -389,19 +340,15 @@ pre {
 .current__stack{
   &-list {
     font-weight: 500;
+    margin: 0;
   }
 
   &-technology {
-    padding: 0;
-
     &:after {
       content: '\2022';
       display: inline-block;
-      margin-left: 10px;
-    }
-
-    &:first-child {
       padding-left: 5px;
+      color: lighten($gray-light, 10%);
     }
 
     &:last-child {
@@ -412,6 +359,15 @@ pre {
     }
   }
 }
+
+.list-inline>li {
+  &.current__stack-technology {
+    margin-left: -5px;
+    padding-right: 0;
+  }
+}
+
+
 
 .article {
   word-break: break-word;
@@ -443,6 +399,7 @@ pre {
 }
 
 .featured__projects {
+  padding-top: 10px;
   counter-reset: project-count;
 }
 

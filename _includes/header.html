@@ -1,4 +1,4 @@
-<header class="site__masthead {% if page.class == 'home' %}site__masthead--featured site__masthead--right site__masthead--speaker{% endif %}" title="Google Big Tent, Sendai, Japan">
+<header class="site__masthead" title="Google Big Tent, Sendai, Japan">
   <div class="container">
     <div class="row">
       <div class="col-xs-12 site__masthead-title-container">
@@ -8,6 +8,7 @@
           <a class="site__masthead-anchor" rel="home" href="/">
             <h1 class="site__masthead-title">{{ site.title }}</h1>
           </a>
+        {% endif %}
 
           <ul class="site__masthead-nav">
             <li class="nav-item"><a href="{{ '/archives' | prepend: site.baseurl }}">Articles</a></li>
@@ -15,19 +16,7 @@
             <li class="nav-item nav-item--social"><a class="icon icon--twitter" target="_blank" href="https://twitter.com/@{{ site.twitter.username }}">{% include icon-twitter.svg %}</a></li>
             <li class="nav-item nav-item--social"><a class="icon icon--github" target="_blank" href="https://github.com/{{ site.github.username }}">{% include icon-github.svg %}</a></li>
           </ul>
-        {% endif %}
       </div>
-
-      {% if page.class == 'home' %}
-        <div class="col-xs-12 site__masthead-subtitle-container">
-          <h2 class="site__masthead-subtitle">{{ site.profession }}</h2>
-      <!--
-
-          {% include hire-status.html %}
-      -->
-        </div>
-      {% endif %}
-
     </div>
   </div>
 </header>

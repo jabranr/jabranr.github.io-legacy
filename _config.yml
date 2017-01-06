@@ -1,13 +1,14 @@
 # Site settings
 title: Jabran Rafique
 email: hello@jabran.me
-profession: web engineer
+profession: Consultant full stack web developer
 tagline: I like to develop on ideas that are useful and beneficial to everyone.
 description: >
-  Currently I am Front-end web developer at Rated People, an
-  Advocate and Regional Lead for Google Map Maker.
+  Currently I work at Rated People as Front-end web developer. Outside of my
+  professional life I am an Advocate and Regional Lead at Google Map Maker.
+  I like to develop on ideas that are useful and beneficial to everyone.
 
-version: 2.0.12
+version: 3.0.0
 baseurl: ''
 url: http://jabran.me
 gravatar: 'https://s.gravatar.com/avatar/51253538589838978a4372bfda814c21?s=250'
@@ -60,12 +61,24 @@ google:
   gtm: GTM-MHKHDT
   mapmaker: '?gw=66&uid=208599960765438642668'
 
-hire: true
+hire: false
 
 current_stack:
-  - LAM(PHP) stack
+  - LAMP
   - Symfony2
   - JavaScript
+  - jQuery
+  - RequireJS
+  - Node
+  - CSS
+  - Sass
+  - Gulp
+  - Grunt
+  - Bower
+  - Composer
+  - npm
+  - Docker
+  - AWS
 
 clients:
   - Pathé
@@ -80,3 +93,6 @@ clients:
   - Thomas Cook Airlines
   - Brand USA
   - Hobbs
+  - Heathrow
+  - ThomasCook Cruises
+  - Amelia Freer
