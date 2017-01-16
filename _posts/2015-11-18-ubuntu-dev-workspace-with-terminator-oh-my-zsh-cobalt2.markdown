@@ -82,7 +82,7 @@ Using wget:
 $ sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
 {% endhighlight %}
 
-Once done, Terminator will confirm the successful installation with a OMZ funky message. Next step is to install Cobalt2 theme for OMZ.Naviagte your browser to [Wesbos Cobalt2 theme for iTerm2](https://github.com/wesbos/cobalt2-iterm/tree/master/cobalt2-theme.iterm). Select all and copy the text to the clipboard. Create a new OMZ theme file in Terminator:
+Once done, Terminator will confirm the successful installation with a OMZ funky message. Next step is to install Cobalt2 theme for OMZ.Naviagte your browser to [Wesbos Cobalt2 theme for iTerm2](https://github.com/wesbos/Cobalt2-iterm/blob/master/cobalt2.zsh-theme). Select all and copy the text to the clipboard. Create a new OMZ theme file in Terminator:
 
 {% highlight bash %}
 $ nano ~/.oh-my-zsh/themes/cobalt2.zsh-theme
