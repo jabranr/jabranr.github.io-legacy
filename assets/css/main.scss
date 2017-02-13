@@ -8,185 +8,14 @@
 @import "_variables";
 @import "_syntax-highlighting";
 @import "_bootstrap";
+@import "_custom-override";
+@import "_masthead";
+@import "_navigation";
+@import "_featured-projects";
+@import "_latest-articles";
+@import "_clients";
+@import "_footer";
 
-
-// Custom styling and overrides
-a {
-  color: darken($brand-orange, 10%);
-
-  &:hover,
-  &:active {
-    color: #c30;
-  }
-}
-
-b,
-strong,
-.lead {
-  font-weight: 500;
-  line-height: inherit;
-}
-
-blockquote {
-  color: $brand-golden;
-  background-color: $brand-pink;
-  margin-top: 10px;
-}
-
-pre {
-  background-color: $brand-code;
-  border: none;
-}
-
-.invert {
-  background-color: $text-color;
-  color: #ccc;
-}
-
-.site__masthead {
-  @extend .invert;
-
-  &-title {
-    width: 133px;
-    height: 50px;
-    color: inherit;
-    font-size: 20px;
-    font-weight: normal;
-    display: inline-block;
-    text-transform: uppercase;
-    background: {
-      image: url(../images/apple-touch-icon-76x76.png);
-      size: 50px;
-      repeat: no-repeat;
-      position: left 0 top 50%;
-    }
-
-    margin: {
-      top: 24px;
-      bottom: 24px;
-    };
-
-    padding: {
-      top: 0;
-      left: 55px;
-    }
-
-    @media (min-width: $screen-xs) {
-      font-size: 24px;
-      width: 160px;
-      height: 60px;
-      background: {
-        image: url(../images/apple-touch-icon-120x120.png);
-        size: 60px;
-      }
-
-      padding: {
-        top: 5px;
-        left: 65px;
-      }
-    }
-  }
-
-  &--right {
-    @extend .text-right;
-
-    .site__masthead-title {
-      background-position: left 100% top 50%;
-      padding: {
-        right: 85px;
-        left: 0;
-      }
-    }
-  }
-
-  &-anchor {
-    color: inherit;
-    display: inline-block;
-    text-decoration: none;
-
-    &:hover,
-    &:active {
-      text-decoration: none;
-      color: inherit;
-    }
-  }
-
-  &-nav {
-    display: inline-block;
-    margin: 24px 0 0 0;
-    padding: 0 0 18px;
-    float: right;
-    text-align: right;
-    list-style-type: none;
-
-    @media (min-width: $screen-xs) {
-      margin-top: 43px;
-      text-align: left;
-    }
-  }
-}
-
-.nav-item {
-  display: block;
-  position: relative;
-  margin: 0 0 10px 0;
-
-  @media (min-width: $screen-xs) {
-    display: inline-block;
-    margin: 0 10px;
-
-    &:not(:last-child)::after {
-      content: '\2022';
-      display: inline-block;
-      position: absolute;
-      color: rgba(white, .5);
-      margin-left: 10px;
-    }
-  }
-
-  &--social {
-    display: inline-block;
-    vertical-align: bottom;
-    margin-right: 0;
-
-    &:not(:last-child) {
-      margin: {
-        right: 5px;
-        left: 18px;
-      }
-
-      &::after {
-        display: none;
-      }
-    }
-  }
-}
-
-.hire__status {
-  font-family: $font-family-monospace;
-  font-size: $font-size-small;
-  word-break: break-word;
-  padding: 5px;
-  border-radius: 2px;
-  color: $brand-pink;
-
-  &--available {
-    background-color: rgba($brand-primary, .35);
-  }
-
-  &--not-available {
-    background-color: rgba($brand-danger, .35);
-  }
-
-  &-reason {
-    color: $brand-gold;
-
-    &:hover,
-    &:active {
-      color: lighten($brand-gold, 20%);
-    }
-  }
-}
 
 .home {
   &__hero {
@@ -271,76 +100,10 @@ pre {
   }
 }
 
-.site__footer {
-  @extend .invert;
-  font-size: small;
-  margin-top: 24px;
-  padding: {
-    top: 24px;
-    bottom: 24px;
-  }
-}
-
-.clients {
-  @extend .invert;
-  line-height: 2;
-  letter-spacing: -1px;
-  font-family: $font-family-monospace;
-  font-weight: 500;
-  padding: {
-    top: 24px;
-    bottom: 24px;
-  }
-
-  margin: {
-    top: 24px;
-    bottom: 36px;
-  }
-
-  @media (min-width: $screen-sm) {
-    font-size: 24px;
-  }
-
-  &__list {
-    text-align: left;
-    list-style-type: none;
-    padding: 0;
-
-    @media (min-width: $screen-sm) {
-      text-align: center;
-    }
-
-  }
-
-  &__client {
-    padding: 0;
-    width: 160px;
-    display: inline-block;
-    vertical-align: top;
-    white-space: pre;
-
-    @media (min-width: $screen-xs) {
-      width: 220px;
-      white-space: normal;
-    }
-
-    @media (min-width: $screen-sm) {
-      width: auto;
-
-      &:not(:first-child)::before {
-        content: '\2022';
-        display: inline-block;
-        margin-right: 12px;
-        color: $gray-light;
-      }
-    }
-  }
-}
-
 .current__stack{
   &-list {
     font-weight: 500;
-    margin: 0;
+    margin: 0 0 10px;
   }
 
   &-technology {
@@ -398,37 +161,6 @@ pre {
   margin-top: 24px;
 }
 
-.featured__projects {
-  padding-top: 10px;
-  counter-reset: project-count;
-}
-
-.featured__project {
-  position: relative;
-  border-bottom: 1px dotted rgba($brand-secondary, .5);
-
-  &-title {
-    counter-increment: project-count;
-    padding-left: 36px;
-
-    &::before {
-      content: counter(project-count);
-      display: inline-block;
-      position: absolute;
-      left: 0;
-      background-color: $brand-orange;
-      color: white;
-      width: 28px;
-      height: 28px;
-      top: -4px;
-      border-radius: 50%;
-      text-align: center;
-      line-height: 1.95;
-      font-size: 14px;
-      padding-left: 1px;
-    }
-  }
-}
 
 .icon {
   &--twitter,

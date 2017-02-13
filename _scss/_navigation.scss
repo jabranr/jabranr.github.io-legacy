@@ -1,0 +1,35 @@
+.nav-item {
+  display: block;
+  position: relative;
+  margin: 0 0 10px 0;
+
+  @media (min-width: $screen-xs) {
+    display: inline-block;
+    margin: 0 10px;
+
+    &:not(:last-child)::after {
+      content: '\2022';
+      display: inline-block;
+      position: absolute;
+      color: rgba(white, .5);
+      margin-left: 10px;
+    }
+  }
+}
+
+.nav-item--social {
+  display: inline-block;
+  vertical-align: bottom;
+  margin-right: 0;
+
+  &:not(:last-child) {
+    margin: {
+      right: 5px;
+      left: 18px;
+    }
+
+    &::after {
+      display: none;
+    }
+  }
+}

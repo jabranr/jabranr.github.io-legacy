@@ -1,0 +1,82 @@
+.site__masthead {
+  @extend .invert;
+}
+
+.site__masthead-title {
+  width: 133px;
+  height: 50px;
+  color: inherit;
+  font-size: 20px;
+  font-weight: normal;
+  display: inline-block;
+  text-transform: uppercase;
+  background: {
+    image: url(../images/apple-touch-icon-76x76.png);
+    size: 50px;
+    repeat: no-repeat;
+    position: left 0 top 50%;
+  }
+
+  margin: {
+    top: 24px;
+    bottom: 24px;
+  };
+
+  padding: {
+    top: 0;
+    left: 55px;
+  }
+
+  @media (min-width: $screen-xs) {
+    font-size: 24px;
+    width: 160px;
+    height: 60px;
+    background: {
+      image: url(../images/apple-touch-icon-120x120.png);
+      size: 60px;
+    }
+
+    padding: {
+      top: 5px;
+      left: 65px;
+    }
+  }
+}
+
+.site__masthead--right {
+  @extend .text-right;
+
+  .site__masthead-title {
+    background-position: left 100% top 50%;
+    padding: {
+      right: 85px;
+      left: 0;
+    }
+  }
+}
+
+.site__masthead-anchor {
+  color: inherit;
+  display: inline-block;
+  text-decoration: none;
+
+  &:hover,
+  &:active {
+    text-decoration: none;
+    color: inherit;
+  }
+}
+
+.site__masthead-nav {
+  display: inline-block;
+  margin: 24px 0 0 0;
+  padding: 0 0 18px;
+  float: right;
+  text-align: right;
+  list-style-type: none;
+
+  @media (min-width: $screen-xs) {
+    margin-top: 43px;
+    text-align: left;
+  }
+}

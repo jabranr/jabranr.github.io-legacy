@@ -1,0 +1,29 @@
+<div class="row latest_articles">
+  <div class="latest_articles-heading col-sm-12">
+    <h2>Articles</h2>
+  </div>
+
+  <div class="latest_articles-content col-sm-12">
+    {% for article in site.categories.articles limit:5 %}
+      {% if article.private != true %}
+        <article class="latest_articles-item">
+          <header class="latest_article-header">
+            <h3 class="latest_article-title">
+              <a class="latest_article-anchor" href="{{ article.url }}">{{ article.title }}</a>
+            </h3>
+          </header>
+          <p class="latest_article-excerpt">{{ article.excerpt | strip_html }}</p>
+          <footer class="latest_article-footer">
+            <em class="latest_article-publish-date">{{ article.date | date_to_long_string }}</em>
+            {% if article.author %}
+            <em class="latest_article-author">&bull; {{ article.author }}</em>
+            {% endif %}
+          </footer>
+        </article>
+      {% endif %}
+    {% endfor %}
+    <div class="latest_articles-more">
+      <a href="{{ '/archives/' | prepend: site-baseurl }}">More articles &raquo;</a>
+    </div>
+  </div>
+</div>

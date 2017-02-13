@@ -1,0 +1,9 @@
+.site__footer {
+  @extend .invert;
+  font-size: small;
+  margin-top: 24px;
+  padding: {
+    top: 24px;
+    bottom: 24px;
+  }
+}

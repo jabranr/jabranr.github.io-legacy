@@ -1,0 +1,56 @@
+
+.clients {
+  @extend .invert;
+  line-height: 2;
+  letter-spacing: -1px;
+  font-family: $font-family-monospace;
+  font-weight: 500;
+  padding: {
+    top: 24px;
+    bottom: 24px;
+  }
+
+  margin: {
+    top: 24px;
+    bottom: 36px;
+  }
+
+  @media (min-width: $screen-sm) {
+    font-size: 24px;
+  }
+
+  &__list {
+    text-align: left;
+    list-style-type: none;
+    padding: 0;
+
+    @media (min-width: $screen-sm) {
+      text-align: center;
+    }
+
+  }
+}
+
+.clients__client {
+  padding: 0;
+  width: 160px;
+  display: inline-block;
+  vertical-align: top;
+  white-space: pre;
+
+  @media (min-width: $screen-xs) {
+    width: 220px;
+    white-space: normal;
+  }
+
+  @media (min-width: $screen-sm) {
+    width: auto;
+
+    &:not(:first-child)::before {
+      content: '\2022';
+      display: inline-block;
+      margin-right: 12px;
+      color: $gray-light;
+    }
+  }
+}
