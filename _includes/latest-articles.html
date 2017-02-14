@@ -4,7 +4,7 @@
   </div>
 
   <div class="latest_articles-content col-sm-12">
-    {% for article in site.categories.articles limit:5 %}
+    {% for article in site.categories.articles limit:8 %}
       {% if article.private != true %}
         <article class="latest_articles-item">
           <header class="latest_article-header">

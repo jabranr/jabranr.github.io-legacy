@@ -1,8 +1,8 @@
-.site__masthead {
+.site_masthead {
   @extend .invert;
 }
 
-.site__masthead-title {
+.site_masthead-title {
   width: 133px;
   height: 50px;
   color: inherit;
@@ -43,10 +43,10 @@
   }
 }
 
-.site__masthead--right {
+.site_masthead--right {
   @extend .text-right;
 
-  .site__masthead-title {
+  .site_masthead-title {
     background-position: left 100% top 50%;
     padding: {
       right: 85px;
@@ -55,7 +55,7 @@
   }
 }
 
-.site__masthead-anchor {
+.site_masthead-anchor {
   color: inherit;
   display: inline-block;
   text-decoration: none;
@@ -64,19 +64,5 @@
   &:active {
     text-decoration: none;
     color: inherit;
-  }
-}
-
-.site__masthead-nav {
-  display: inline-block;
-  margin: 24px 0 0 0;
-  padding: 0 0 18px;
-  float: right;
-  text-align: right;
-  list-style-type: none;
-
-  @media (min-width: $screen-xs) {
-    margin-top: 43px;
-    text-align: left;
   }
 }

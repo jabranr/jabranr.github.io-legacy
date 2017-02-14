@@ -18,9 +18,12 @@ class: home
 <div class="home_content container">
   <div class="row">
     <div class="col-xs-12 col-md-5 col-md-offset-1">
+      {% include clients.html %}
+      <hr>
       {% include featured-projects.html %}
     </div>
     <div class="col-xs-12 col-md-5">
+      <hr class="visible-xs visible-sm">
       {% include latest-articles.html %}
     </div>
   </div>
