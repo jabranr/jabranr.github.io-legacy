@@ -1,16 +1,15 @@
 ---
 layout: project
-title: 'PHP library for Twitter API v1.1'
-date:   2013-10-09 08:00:00
+title: PHP library for Twitter API v1.1
+date: 2013-10-09 08:00:00
 categories: projects
-client: "Personal"
-excerpt: 'PHP wrapper to fetch Tweets from Twitter API. This project has been deprecated and no longer maintained.'
+excerpt: >
+  PHP wrapper to fetch Tweets from Twitter API. This project has been deprecated and no longer maintained.
 code: https://github.com/jabranr/twitter-api-v1.1
 private: false
-stage: deprecated
-version: 1.1.0
+thumbnail:
+featured:
 ---
-
 
 > This project is deprecated and no more maintained.
 

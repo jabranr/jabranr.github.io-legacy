@@ -1,33 +1,22 @@
-<header class="site__masthead {% if page.class == 'home' %}site__masthead--featured site__masthead--right site__masthead--speaker{% endif %}" title="Google Big Tent, Sendai, Japan">
+<header class="site_masthead" title="Google Big Tent, Sendai, Japan">
   <div class="container">
     <div class="row">
-      <div class="col-xs-12 site__masthead-title-container">
+      <div class="col-xs-12 site_masthead-title-container">
         {% if page.class == 'home' %}
-          <h1 class="site__masthead-title">{{ site.title }}</h1>
+          <h1 class="site_masthead-title">{{ site.title }}</h1>
         {% else %}
-          <a class="site__masthead-anchor" rel="home" href="/">
-            <h1 class="site__masthead-title">{{ site.title }}</h1>
+          <a class="site_masthead-anchor" rel="home" href="/">
+            <h1 class="site_masthead-title">{{ site.title }}</h1>
           </a>
-
-          <ul class="site__masthead-nav">
-            <li class="nav-item"><a href="{{ '/archives' | prepend: site.baseurl }}">Articles</a></li>
-            <li class="nav-item"><a href="{{ '/projects' | prepend: site.baseurl }}">Projects</a></li>
-            <li class="nav-item nav-item--social"><a class="icon icon--twitter" target="_blank" href="https://twitter.com/@{{ site.twitter.username }}">{% include icon-twitter.svg %}</a></li>
-            <li class="nav-item nav-item--social"><a class="icon icon--github" target="_blank" href="https://github.com/{{ site.github.username }}">{% include icon-github.svg %}</a></li>
-          </ul>
         {% endif %}
+
+          <ul class="site_nav">
+            <li class="site_nav-item"><a href="{{ '/archives' | prepend: site.baseurl }}">Articles</a></li>
+            <li class="site_nav-item"><a href="{{ '/projects' | prepend: site.baseurl }}">Projects</a></li>
+            <li class="site_nav-item site_nav-item--social"><a class="icon icon--twitter" target="_blank" href="https://twitter.com/@{{ site.twitter.username }}">{% include icon-twitter.svg %}</a></li>
+            <li class="site_nav-item site_nav-item--social"><a class="icon icon--github" target="_blank" href="https://github.com/{{ site.github.username }}">{% include icon-github.svg %}</a></li>
+          </ul>
       </div>
-
-      {% if page.class == 'home' %}
-        <div class="col-xs-12 site__masthead-subtitle-container">
-          <h2 class="site__masthead-subtitle">{{ site.profession }}</h2>
-      <!--
-
-          {% include hire-status.html %}
-      -->
-        </div>
-      {% endif %}
-
     </div>
   </div>
 </header>

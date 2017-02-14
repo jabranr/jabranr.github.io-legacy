@@ -3,56 +3,26 @@ layout: default
 class: home
 ---
 <div class="home__hero container">
-  <div class="row">
-    <div class="home__hero-about col-xs-12 col-sm-10 col-sm-offset-1 col-lg-8 col-lg-offset-2 text-center">
-        {% include intro-as-per-hire-status.html %}
-    </div>
-    <div class="col-xs-12 col-sm-4 col-sm-offset-2">
-      <p>Currently I am <strong>Front-End Web Developer</strong> at <strong><a href="http://ratedpeople.com" target="_blank">Rated People</a></strong> &ndash; a platform that connects homeowners and professional tradespeople in the UK. Nowadays I regularly work with:</p>
+  <div class="row home__hero-about">
+    <div class="col-xs-12 col-md-10 col-md-offset-1">
+      <p class="lead">I am {{ site.profession }} with a passion for progressive and usable web. Currently I am <strong>Front-End Web Developer</strong> at <strong><a href="http://ratedpeople.com" target="_blank">Rated People</a></strong> &ndash; a platform that connects homeowners and professional tradespeople in the UK. Nowadays I regularly work with:</p>
       {% include current-stack.html %}
-    </div>
-    <div class="col-xs-12 col-sm-4">
-      I offer services in web architecture design, development, deployment, maintenance and improvement of products within bound of best practices and standards &ndash; whether starting from scratch, improving an existing product or migrating a legacy project.
+      <p>I am also a digital <a href="https://google.com/mapmaker{{ site.google.mapmaker }}" target="_blank">cartographer, Advocate &amp; Regional Lead</a> for <a href="http://google.com/mapmaker" target="_blank">Google Map Maker</a> where I help create digital maps for everyone around the world. I regularly <a href="https://twitter.com/@{{ site.twitter.username }}" target="_blank">tweet</a>, share and contribute to <a href="https://github.com/{{ site.github.username }}" target="_blank">code</a>, and <a href="{{ '/articles' | prepend: site.baseurl }}">write</a> my thoughts out and occassionally speak at events.</p>
+      <hr>
     </div>
   </div>
 </div>
 
-{% include clients.html %}
-
-<div class="home__content container">
+<div class="home_content container">
   <div class="row">
-
-    {% include sidebar.html class="visible-xs" %}
-
-    <div class="col-xs-12 col-sm-8 home__articles">
-      <header class="home__articles-header">
-        <h2 class="home__articles-title">Articles</h2>
-      </header>
-
-      {% for article in site.categories.articles limit:5 %}
-        {% if article.private != true %}
-          <article class="home__article">
-            <header class="home__article-header">
-              <h3 class="home__article-title">
-                <a class="home__article-anchor" href="{{ article.url }}">{{ article.title }}</a>
-              </h3>
-            </header>
-            <p class="home__article-excerpt">{{ article.excerpt | strip_html }}</p>
-            <footer class="home__article-footer">
-              <em class="home__article-publish__date">{{ article.date | date_to_long_string }}</em>
-              {% if article.author %}
-              <em class="home__article-author">&bull; {{ article.author }}</em>
-              {% endif %}
-            </footer>
-          </article>
-        {% endif %}
-      {% endfor %}
-      <div class="home__articles-more">
-        <a href="{{ '/archives/' | prepend: site-baseurl }}">More articles &raquo;</a>
-      </div>
+    <div class="col-xs-12 col-md-5 col-md-offset-1">
+      {% include clients.html %}
+      <hr>
+      {% include featured-projects.html %}
     </div>
-
-    {% include sidebar.html class="hidden-xs" %}
-
+    <div class="col-xs-12 col-md-5">
+      <hr class="visible-xs visible-sm">
+      {% include latest-articles.html %}
+    </div>
   </div>
 </div>

@@ -1,14 +1,14 @@
 ---
 layout: project
-title: 'Instagram PHP Client'
-date:   2014-12-01 08:00:00
+title: Instagram PHP Client
+date: 2014-12-01 08:00:00
 categories: projects
-client: "Personal"
-excerpt: 'PHP client for Instagram API'
+excerpt: >
+  PHP client for Instagram API.
 code: https://github.com/jabranr/instagram-php-sdk
 private: false
-stage: stable
-version: 1.0.0
+thumbnail:
+featured: false
 ---
 
 A PHP client to use with Instagram API.

@@ -1,14 +1,14 @@
 ---
 layout: project
-title: 'Fetchwitter for WordPress'
-date:   2014-04-05 08:00:00
+title: Fetchwitter for WordPress
+date: 2014-04-05 08:00:00
 categories: projects
-client: "Personal"
-excerpt: 'WordPress plugin based on Fetchwitter PHP Library'
+excerpt: >
+  WordPress plugin based on Fetchwitter library.
 code: http://j.mp/fetchwitter-for-wordpress
-private: true
-stage: alpha
-version: 0.0.1
+private: false
+thumbnail: fetchwitter-wordpress.png
+featured: true
 ---
 
 WordPress plugin based on Fetchwitter PHP Library

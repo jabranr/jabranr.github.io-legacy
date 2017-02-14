@@ -1,0 +1,32 @@
+// Custom styling and overrides
+a {
+  color: darken($brand-orange, 10%);
+
+  &:hover,
+  &:active {
+    color: #c30;
+  }
+}
+
+b,
+strong,
+.lead {
+  font-weight: 500;
+  line-height: inherit;
+}
+
+blockquote {
+  color: $brand-golden;
+  background-color: $brand-pink;
+  margin-top: 10px;
+}
+
+pre {
+  background-color: $brand-code;
+  border: none;
+}
+
+.invert {
+  background-color: $text-color;
+  color: #ccc;
+}

@@ -1,14 +1,13 @@
 ---
 layout: project
-title: 'letter-spacing Custom Element'
-date:   2014-06-29 08:00:00
+title: letter-spacing Custom Element
+date: 2014-06-29 08:00:00
 categories: projects
-client: "Personal"
-excerpt: 'An inline custom element to provide letter-spacing CSS styling to its contents.'
+excerpt: >
+  An inline custom element to provide letter-spacing CSS styling to its contents.
 code: http://git.io/letter-spacing
 private: false
-stage: stable
-version: 0.0.6
+thumbnail: letter-spacing.png
 featured: true
 ---
 

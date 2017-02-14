@@ -1,14 +1,21 @@
-<div class="featured__projects">
-  {% for project in site.categories.projects %}
-    {% if project.featured == true %}
-      <div class="featured__project">
-        <header class="featured__project-header">
-          <h4 class="featured__project-title">
-            <a href="{{ project.code }}" target="_blank">{{ project.title }}</a>
-          </h4>
-        </header>
-        <div class="featured__project-excerpt"><p>{{ project.excerpt }}</p></div>
-      </div>
-    {% endif %}
-  {% endfor %}
-</div>
+{% assign countFeaturedProjects = site.categories.projects | size %}
+{% if countFeaturedProjects > 0 %}
+  <div class="row featured_projects">
+    <div class="featured_projects-heading col-sm-12">
+      <h2>Projects</h2>
+    </div>
+    <div class="featured_projects-content col-sm-12 clearfix">
+      {% for project in site.categories.projects %}
+        {% if project.featured == true %}
+          <div class="col-xs-6 col-lg-4 featured_projects-item">
+            <a href="{{ project.code }}" target="_blank"><img class="img-responsive featured_projects-thumbnail" src="{{ project.thumbnail | prepend: '/assets/images/projects/' | prepend: site.baseurl }}" alt="{{ project.title }}" /></a>
+            <!-- <p class="visible-xs featured_projects-excerpt">{{ project.excerpt }}</p> -->
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+    <div class="featured_projects-more col-sm-12 f">
+      <a target="_blank" href="{{ site.github.username | prepend: 'https://github.com/' }}">More projects on GitHub &raquo;</a>
+    </div>
+  </div>
+{% endif %}
