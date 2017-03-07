@@ -8,7 +8,7 @@ excerpt: Quick story telling all about migrating from Sublime Text to Visual Stu
 permalink:
 thumbnail:
 comment: true
-private: false
+private: true
 ---
 
 I am a Front-end Web Developer at [Rated People](https://ratedpeople.com) and my day-to-day job requires me to use tools that I am comfortable with and those serve the purpose. While Rated People does offer any required tools such as [PHPStorm](https://www.jetbrains.com/phpstorm/) licenses for Front-end teams &ndash; I decided to keep using [SublimeText](https://www.sublimetext.com/) after I joined because of my level of comfortability with it. 
