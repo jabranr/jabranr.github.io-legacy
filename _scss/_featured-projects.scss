@@ -7,6 +7,18 @@
   padding: 0 15px 0 0;
 }
 
+.featured_projects-thumbnail {
+  filter: grayscale(100%);
+  transition: filter 100ms ease-in-out;
+  transition: transform 300ms ease-in-out;
+
+  &:hover,
+  &:active {
+    filter: grayscale(0%);
+    transform: scale(1.1, 1.1);
+  }
+}
+
 .featured_projects-more {
   margin-top: 15px;
 }
