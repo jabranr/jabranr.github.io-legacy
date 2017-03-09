@@ -8,7 +8,7 @@ excerpt: Quick story telling all about migrating from Sublime Text to Visual Stu
 permalink:
 thumbnail:
 comment: true
-private: true
+private: false
 ---
 
 I am a Front-end Web Developer at [Rated People](https://ratedpeople.com) (RP) and my day-to-day job requires me to use tools that I am comfortable too work with and those that serve the purpose. This is why everyone in my team uses a different editor of their choice. The company offers all the support required for better workflow and tools regardlessly. After joining RP back in 2015 I was given a  [PHP/WebStorm](https://www.jetbrains.com/phpstorm/) license that I hardly used and instead kept on using [SublimeText](https://www.sublimetext.com/)  because of my comfortability with it. Nevertheless PHPStorm is a great IDE!
