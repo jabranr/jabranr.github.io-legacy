@@ -1,0 +1,33 @@
+{
+  "name": "jabranr.github.io",
+  "version": "1.0.0",
+  "description": "Uncompiled [Jekyll](http://jekyllrb.com) source code for [jabran.me](http://jabran.me).",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "bootstrap-sass": "^3.3.7",
+    "imagemin-cli": "^3.0.0",
+    "jquery": "^3.2.1",
+    "socialmedia": "^2.0.2"
+  },
+  "scripts": {
+    "postinstall": "cp -r node_modules/bootstrap-sass vendor/ && cp -r node_modules/jquery vendor/ && cp -r node_modules/socialmedia vendor/",
+    "optimize-images": "node_modules/.bin/imagemin assets/images/* --out-dir=assets/images && node_modules/.bin/imagemin assets/images/projects/* --out-dir=assets/images/projects"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jabranr/jabranr.github.io.git"
+  },
+  "keywords": [
+    "Jabran",
+    "Rafique",
+    "portfolio",
+    "website"
+  ],
+  "author": "Jabran Rafique <hello@jabran.me>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jabranr/jabranr.github.io/issues"
+  },
+  "homepage": "https://github.com/jabranr/jabranr.github.io#readme"
+}
