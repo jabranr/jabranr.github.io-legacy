@@ -11,7 +11,10 @@
   <!-- SEO -->
   {% include seo.html %}
 
-  <!-- Favicons etc. -->
+  <!-- Web app manifest -->
+  <link rel="manifest" href="{{ '/manifest.json' | prepend: site.baseurl }}">
+
+  <!-- Favicon, icons, meta tags -->
   <link rel="shortcut icon" href="{{ '/assets/images/favicon.ico' | prepend: site.baseurl }}">
   <link rel="apple-touch-icon" href="{{ '/assets/images/apple-touch-icon-60x60.png' | prepend: site.baseurl }}">
   <link rel="apple-touch-icon" sizes="76x76" href="{{ '/assets/images/apple-touch-icon-76x76.png' | prepend: site.baseurl }}">
@@ -24,10 +27,12 @@
   <meta name="msapplication-wide310x150logo" content="{{ '/assets/images/mstile-310x150.png' | preprend: site.baseurl }}">
   <meta name="apple-mobile-web-app-title" content="{{ site.title }}">
   <meta name="application-name" content="{{ site.title }}">
-  <meta name="msapplication-TileColor" content="#9dbf8e">
-  <meta name="cleartype" content="on">
+  <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="#9dbf8e">
+  <meta name="msapplication-TileColor" content="#9dbf8e">
   <meta name="theme-color" content="#9dbf8e">
+  <meta name="cleartype" content="on">
 
   <!-- Styling -->
   <link href="//fonts.googleapis.com/css?family=Montserrat:600|Roboto+Condensed|Roboto+Mono:400,500" rel="stylesheet">

@@ -1,0 +1,16 @@
+{
+  "name": "Jabran Rafique - Portfolio",
+  "short_name": "Jabran.me",
+  "description": "Personal website for Jabran Rafique.",
+  "start_url": "jabran.me",
+  "icons": [{
+    "src": "/assets/images/apple-touch-icon-152x152.png",
+    "sizes": "152x152"
+  },{
+    "src": "/assets/images/mstile-144x144.png",
+    "sizes": "144x144"
+  }],
+  "display": "fullscreen",
+  "theme_color": "#9dbf8e",
+  "background_color": "#9dbf8e"
+}
