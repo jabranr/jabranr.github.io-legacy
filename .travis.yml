@@ -8,7 +8,7 @@ script: npm install --production && bundle exec jekyll build
 
 branches:
   only:
-    - master
+    - fix-failures
 
 env:
   global:
