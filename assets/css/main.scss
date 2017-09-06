@@ -5,16 +5,16 @@
 @charset "utf-8";
 
 // Import partials
-@import "_variables";
-@import "_syntax-highlighting";
-@import "_bootstrap";
-@import "_custom-override";
-@import "_masthead";
-@import "_navigation";
-@import "_featured-projects";
-@import "_latest-articles";
-@import "_clients";
-@import "_footer";
+@import "variables";
+@import "syntax-highlighting";
+@import "bootstrap";
+@import "custom-override";
+@import "masthead";
+@import "navigation";
+@import "featured-projects";
+@import "latest-articles";
+@import "clients";
+@import "footer";
 
 
 .home {

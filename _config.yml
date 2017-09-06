@@ -21,10 +21,10 @@ markdown: kramdown
 exclude:
   - '.bowerrc'
   - '_site'
-  - 'bower.json'
   - 'node_modules'
   - 'bower_components'
   - 'README.md'
+  - 'vendor'
 
 gems: [jekyll-paginate]
 # gems: [jekyll-paginate, github-pages]

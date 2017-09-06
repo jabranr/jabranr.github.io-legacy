@@ -3,12 +3,13 @@
   "version": "1.0.0",
   "description": "Uncompiled [Jekyll](http://jekyllrb.com) source code for [jabran.me](http://jabran.me).",
   "main": "index.js",
-  "dependencies": {},
-  "devDependencies": {
+  "dependencies": {
     "bootstrap-sass": "^3.3.7",
-    "imagemin-cli": "^3.0.0",
     "jquery": "^3.2.1",
     "socialmedia": "^2.0.2"
+  },
+  "devDependencies": {
+    "imagemin-cli": "^3.0.0"
   },
   "scripts": {
     "postinstall": "cp -r node_modules/bootstrap-sass vendor/ && cp -r node_modules/jquery vendor/ && cp -r node_modules/socialmedia vendor/",
