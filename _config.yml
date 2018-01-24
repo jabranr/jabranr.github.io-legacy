@@ -1,14 +1,14 @@
 # Site settings
 title: Jabran Rafique
 email: hello@jabran.me
-profession: Consultant full stack web developer
+profession: Software Engineer (Web)
 tagline: I like to develop on ideas that are useful and beneficial to everyone.
 description: >
-  Currently I work at Rated People as Front-end web developer. Outside of my
-  professional life I am an Advocate and Regional Lead at Google Map Maker.
+  Currently I work at Rated People as Front-end Web Developer. I have also served as 
+  an Advocate and Regional Lead at Google Map Maker, and currently a Local Guide on Google Maps.
   I like to develop on ideas that are useful and beneficial to everyone.
 
-version: 3.0.1
+version: 3.0.2
 baseurl: ''
 url: http://jabran.me
 gravatar: 'https://s.gravatar.com/avatar/51253538589838978a4372bfda814c21?s=250'
@@ -65,20 +65,23 @@ hire: false
 
 current_stack:
   - LAMP
-  - Symfony2
+  - Symfony
   - JavaScript
   - jQuery
   - RequireJS
   - Node
+  - React
   - CSS
   - Sass
   - Gulp
   - Grunt
   - Bower
+  - Webpack
   - Composer
   - npm
-  - Docker
+  - docker
   - AWS
+  - Atlassian
 
 clients:
   - Pathé
