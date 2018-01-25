@@ -1,6 +1,5 @@
 language: ruby
 sudo: false
-dist: precise
 rvm:
   - 2.1
 install: bundle install
