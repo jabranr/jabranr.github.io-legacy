@@ -8,7 +8,7 @@ excerpt: Experience of attending two days of Smashing Conference, London 2018
 permalink:
 thumbnail:
 comment: true
-private: true
+private: false
 ---
 
 Right from the day it was announced, to the day we booked the tickets, it was an exciting wait to attend this fabulous event. I have been an avid reader of [Smashing Magazine](https://www.smashingmagazine.com) for almost a decade. It helped a lot throughout my web development learning process. In fact, it taught me more about web design and development than anything from a formal education, if I am being honest. There are of course other online resources that stood shoulder-to-shoulder to Smashing such as A List Apart and more. The Magazine's website itself has been a metaphor of all the good practices it preaches.
