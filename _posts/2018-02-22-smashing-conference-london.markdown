@@ -3,7 +3,7 @@ layout: post
 title: Smashing Conference London 2018
 date: 2018-02-22 07:00:00
 categories: articles
-tags: [Event, Conference, Smashing, London, Web Development, Web Performance, #perfmatters]
+tags: [Event, Conference, Smashing, London, Web Development, Web Performance, '#perfmatters']
 excerpt: Experience of attending two days of Smashing Conference, London 2018
 permalink:
 thumbnail:
