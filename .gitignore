@@ -5,24 +5,21 @@ _site
 Thumbs.db
 node_modules
 
-# ignore all vendors
-vendor/*/*
-vendor/jquery/
+vendors/*/*
 
-# filter out required
-!vendor/*/dist/
-vendor/*/dist/*.js
-vendor/*/dist/*.map
-!vendor/*/dist/*.min.js
+!vendors/jquery
+!vendors/socialmedia
+!vendors/bootstrap-sass
 
-!vendor/bootstrap-sass/
-vendor/bootstrap-sass/*
+vendors/jquery/*
+vendors/socialmedia/*
+vendors/bootstrap-sass/*
 
-!vendor/bootstrap-sass/assets/
-vendor/bootstrap-sass/assets/*
+!vendors/jquery/dist
+!vendors/socialmedia/dist
+!vendors/bootstrap-sass/assets
 
-!vendor/bootstrap-sass/assets/stylesheets/
-vendor/bootstrap-sass/assets/stylesheets/*
-
-!vendor/bootstrap-sass/assets/stylesheets/bootstrap/
-#vendor/bootstrap-sass/assets/stylesheets/bootstrap/*
+vendors/*/dist/*
+vendors/*/dist/*.js
+vendors/*/dist/*.map
+!vendors/*/dist/*.min.js

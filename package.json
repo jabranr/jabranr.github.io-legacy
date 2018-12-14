@@ -12,7 +12,11 @@
     "imagemin-cli": "^3.0.0"
   },
   "scripts": {
-    "optimize-images": "node_modules/.bin/imagemin assets/images/* --out-dir=assets/images && node_modules/.bin/imagemin assets/images/projects/* --out-dir=assets/images/projects"
+    "postinstall": "mkdir -p vendors && npm run install-jquery && npm run install-socialmedia && npm run install-bootstrap",
+    "install-socialmedia": "cp -r node_modules/socialmedia vendors/socialmedia/",
+    "install-jquery": "cp -r node_modules/jquery vendors/jquery/",
+    "install-bootstrap": "cp -r node_modules/bootstrap-sass vendors/bootstrap-sass/",
+    "optimize-images": "imagemin assets/images/* --out-dir=assets/images && imagemin assets/images/projects/* --out-dir=assets/images/projects"
   },
   "repository": {
     "type": "git",
