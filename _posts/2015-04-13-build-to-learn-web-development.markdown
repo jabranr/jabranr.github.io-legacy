@@ -1,10 +1,10 @@
 ---
 layout: post
-title: 'Build to Learn – socialmedia.js – Case Study'
+title: "Build to Learn – socialmedia.js – Case Study"
 date: 2015-04-13 08:00:00
 categories: articles
 tags: [social media, Facebook, Twitter, Google+, Pinterest, API, SDKs]
-excerpt: 'The journey of learning web development by building some library, framework or merely a wrapper. Here is quick summary from building and maintaining of socialmedia.js and learning through this process.'
+excerpt: "The journey of learning web development by building some library, framework or merely a wrapper. Here is quick summary from building and maintaining of socialmedia.js and learning through this process."
 permalink:
 thumbnail: socialmedia-js.png
 comment: true
@@ -27,17 +27,19 @@ So how actually Socialmedia can benefit a project? I will give a brief introduct
 
 At the time of writing, Socialmedia [supports](https://github.com/jabranr/socialmedia/wiki/API-Reference) following four social platforms:
 
-+ Facebook
-+ Twitter
-+ Google+
-+ Pinterest
+- Facebook
+- Twitter
+- Google+
+- Pinterest
 
 The idea is to write minimum code to setup an SDK – and wherever possible – to provide an API that has less options to configure and is more human readable. Let's start with some comparison between native way of consuming SDKs and with Socialmedia to see the potential benefits.
 
 ## Facebook SDK
+
 In order to use the Facebook SDKs into your web app, you will normally need following chunk of code from [Facebook developers docs](https://developers.facebook.com/docs/javascript/quickstart/v2.3).
 
 {% highlight html %}
+
 <script>
   window.fbAsyncInit = function() {
     FB.init({
@@ -55,17 +57,20 @@ In order to use the Facebook SDKs into your web app, you will normally need foll
      fjs.parentNode.insertBefore(js, fjs);
    }(document, 'script', 'facebook-jssdk'));
 </script>
+
 {% endhighlight %}
 
 Here is how it is done with Socialmedia.
 
 {% highlight html %}
+
 <script src="path/to/socialmedia.min.js" type="text/javascript"></script>
 <script>
 	var facebook = new Socialmedia.Facebook({
 		appid: 'your-app-id'
 	});
 </script>
+
 {% endhighlight %}
 
 At this stage – once all setup – web app will not only have all native objects and methods of SDK i.e. FB object but also additional easy-to-use helper methods built around some of most popular native methods. Here are some methods ([compelete API reference](https://github.com/jabranr/socialmedia/wiki/Facebook)) of the additional API that Socialmedia exposes in this case:
@@ -81,10 +86,12 @@ facebook.Feed(...)
 {% endhighlight %}
 
 ### Examples:
+
 This website already uses Socialmedia therefore I can just go ahead and setup some live examples right here. Here are two examples to demonstrate the convenience of Socialmedia:
 
 ##### Example 1:
-+ Following button lets you invite your Facebook friends to read this article&mdash;provided your are already logged into Facebook otherwise it will ask you to login first.
+
+- Following button lets you invite your Facebook friends to read this article&mdash;provided your are already logged into Facebook otherwise it will ask you to login first.
 
 <button class="btn btn-sm btn-primary" type="button" id="inviteFriends">Invite friends to read article</button>
 
@@ -104,9 +111,12 @@ The code used for this example is as following:
 		}, false);
 	}
 </script>
+
 {% endhighlight %}
+
 ##### Example 2:
-+ Following button will get your Facebook basic information and display underneath&mdash;provided you are logged into Facebook already and given permissions (upon request) otherwise it will ask you to login first and to allow this app to get data from Facebook on your behalf.
+
+- Following button will get your Facebook basic information and display underneath&mdash;provided you are logged into Facebook already and given permissions (upon request) otherwise it will ask you to login first and to allow this app to get data from Facebook on your behalf.
 
 <button class="btn btn-sm btn-primary" type="button" id="getInfo">Get basic info from Facebook</button>
 
@@ -147,8 +157,10 @@ The code used for this example is as following:
 		}
 	}
 </script>
+
 {% endhighlight %}
-<script src="{{ '/vendor/socialmedia/dist/socialmedia.min.js' | prepend: site.baseurl }}">
+
+<script src="{{ '/vendors/socialmedia/dist/socialmedia.min.js' | prepend: site.baseurl }}">
 <script type="text/javascript">
 	window.jabranr = window.jabranr || {};
 
@@ -195,9 +207,11 @@ The code used for this example is as following:
 Socialmedia works similarly for other supported social media platforms too. Here is quick overview through all these.
 
 ## Twitter SDK
+
 For Twitter, it would be as following and few of the API methods ([complete API reference](https://github.com/jabranr/socialmedia/wiki/Twitter)):
 
 {% highlight html %}
+
 <script src="path/to/socialmedia.min.js" type="text/javascript"></script>
 <script>
 	var twitter = new Socialmedia.Twitter();
@@ -210,9 +224,11 @@ twitter.Mention()
 {% endhighlight %}
 
 ## Google+ SDK
+
 For Google+, it would be as following and few of the API methods ([complete API reference](https://github.com/jabranr/socialmedia/wiki/Google-Plus)):
 
 {% highlight html %}
+
 <script src="path/to/socialmedia.min.js" type="text/javascript"></script>
 <script>
 	var gplus = new Socialmedia.GooglePlus();
@@ -223,9 +239,11 @@ gplus.Share()
 {% endhighlight %}
 
 ## Pinterest SDK
+
 For Pinterest, it would be as following and few of the API methods ([complete API reference](https://github.com/jabranr/socialmedia/wiki/Pinterest)):
 
 {% highlight html %}
+
 <script src="path/to/socialmedia.min.js" type="text/javascript"></script>
 <script>
 	var pinterest = new Socialmedia.Pinterest();
