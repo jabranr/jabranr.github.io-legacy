@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Building an information portal
+title: Building an information platform
 date: 2019-01-25 01:00:00
 categories: articles
 tags: [pakistan, information, services, platform, portal]
@@ -10,8 +10,6 @@ thumbnail:
 comment: true
 private: false
 ---
-
-# Building an information platform
 
 ## Background
 
