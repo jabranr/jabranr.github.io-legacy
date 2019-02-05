@@ -11,51 +11,47 @@ private: false
 
 GatsbyJS is a great tool to create static pages. The best part is the integration of different modern technologies together e.g. NodeJS, ReactJS and GraphQL. A combination of those in GatsbyJS gives you set of powerful tools and commands that sets out a world of unlimited opportunities.
 
-I came across this requirement of integrating performance audits on a GatsbyJS project as part of the CD/CI pipelines. [Lighthouse](https://developers.google.com/web/tools/lighthouse/) is without a doubt the best tool out there for such purpose. 
+I came across this requirement of integrating performance audits on a GatsbyJS project as part of the Continuous Development(CD) and Continuous Integration(CI) pipelines. [Lighthouse](https://developers.google.com/web/tools/lighthouse/) is without a doubt the best tool out there for such purpose. 
 
-Audits are meant to be performed on a production build to reflect more accurate results. Therefore in order to run an audit, I must have a production build and being served from a sever. 
+Audits are meant to be performed on a production build to reflect more accurate results. Therefore in order to run an audit we must have a production build and being served from a server. GatsbyJS provides options to create a production build and serve it from a local server. These commands are `gatsby build` and `gatsby serve` respectively. 
 
-GatsbyJS provides options to create a production build and serve it from a local server. These commands are `gatsby build` and `gatsby serve` respectively. 
+Normally I would have these as a combined command inside `npm scripts` in `package.json` i.e.
 
-Normally I would have as a combined command of `npm scripts` in `package.json` i.e.
-
-```
+{% highlight json %}
 ...
 
 "scripts": {
   "develop": "gatsby develop",
   "build": "gatsby build",
-  "preview:start": "gatsby build && gatsby serve"
+  "preview": "gatsby build && gatsby serve"
 }
 
 ...
-```
+{% endhighlight %}
 
-Now we can run `npm run preview:start` in terminal and it will serve the production site at `http://localhost:9000`. Then we can perform an audit using Chrome's DevTools `Audit` tab.
+Now we can run `npm run preview` in terminal and it will serve the production site at `http://localhost:9000`. Now we can perform an audit using Chrome browser DevTools `Audit` tab which will produce a nice report for us.
 
 > There is an excellent guide on this at [GatsbyJS docs](https://www.gatsbyjs.org/docs/audit-with-lighthouse/).
 
 However, in order to have this run in a CD/CI pipeline, we need command-line interface of `lighthouse` that we can install as a node module.
 
-```
+{% highlight bash %}
 npm install -D lighthouse
-```
+{% endhighlight %}
 
 or 
 
-```
+{% highlight bash %}
 yarn add -D lighthouse
-```
+{% endhighlight %}`
 
-Then we can modify our `npm scripts` in `package.json` to add following:
+Then we can modify our `npm scripts` in `package.json` to include following:
 
-```
+{% highlight json %}
 ...
 
 "scripts": {
-  "develop": "gatsby develop",
-  "build": "gatsby build",
-  "preview": "gatsby build && gatsby serve",
+  ...
 
   "preview:start": "(gatsby build && (gatsby serve &))",
   "preview:stop": "lsof -i tcp:9000 | awk '{print $2}' | grep \"[0-9]\" | xargs kill -9",
@@ -65,11 +61,11 @@ Then we can modify our `npm scripts` in `package.json` to add following:
 }
 
 ...
-```
+{% endhighlight %}
 
 It may already be self-explanatory but here is quick run through:
 
-- `lighthouse:audit` runs the `lighthouse` on given URL which in this case is `http://localhost:9000` since GatsbyJS serves the site on port 9000.
+- `audit` runs the `lighthouse` on given URL which in this case is `http://localhost:9000` since GatsbyJS serves the site on port 9000.
 - `preview:start` is same as `preview` command but with some difference. It makes sure that GatsbyJS serves the site in background and does not block further commands to run.
 - `preview:stop` basically kills the GatsbyJS service running in the background assuming it is running on port 9000
 - `perf:audit` runs the combination of above commands to make a build, serve it in the background, run the `lighthouse` audit, opens the report in browser and kills the background service
@@ -85,4 +81,3 @@ Since `lighthouse` can generate report in different formats including JSON, it c
 ## References:
 - [Lighthouse documentation](https://developers.google.com/web/tools/lighthouse/)
 - [GatsbyJS documentation](https://www.gatsbyjs.com)
-
