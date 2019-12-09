@@ -1,0 +1,26 @@
+.intro,
+.subintro {
+  font-size: 1.5rem;
+  color: #666;
+  font-weight: 300;
+
+  a {
+    color: #666;
+
+    &:hover,
+    &:active {
+      color: #c30;
+    }
+  }
+}
+
+.subintro {
+  font-size: 1.25rem;
+}
+
+.stack {
+  display: block;
+  margin-top: 0.85rem;
+  font-size: 1rem;
+  color: #888;
+}

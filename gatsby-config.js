@@ -1,13 +1,12 @@
 const metadata = {
-  title: `Jabran Rafique`,
+  title: `Jabran Rafique - Software Engineer (Web)`,
   author: `Jabran Rafique`,
   description: `I like to develop on ideas that are useful and beneficial to everyone`,
-  siteUrl: `https://localpk.github.io/blog`,
+  siteUrl: `https://www.jabran.me`,
   avatar: `content/assets/images/avatar.png`
 };
 
 module.exports = {
-  pathPrefix: `/blog`,
   siteMetadata: {
     ...metadata,
     social: {
@@ -17,6 +16,7 @@ module.exports = {
     }
   },
   plugins: [
+    `gatsby-plugin-sass`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {

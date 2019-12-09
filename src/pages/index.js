@@ -1,40 +1,42 @@
 import React from 'react';
 import { Link, graphql } from 'gatsby';
 
-import Bio from '../components/Bio';
-import Layout from '../components/Layout';
+import Bio from '../components/bio';
+import Layout from '../components/layout';
 import SEO from '../components/seo';
-import { rhythm } from '../utils/typography';
+
+import style from './index.module.scss';
 
 const HomePage = ({ data, location }) => {
-  const siteTitle = data.site.siteMetadata.title;
   const posts = data.allMarkdownRemark.edges;
 
   return (
-    <Layout location={location} title={siteTitle}>
+    <Layout location={location}>
       <SEO
-        title="All posts"
-        keywords={[`blog`, `gatsby`, `javascript`, `react`]}
+        title="Jabran Rafique"
+        keywords={[`blog`, `jabran`, `rafique`, `javascript`, `react`]}
       />
       <Bio />
-      {posts.map(({ node }) => {
-        const title = node.frontmatter.title || node.fields.slug;
-        return (
-          <div key={node.fields.slug}>
-            <h3
-              style={{
-                marginBottom: rhythm(1 / 4)
-              }}
-            >
-              <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
-                {title}
-              </Link>
-            </h3>
-            <small>{node.frontmatter.date}</small>
-            <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
-          </div>
-        );
-      })}
+      <h4 className={style.h4}>Projects</h4>
+      <p>Here are some of the projects I worked on.</p>
+
+      <h4 className={style.h4}>Articles</h4>
+      {posts.map(({ node }) => (
+        <Link
+          className={style.card}
+          to={node.fields.slug}
+          key={node.fields.slug}
+        >
+          <div className={style.datetime}>{node.frontmatter.date}</div>
+          <h3 className={style.h3}>
+            {node.frontmatter.title || node.fields.slug}
+          </h3>
+          <p
+            className={style.excerpt}
+            dangerouslySetInnerHTML={{ __html: node.excerpt }}
+          />
+        </Link>
+      ))}
     </Layout>
   );
 };

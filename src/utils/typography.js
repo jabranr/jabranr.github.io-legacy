@@ -3,7 +3,7 @@ import Typography from 'typography';
 const typography = new Typography({
   scaleRatio: 2,
   baseLineHeight: 1.5,
-  bodyColor: '#444',
+  bodyColor: '#333',
   headerFontFamily: ['Merriweather', 'georgia', 'serif'],
   bodyFontFamily: ['Roboto', 'Helvetica', 'Arial', 'sans-serif'],
   googleFonts: [
@@ -13,15 +13,18 @@ const typography = new Typography({
     },
     {
       name: 'Roboto',
-      styles: ['400', '400i', '500', '500i']
+      styles: ['300', '400', '400i', '500', '500i']
     }
   ],
-  overrideThemeStyles: ({ adjustFontSizeTo, rhythm }, options, styles) => ({
-    blockquote: {
-      backgroundColor: '#eee',
-      padding: '10px',
-      borderLeft: '5px solid #999',
-      margin: 0
+  overrideStyles: () => ({
+    ':root': {
+      '--jr-orange': '#e2734e',
+      '--jr-red': '#c30',
+      '--jr-white': '#fafafa',
+      '--jr-black': '#333',
+      '--jr-gray': '#666',
+      '--jr-light': '#999',
+      '--jr-lighter': '#eee'
     }
   })
 });
