@@ -3,7 +3,10 @@ layout: post
 title: 'Using Special Integers with Bitwise Operators for PHP RBAC'
 date: 2013-10-11 07:00:00
 categories: articles
-tags: 'Binary, Bitwise Operators, CMS, GitHub, PHP, RBAC, Role-Based Access Control'
+tags:
+  [
+    'Binary, Bitwise Operators, CMS, GitHub, PHP, RBAC, Role-Based Access Control',
+  ]
 excerpt: 'Ever wondered how different type of roles and permissions in a system are handled? Well, using bitwise operators can be one of the methods. But this article is more about getting a list of required integers that would make Bitwise operator work properly.'
 permalink: using-special-integers-with-bitwise-operators-for-php-rbac
 comment: true
@@ -17,11 +20,13 @@ The very first method that came to my mind to build this system was from a book 
 Since I had more than 12 types of permissions to assign to various Roles, I thought it would be useful to have a list of special integers in hand. So I made following small PHP function and ran it through browser to get the list of special integers.
 
 {% highlight php %}
-  /**
-   * Converts the integer to binary and outputs list of integers that are power of 2
-   * @param: Integer
-   * @return: String
-   */
+/\*\*
+
+- Converts the integer to binary and outputs list of integers that are power of 2
+- @param: Integer
+- @return: String
+  \*/
+
 
     function get_special_binary( $decimal ) {
       $binaries = '';
@@ -32,6 +37,7 @@ Since I had more than 12 types of permissions to assign to various Roles, I thou
       }
       return $binaries;
     }
+
 {% endhighlight %}
 
 I thought it might also be helpful for anyone else so I have put it on [Github Gist](https://gist.github.com/jabranr/7406258). Please feel free to use it to do wonders.
@@ -41,15 +47,15 @@ I thought it might also be helpful for anyone else so I have put it on [Github G
 Special integers are special in way because they are power of 2 i.e. `2, 4, 8, 16` and so on. These special integers return amazing outcome due to their Binary structure when they are used with Bitwise operators. By analysing the following list of integers you can see that these integers (1, 2, 4, 8, 16) have only one digit “1” in their structure when converted to Binary.
 
 {% highlight text %}
- 1 – 0000 0001
- 2 – 0000 0010
- 3 – 0000 0011
- 4 – 0000 0100
- 5 – 0000 0101
- 6 – 0000 0110
- 7 – 0000 0111
- 8 – 0000 1000
- 9 – 0000 1001
+1 – 0000 0001
+2 – 0000 0010
+3 – 0000 0011
+4 – 0000 0100
+5 – 0000 0101
+6 – 0000 0110
+7 – 0000 0111
+8 – 0000 1000
+9 – 0000 1001
 10 – 0000 1010
 11 – 0000 1011
 12 – 0000 1100
