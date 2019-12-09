@@ -17,9 +17,6 @@ const HomePage = ({ data, location }) => {
         keywords={[`blog`, `jabran`, `rafique`, `javascript`, `react`]}
       />
       <Bio />
-      <h4 className={style.h4}>Projects</h4>
-      <p>Here are some of the projects I worked on.</p>
-
       <h4 className={style.h4}>Articles</h4>
       {posts.map(({ node }) => (
         <Link

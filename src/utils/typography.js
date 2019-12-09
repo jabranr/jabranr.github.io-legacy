@@ -15,18 +15,7 @@ const typography = new Typography({
       name: 'Roboto',
       styles: ['300', '400', '400i', '500', '500i']
     }
-  ],
-  overrideStyles: () => ({
-    ':root': {
-      '--jr-orange': '#e2734e',
-      '--jr-red': '#c30',
-      '--jr-white': '#fafafa',
-      '--jr-black': '#333',
-      '--jr-gray': '#666',
-      '--jr-light': '#999',
-      '--jr-lighter': '#eee'
-    }
-  })
+  ]
 });
 
 // Hot reload typography in development.
