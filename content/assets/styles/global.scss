@@ -47,9 +47,18 @@ h3 {
 
 blockquote {
   background-color: #eee;
-  padding: 10px;
-  border-left: 5px solid #999;
-  margin: 0;
+  padding: 1rem;
+  border-left: 10px solid #ddd;
+  margin: 0 0 2rem 0;
+  font-style: oblique;
+}
+
+code {
+  color: #666;
+  font-size: 1rem;
+  background-color: #eee;
+  padding: 2px 4px;
+  border-radius: 3px;
 }
 
 a:link {
