@@ -1,0 +1,29 @@
+.timestamp {
+  color: #999;
+  font-weight: 300;
+}
+
+.content {
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.hr {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.nav {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  list-style: none;
+  margin: 0;
+  grid-gap: 15px;
+  font-size: 1.125rem;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+}
+
+.next {
+  text-align: right;
+}

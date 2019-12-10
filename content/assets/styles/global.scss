@@ -24,12 +24,20 @@ h3,
 
 .h1,
 h1 {
-  font-size: 2.8125rem;
+  font-size: 2rem;
+
+  @media (min-width: 600px) {
+    font-size: 2.8125rem;
+  }
 }
 
 .h2,
 h2 {
-  font-size: 2.1875rem;
+  font-size: 1.625rem;
+
+  @media (min-width: 600px) {
+    font-size: 2.1875rem;
+  }
 }
 
 .h3,
@@ -44,7 +52,11 @@ blockquote {
   margin: 0;
 }
 
+a:link {
+  color: #1e90ff; /* dodgerblue */
+}
+
 a:hover,
 a:active {
-  color: #c30;
+  color: #f65;
 }
