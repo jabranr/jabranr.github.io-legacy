@@ -50,7 +50,7 @@ const Bio = () => {
         </a>
         , share and contribute to{' '}
         <a
-          href="https://www.twitter.com/jabranr"
+          href="https://www.github.com/jabranr"
           target="_blank"
           rel="noopener noreferer"
         >

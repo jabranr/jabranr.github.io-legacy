@@ -30,9 +30,17 @@
   }
 }
 
-.hr {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+.code {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  font-size: 1.125rem;
+
+  svg {
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+    margin-top: -3px;
+  }
 }
 
 .nav {

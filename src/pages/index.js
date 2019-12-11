@@ -18,10 +18,15 @@ const HomePage = ({ data, location }) => {
         keywords={[`blog`, `jabran`, `rafique`, `javascript`, `react`]}
       />
       <Bio />
+      <hr className={style.hr} />
       <h4 className={style.h4}>Projects</h4>
       <div className={style.projects}>
         {projects.map(({ node }) => (
-          <Link to={node.fields.slug} className={style.project}>
+          <Link
+            key={node.fields.slug}
+            to={node.fields.slug}
+            className={style.project}
+          >
             <img
               src={node.frontmatter.thumbnail.childImageSharp.resize.src}
               className={style.thumbnail}
@@ -30,34 +35,10 @@ const HomePage = ({ data, location }) => {
           </Link>
         ))}
       </div>
-      {/* {projects.map(({ node }) => (
-        <Link
-          className={style.card}
-          to={node.fields.slug}
-          key={node.fields.slug}
-        >
-          <div className={style.timestamp}>{node.frontmatter.date}</div>
-          {node.frontmatter.thumbnail && (
-            <img
-              src={node.frontmatter.thumbnail.childImageSharp.resize.src}
-              className={style.thumbnail}
-              alt=""
-            />
-          )}
-          <div>
-            <h3 className={style.h3}>
-              {node.frontmatter.title || node.fields.slug}
-            </h3>
-            <p
-              className={style.excerpt}
-              dangerouslySetInnerHTML={{ __html: node.excerpt }}
-            />
-          </div>
-        </Link>
-      ))} */}
       <p className={style.more}>
         <Link to="/projects">More projects &raquo;</Link>
       </p>
+      <hr className={style.hr} />
       <h4 className={style.h4}>Articles</h4>
       {articles.map(({ node }) => (
         <Link
@@ -65,7 +46,6 @@ const HomePage = ({ data, location }) => {
           to={node.fields.slug}
           key={node.fields.slug}
         >
-          <div className={style.timestamp}>{node.frontmatter.date}</div>
           {node.frontmatter.thumbnail && (
             <img
               src={node.frontmatter.thumbnail.childImageSharp.resize.src}
@@ -74,6 +54,7 @@ const HomePage = ({ data, location }) => {
             />
           )}
           <div>
+            <div className={style.timestamp}>{node.frontmatter.date}</div>
             <h3 className={style.h3}>
               {node.frontmatter.title || node.fields.slug}
             </h3>

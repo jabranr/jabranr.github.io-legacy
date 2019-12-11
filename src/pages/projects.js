@@ -12,8 +12,16 @@ const ProjectPage = ({ data, location }) => {
   return (
     <Layout location={location}>
       <SEO
-        title="Articles"
-        keywords={[`blog`, `jabran`, `rafique`, `javascript`, `react`]}
+        title="Projects"
+        keywords={[
+          `projects`,
+          `code`,
+          `github`,
+          `jabran`,
+          `rafique`,
+          `javascript`,
+          `react`
+        ]}
       />
       <h2 className={style.h2}>Projects</h2>
       <p>This page has information about various projects of Jabran Rafique.</p>
@@ -75,6 +83,16 @@ const ProjectPage = ({ data, location }) => {
           </div>
         </Link>
       ))}
+      <hr className={style.hr} />
+      <p>
+        <a
+          href="https://www.github.com/jabranr"
+          target="_blank"
+          rel="noopener noreferer"
+        >
+          More projects at GitHub &raquo;
+        </a>
+      </p>
     </Layout>
   );
 };

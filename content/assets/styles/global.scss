@@ -86,6 +86,14 @@ strong {
   font-weight: 500;
 }
 
+hr {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  border-bottom: 3px double #f69;
+  background-color: transparent;
+  height: 1px;
+}
+
 a:link {
   color: #1e90ff; /* dodgerblue */
 }

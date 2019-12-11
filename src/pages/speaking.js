@@ -6,47 +6,54 @@ import SEO from '../components/seo';
 
 import style from './index.module.scss';
 
-const ArticlesPage = ({ data, location }) => {
+const SpeakingPage = ({ data, location }) => {
   const posts = data.allMarkdownRemark.edges;
 
   return (
     <Layout location={location}>
       <SEO
-        title="Articles"
-        keywords={[`blog`, `jabran`, `rafique`, `javascript`, `react`]}
+        title="Speaking"
+        keywords={[
+          `speaking`,
+          `jabran`,
+          `rafique`,
+          `javascript`,
+          `react`,
+          `google`,
+          `maps`,
+          `map maker`,
+          `cartography`,
+          `tech events`,
+          `disaster relief`
+        ]}
       />
-      <h2 className={style.h2}>Articles</h2>
-      <p>An archive collection of all articles written by Jabran Rafique.</p>
-      {posts.map(({ node }) => (
-        <Link
-          className={style.card}
-          to={node.fields.slug}
-          key={node.fields.slug}
+      <h2 className={style.h2}>Speaking</h2>
+      <p>
+        I have spoken at various events in past. Mostly these talks were related
+        to my work with{' '}
+        <a
+          href="https://mapmaker.google.com"
+          target="_blank"
+          rel="noopener noreferer"
         >
-          {node.frontmatter.thumbnail && (
-            <img
-              src={node.frontmatter.thumbnail.childImageSharp.resize.src}
-              className={style.thumbnail}
-              alt=""
-            />
-          )}
-          <div>
-            <div className={style.timestamp}>{node.frontmatter.date}</div>
-            <h3 className={style.h3}>
-              {node.frontmatter.title || node.fields.slug}
-            </h3>
-            <p
-              className={style.excerpt}
-              dangerouslySetInnerHTML={{ __html: node.excerpt }}
-            />
-          </div>
-        </Link>
-      ))}
+          Google Map Maker
+        </a>
+        . However I am now more focused on giving talks and workshops on tech
+        related topics.
+      </p>
+
+      <ul>
+        <li>Google Africa Mappers Conference Kenya 2010</li>
+        <li>TEDx Lahore 2010</li>
+        <li>Google Map Maker Regional Conference Dubai 2011</li>
+        <li>Google Geo User Summit Singapore 2011</li>
+        <li>Google Big Tent Sendai 2011</li>
+      </ul>
     </Layout>
   );
 };
 
-export default ArticlesPage;
+export default SpeakingPage;
 
 export const pageQuery = graphql`
   query {
