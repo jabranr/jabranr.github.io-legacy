@@ -60,7 +60,7 @@ The contact section has feeds from Instagram and Twitter channels.
 
 [Instagram API](http://instagram.com/developer/) now provides a very convenient way to grab a user feed with [a new addition](http://instagram.com/developer/endpoints/users/#get_users_media_recent_with_client_id) to its `/users` endpoint. I used `jQuery.getJSON` method as exampled below to grab the feed. The `callback=?` parameter here is to get the response in JSONP type to bypass the cross-origin restrictions in a `XMLHttpRequest`.
 
-{% highlight javascript %}
+```javascript
   var url = "https://api.instagram.com/v1/users/396527045/media/recent/";
   url += "?client_id=012345689";
   url += "&count=10";
@@ -69,7 +69,7 @@ The contact section has feeds from Instagram and Twitter channels.
   $.getJSON(url, function(data) {
   // Setup Instagram feed here.
   });
-{% endhighlight %}
+```
 
 #### Twitter Feed:
 

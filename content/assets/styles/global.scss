@@ -53,12 +53,37 @@ blockquote {
   font-style: oblique;
 }
 
-code {
-  color: #666;
-  font-size: 1rem;
-  background-color: #eee;
-  padding: 2px 4px;
-  border-radius: 3px;
+.gatsby-highlight {
+  background-color: #f1f1f1;
+  border-radius: 0.3rem;
+  font-size: 0.875rem;
+
+  pre[class*='language-'],
+  code[class*='language-'] {
+    background-color: transparent;
+    color: #333;
+    text-shadow: none;
+    margin: 1rem 0 2rem;
+  }
+
+  .token.operator,
+  .token.entity,
+  .token.url,
+  .language-css .token.string,
+  .style .token.string {
+    background: none;
+  }
+}
+
+:not(pre) > code[class*='language-'] {
+  font-size: 0.875rem;
+  background-color: #f1f1f1;
+  color: #555;
+  padding: 0.1rem 0.3rem !important;
+}
+
+strong {
+  font-weight: 500;
 }
 
 a:link {

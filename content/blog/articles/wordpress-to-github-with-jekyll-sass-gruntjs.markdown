@@ -30,9 +30,9 @@ In this website renovation, for reset, grids layout and other custom styling req
 
 Bower and [TWBS Sass](https://github.com/twbs/bootstrap-sass) came to rescue. By using Bower, I installed the TWBS Sass into project directory.
 
-{% highlight bash %}
+```bash
   $ bower install bootstrap-sass-official
-{% endhighlight %}
+```
 
 Then imported the `/bootstrap.scss` file into website’s custom Sass file. Now not only I can simply comment out the unwanted parts of TWBS to exclude the code from final CSS file but I can also setup custom values for TWBS Sass variables. Additionally, I can even make use of TWBS Sass `mixin` too.
 

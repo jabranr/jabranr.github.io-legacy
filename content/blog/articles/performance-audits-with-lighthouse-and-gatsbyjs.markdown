@@ -11,13 +11,13 @@ private: false
 
 GatsbyJS is a great tool to create static pages. The best part is the integration of different modern technologies together e.g. NodeJS, ReactJS and GraphQL. A combination of those in GatsbyJS gives you set of powerful tools and commands that sets out a world of unlimited opportunities.
 
-I came across this requirement of integrating performance audits on a GatsbyJS project as part of the Continuous Development(CD) and Continuous Integration(CI) pipelines. [Lighthouse](https://developers.google.com/web/tools/lighthouse/) is without a doubt the best tool out there for such purpose. 
+I came across this requirement of integrating performance audits on a GatsbyJS project as part of the Continuous Development(CD) and Continuous Integration(CI) pipelines. [Lighthouse](https://developers.google.com/web/tools/lighthouse/) is without a doubt the best tool out there for such purpose.
 
-Audits are meant to be performed on a production build to reflect more accurate results. Therefore in order to run an audit we must have a production build and being served from a server. GatsbyJS provides options to create a production build and serve it from a local server. These commands are `gatsby build` and `gatsby serve` respectively. 
+Audits are meant to be performed on a production build to reflect more accurate results. Therefore in order to run an audit we must have a production build and being served from a server. GatsbyJS provides options to create a production build and serve it from a local server. These commands are `gatsby build` and `gatsby serve` respectively.
 
 Normally I would have these as a combined command inside `npm scripts` in `package.json` i.e.
 
-{% highlight json %}
+```json
 ...
 
 "scripts": {
@@ -27,7 +27,7 @@ Normally I would have these as a combined command inside `npm scripts` in `packa
 }
 
 ...
-{% endhighlight %}
+```
 
 Now we can run `npm run preview` in terminal and it will serve the production site at `http://localhost:9000`. Now we can perform an audit using Chrome browser DevTools `Audit` tab which will produce a nice report for us.
 
@@ -35,19 +35,19 @@ Now we can run `npm run preview` in terminal and it will serve the production si
 
 However, in order to have this run in a CD/CI pipeline, we need command-line interface of `lighthouse` that we can install as a node module.
 
-{% highlight bash %}
+```bash
 npm install -D lighthouse
-{% endhighlight %}
+```
 
-or 
+or
 
-{% highlight bash %}
+```bash
 yarn add -D lighthouse
-{% endhighlight %}`
+````
 
 Then we can modify our `npm scripts` in `package.json` to include following:
 
-{% highlight json %}
+```json
 ...
 
 "scripts": {
@@ -61,7 +61,7 @@ Then we can modify our `npm scripts` in `package.json` to include following:
 }
 
 ...
-{% endhighlight %}
+```
 
 It may already be self-explanatory but here is quick run through:
 

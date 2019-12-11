@@ -38,7 +38,7 @@ The idea is to write minimum code to setup an SDK – and wherever possible – 
 
 In order to use the Facebook SDKs into your web app, you will normally need following chunk of code from [Facebook developers docs](https://developers.facebook.com/docs/javascript/quickstart/v2.3).
 
-{% highlight html %}
+```html
 
 <script>
   window.fbAsyncInit = function() {
@@ -58,11 +58,11 @@ In order to use the Facebook SDKs into your web app, you will normally need foll
    }(document, 'script', 'facebook-jssdk'));
 </script>
 
-{% endhighlight %}
+```
 
 Here is how it is done with Socialmedia.
 
-{% highlight html %}
+```html
 
 <script src="path/to/socialmedia.min.js" type="text/javascript"></script>
 <script>
@@ -71,11 +71,11 @@ Here is how it is done with Socialmedia.
 	});
 </script>
 
-{% endhighlight %}
+```
 
 At this stage – once all setup – web app will not only have all native objects and methods of SDK i.e. FB object but also additional easy-to-use helper methods built around some of most popular native methods. Here are some methods ([compelete API reference](https://github.com/jabranr/socialmedia/wiki/Facebook)) of the additional API that Socialmedia exposes in this case:
 
-{% highlight javascript %}
+```javascript
 facebook.AddToPage()
 facebook.Invite(...)
 facebook.Share(...)
@@ -83,7 +83,7 @@ facebook.ShareOpenGraph(...)
 facebook.Send(...)
 facebook.Pay(...)
 facebook.Feed(...)
-{% endhighlight %}
+```
 
 ### Examples:
 
@@ -97,7 +97,7 @@ This website already uses Socialmedia therefore I can just go ahead and setup so
 
 The code used for this example is as following:
 
-{% highlight html %}
+```html
 <button class="btn btn-sm btn-primary" type="button" id="inviteFriends">Invite friends to read article</button>
 
 <script type="text/javascript">
@@ -112,7 +112,7 @@ The code used for this example is as following:
 	}
 </script>
 
-{% endhighlight %}
+```
 
 ##### Example 2:
 
@@ -126,7 +126,7 @@ The code used for this example is as following:
 
 The code used for this example is as following:
 
-{% highlight html %}
+```html
 <button class="btn btn-sm btn-primary" type="button" id="getInfo">Get basic info from Facebook</button>
 <textarea name="infoBox" id="infoBox" class="form-control" rows="5" style="resize: none;" placeholder="Info will appear here" disabled></textarea>
 
@@ -158,7 +158,7 @@ The code used for this example is as following:
 	}
 </script>
 
-{% endhighlight %}
+```
 
 <script src="{{ '/vendors/socialmedia/dist/socialmedia.min.js' | prepend: site.baseurl }}">
 <script type="text/javascript">
@@ -210,7 +210,7 @@ Socialmedia works similarly for other supported social media platforms too. Here
 
 For Twitter, it would be as following and few of the API methods ([complete API reference](https://github.com/jabranr/socialmedia/wiki/Twitter)):
 
-{% highlight html %}
+```html
 
 <script src="path/to/socialmedia.min.js" type="text/javascript"></script>
 <script>
@@ -221,13 +221,13 @@ For Twitter, it would be as following and few of the API methods ([complete API 
 twitter.Tweet()
 twitter.Hashtag()
 twitter.Mention()
-{% endhighlight %}
+```
 
 ## Google+ SDK
 
 For Google+, it would be as following and few of the API methods ([complete API reference](https://github.com/jabranr/socialmedia/wiki/Google-Plus)):
 
-{% highlight html %}
+```html
 
 <script src="path/to/socialmedia.min.js" type="text/javascript"></script>
 <script>
@@ -236,13 +236,13 @@ For Google+, it would be as following and few of the API methods ([complete API 
 
 // Exposes following API to use with Google+ SDK:
 gplus.Share()
-{% endhighlight %}
+```
 
 ## Pinterest SDK
 
 For Pinterest, it would be as following and few of the API methods ([complete API reference](https://github.com/jabranr/socialmedia/wiki/Pinterest)):
 
-{% highlight html %}
+```html
 
 <script src="path/to/socialmedia.min.js" type="text/javascript"></script>
 <script>
@@ -251,7 +251,7 @@ For Pinterest, it would be as following and few of the API methods ([complete AP
 
 // Exposes following API to use withPinterest SDK:
 pinterest.Pinit()
-{% endhighlight %}
+```
 
 Socialmedia is very stable for the purposes it is built – all thanks to it's Test Driven Development (TDD) – yet it's intensive use in basic to complex (in production) projects has further strengthened its stability.
 

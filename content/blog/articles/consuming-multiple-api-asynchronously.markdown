@@ -37,7 +37,7 @@ Here I will go through all these steps explaining how it works best by chaining 
 
 This app uses Facebook user ID in order to identify and keep track of user progress. Facebook JavaScript SDK has built-in methods of returning asynchronous calls that can defer custom steps until SDKs are fully loaded so the relevant functions are available to the app. Here is quick overview with default Facebook SDK initialization code:
 
-{% highlight javascript %}
+```javascript
 window.fbAsyncInit = function() {
 	FB.init({
 		appId   : '1234567890',
@@ -56,18 +56,18 @@ window.fbAsyncInit = function() {
 	js.src = "//connect.facebook.net/en_US/sdk.js";
 	fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));
-{% endhighlight %}
+```
 
 Passing a custom function `myCallbackFunc` in `FB.getLoginStatus(...)`, will have a deferred execution and will be served as callback.
 
 Now depending on personal choice, that may or may not be an optimal workflow &ndash; so here is a better workflow by using [Socialmedia.js](http://jabran.me/projects/socialmedia-js). Making an exact similar call with `Socialmedia.js` could not be anymore simpler.
 
-{% highlight javascript %}
+```javascript
 var myFbApp = new Socialmedia.Facebook({
   appid: '12345678',
   callback: myCallbackFunc
 });
-{% endhighlight %}
+```
 
 ## Outdoors Adventure (OA) API
 
@@ -75,7 +75,7 @@ Now that we have Facebook SDK ready to use as well as user status from Graph API
 
 A simple `jQuery.getJSON` call grabs user data from OA API. But first, we want user to authenticate the app by giving appropriate permissions so that we know who this user is. Here is the breakdown of complete scenario:
 
-{% highlight javascript %}
+```javascript
 function myCallbackFunc(response) {
 	if ( isConnectedUser(response) ) {
 
@@ -101,13 +101,13 @@ function myCallbackFunc(response) {
 function isConnectedUser(response) {
 	return (response && response.status && response.status === 'connected') ? true : false;
 }
-{% endhighlight %}
+```
 
 ## Google Maps API
 
 Now that we have the user identity, status and progress data in JSON format, we can utilize this information for a personalised Google Maps layout. Here is the breakdown to load Google Maps functions.
 
-{% highlight javascript %}
+```javascript
 function loadGoogleMapsFunc(json) {
 	var map = null,
 	mapOptions = {
@@ -128,11 +128,11 @@ function loadGoogleMapsFunc(json) {
 	}
 
 }
-{% endhighlight %}
+```
 
 Google Maps is loaded now and ready to use. It is time to load user data to display on map. Here we go:
 
-{% highlight javascript %}
+```javascript
 function setupLocationData(map, json) {
 	for ( var i=0; i < json.length; i++ ) {
 		var info = json[i];
@@ -144,7 +144,7 @@ function setupLocationData(map, json) {
 		});
 	}
 }
-{% endhighlight %}
+```
 
 This process may go on as we add more and more interactivity into this. We can also display a loading status or animated progress cricle between calls so to provide a better user experience and so on.
 

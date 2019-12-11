@@ -31,14 +31,14 @@ The package consists of two files.
 **Parameters:**
 
 
-{% highlight php %}
+```php
 
 $client_id
 $client_secret
 $redirect_uri
 $scope
 
-{% endhighlight %}
+```
 
 The parameters are optional and by default an instance will take the parameter values from `ig-config.php`
 
@@ -46,7 +46,7 @@ However, if you like to create an instance on the go to use another registered I
 
 Following methods are currently available using a defined instance:
 
-{% highlight php %}
+```php
 // returns an Instagram OAuth URI
 $ig->get_oauth_uri();
 
@@ -62,7 +62,7 @@ $ig->get_scope();
 // returns user basic information including access_token as an associative Array()
 $ig->get_access_token();
 
-{% endhighlight %}
+```
 
 A number of other methods are also part of this release. The project is available at GitHub under MIT License for use and contributions.
 

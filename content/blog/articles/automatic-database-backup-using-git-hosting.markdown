@@ -3,7 +3,20 @@ layout: post
 title: 'Automatic database backup using Git (Bitbucket/GitLab/Github)'
 date: 2016-04-25 8:00:00
 categories: articles
-tags: ['database', 'backup', 'version control', 'github', 'bitbucket', 'gitlab', 'bash', 'cron', 'git', 'Ubuntu', 'Linux']
+tags:
+  [
+    'database',
+    'backup',
+    'version control',
+    'github',
+    'bitbucket',
+    'gitlab',
+    'bash',
+    'cron',
+    'git',
+    'Ubuntu',
+    'Linux',
+  ]
 excerpt: 'Set up an automaic backup cron job and host data using version control'
 permalink:
 thumbnail:
@@ -21,62 +34,61 @@ Another concern in this automated task is to where to store such valuable data a
 
 Let's start with creating a special MySQL user called `cron_user` but you can name it anything you like. Login into MySQL by replacing USER with your username:
 
-{% highlight bash %}
+```bash
 $ mysql -u USER -p
-{% endhighlight %}
+```
 
 Create a new user with password (always use a strong password and make sure to save it to safe place before moving forward):
 
-{% highlight bash %}
+```bash
 $ CREATE USER 'cron_user'@'localhost' IDENTIFIED BY 'someStrongPassword';
-{% endhighlight %}
+```
 
 Now grant only specific privileges to this user and flush privileges to bring all changes in effect:
 
-{% highlight bash %}
+```bash
 $ GRANT SELECT,LOCK TABLES, EVENT, TRIGGER, SHOW VIEW PRIVILEGES ON *.* TO 'cron_user'@'localhost';
 $ FLUSH PRIVILEGES;
-{% endhighlight %}
+```
 
 Our `cron_user` is ready for use now.
-
 
 ## Setup local and remote repository
 
 Now create a fresh empty repository now on any of above mentioned services and name is `database-backups`. Now `ssh` to your server using any Terminal app and make a backup directory at `/home/backup` and `cd` into it.
 
-{% highlight bash %}
+```bash
 $ mkdir -p /home/backup/database-backups && cd /home/backup/database-backups
-{% endhighlight %}
+```
 
 Create a shell script file and make it executable.
 
-{% highlight bash %}
+```bash
 $ touch cron_backup.sh
 $ chmod +x cron_backup.sh
-{% endhighlight %}
+```
 
 Add Git and add remote repository.
 
-{% highlight bash %}
+```bash
 $ git init
 $ git remote add origin {path/to/remote/database-backups.git}
 $ git add -A
 $ git commit -am 'Add files'
 $ git push -u origin HEAD
-{% endhighlight %}
+```
 
 ## Setup cron script
 
 Use any of your favourite editor to edit the file. Here I am using `nano`.
 
-{% highlight bash %}
+```bash
 $ nano cron_backup.sh
-{% endhighlight %}
+```
 
 Add following script, save and exit of editor (CTRL x).
 
-{% highlight bash %}
+```bash
 #!/bin/sh
 # Set variables
 DB_NAME="foo"
@@ -112,7 +124,7 @@ rm -f $TEMP_BACKUP
 ${GIT} add -A
 ${GIT} commit -m "Automatic backup - $FULLDATE"
 ${GIT} push origin HEAD
-{% endhighlight %}
+```
 
 Let's go through what each line does in this script:
 
@@ -132,23 +144,24 @@ Running this short script will dump the specified database, gzip it using `tar` 
 
 As you may have noticed that you did not have to enter any password for MySQL `CRON_USER`. If we run this script now, it will fail and return an authentication error. We could create user with no password and avoid this error but we should not have a MySQL user interacting with database without an empty or no password &ndash; as it would a serious security risk even though this user has limited permissions. To make sure that `mysqldump` does not return an authentication error, let's create a file `.my.cnf` at user root level.
 
-{% highlight bash %}
+```bash
 $ cd
 $ nano ~/.my.cnf
-{% endhighlight %}
+```
 
 Add following credentials to this file.
 
-{% highlight bash %}
+```bash
 [mysqldump]
 user=CRON_USER_NAME
 password=CRON_USER_PASSWORD
-{% endhighlight %}
+```
+
 Make sure to update `CRON_USER_NAME` and `CRON_USER_PASSWORD` with correct credentials. Save and exit the editor (CTRL x). Now we have fixed the authentication issue. If we have run the script now by issuing following command, we can see our remote repository being updated with a file of fresh backup.
 
-{% highlight bash %}
+```bash
 $ ./cron_backup.sh
-{% endhighlight %}
+```
 
 Reference: [Stackoverflow](http://stackoverflow.com/questions/9293042/mysqldump-without-the-password-prompt)
 
@@ -156,14 +169,16 @@ Reference: [Stackoverflow](http://stackoverflow.com/questions/9293042/mysqldump-
 
 Our next step is to setup a cron job so this script runs a specific time automically. Issue following command to edit the cron job file.
 
-{% highlight bash %}
+```bash
 $ crontab -u USER -e
-{% endhighlight %}
+```
+
 Replace `USER` with correct user name who has the permissions to repository and the backup directory. This shall open the cron job file in an editor. Navigate to the end of the file and add following line.
 
-{% highlight bash %}
+```bash
 @daily cd /home/backup/database-backups; /home/backup/database-backups/cron_backup.sh > /dev/null 2>&1
-{% endhighlight %}
+```
+
 This line creates a daily cron job for midnight. It will change directory to `/home/backup/database-backups` and then run `cron_backup.sh`.
 
 [Here is a Gist](https://gist.github.com/jabranr/d4939b2b48fdcadc74765a3ed04d8157) for cron script.

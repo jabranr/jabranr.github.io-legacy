@@ -7,10 +7,22 @@
   font-size: 18px;
   font-weight: 300;
 
-  h2 {
+  h2,
+  .h2 {
     font-size: 1.5rem;
     margin-top: 1.875rem;
     margin-bottom: 0.75rem;
+  }
+
+  h3,
+  .h3,
+  h4,
+  .h4,
+  h5,
+  .h5,
+  h6,
+  .h6 {
+    margin-bottom: 0.5rem;
   }
 }
 
@@ -28,6 +40,14 @@
   font-size: 1.125rem;
   margin-top: 2rem;
   margin-bottom: 3rem;
+
+  > .next {
+    grid-column: 1/-1;
+  }
+
+  > .prev + .next {
+    grid-column: auto;
+  }
 }
 
 .next {
