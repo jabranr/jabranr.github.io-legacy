@@ -4,7 +4,13 @@ import { Link, graphql } from 'gatsby';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 
-import style from './index.module.scss';
+import africaMappers from '../../content/assets/images/speaking/africa-mappers.png';
+// import tedxLahore from '../../content/assets/images/speaking/tedx-lahore.png';
+// import gmmRegionalConference from '../../content/assets/images/speaking/gmm-regional-conference.png';
+// import geoUsersSummit from '../../content/assets/images/speaking/geo-users-summit.png';
+// import bigTent from '../../content/assets/images/speaking/big-tent.png';
+
+import style from './speaking.module.scss';
 
 const SpeakingPage = ({ data, location }) => {
   const posts = data.allMarkdownRemark.edges;
@@ -42,13 +48,27 @@ const SpeakingPage = ({ data, location }) => {
         related topics.
       </p>
 
-      <ul>
-        <li>Google Africa Mappers Conference Kenya 2010</li>
-        <li>TEDx Lahore 2010</li>
-        <li>Google Map Maker Regional Conference Dubai 2011</li>
-        <li>Google Geo User Summit Singapore 2011</li>
-        <li>Google Big Tent Sendai 2011</li>
-      </ul>
+      <hr />
+      <div className={style.speaking}>
+        <div>
+          <h3>Google Africa Mappers Conference Kenya 2010</h3>
+          <img src={africaMappers} alt="" />
+        </div>
+        {/* <div>
+          <img src={tedxLahore} alt="" /> TEDx Lahore 2010
+        </div>
+        <div>
+          <img src={gmmRegionalConference} alt="" /> Google Map Maker Regional
+          Conference Dubai 2011
+        </div>
+        <div>
+          <img src={geoUsersSummit} alt="" /> Google Geo Users Summit Singapore
+          2011
+        </div>
+        <div>
+          <img src={bigTent} alt="" /> Google Big Tent Sendai 2011
+        </div> */}
+      </div>
     </Layout>
   );
 };
