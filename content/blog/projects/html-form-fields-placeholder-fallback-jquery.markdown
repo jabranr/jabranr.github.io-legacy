@@ -7,7 +7,7 @@ excerpt: >
   This jQuery plugin uses form field placeholder attribute to provide a fallback support for incompatible browsers.
 code: https://github.com/jabranr/jquery.placeholderfallback.js
 private: false
-thumbnail: placeholder-fallback.png
+thumbnail: ../../assets/images/projects/placeholder-fallback.png
 featured: true
 ---
 
@@ -15,14 +15,14 @@ HTML Form fields placeholders can be very useful in terms of providing accessibi
 
 To use the plugin, simple follow the steps in following example.
 
-* Add script reference to `jQuery` and plugin files in `head` section of HTML document.
+- Add script reference to `jQuery` and plugin files in `head` section of HTML document.
 
 ```html
 <script src="path/to/jQuery.js"></script>
 <script src="path/to/jquery.placeholderfallback.js"></script>
 ```
 
-* Then call the `placeholderfallback()` plugin for form fields where falback support is required. You can link the form fields using any usual element identity attribute such as `id`, `class` or element itself.
+- Then call the `placeholderfallback()` plugin for form fields where falback support is required. You can link the form fields using any usual element identity attribute such as `id`, `class` or element itself.
 
 ```javascript
 $('#firstNameField').placeholderfallback();
@@ -38,19 +38,18 @@ Here is detailed example use:
 
 ```html
 <form>
-    <input type="text" id="firstNameField" placeholder="First Name">
-    <input type="text" id="lastNameField" placeholder="Last Name">
-    <input type="email" id="emailField" placeholder="Email address">
+  <input type="text" id="firstNameField" placeholder="First Name" />
+  <input type="text" id="lastNameField" placeholder="Last Name" />
+  <input type="email" id="emailField" placeholder="Email address" />
 </form>
 
 <!--[if lt IE 10]>
-    <script>
-        (function() {
-            $('#firstNameField, #lastNameField, #emailField').placeholderfallback();
-        })();
-    </script>
+  <script>
+    (function() {
+      $('#firstNameField, #lastNameField, #emailField').placeholderfallback();
+    })();
+  </script>
 <![endif]-->
-
 ```
 
-Finally, in this detailed example, we have wrapped the plugin call between [Internet Explorer conditional tags](http://msdn.microsoft.com/en-gb/library/ms537512\(v=vs.85\).aspx) so it only works when it actually is required.
+Finally, in this detailed example, we have wrapped the plugin call between [Internet Explorer conditional tags](<http://msdn.microsoft.com/en-gb/library/ms537512(v=vs.85).aspx>) so it only works when it actually is required.

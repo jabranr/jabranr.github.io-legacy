@@ -6,7 +6,7 @@ categories: articles
 tags: [Linux, Ubuntu, Terminator, Terminal, Shell, ZSH, Oh My ZSH]
 excerpt: 'Setup Ubuntu 14.4 LTS with Terminator, Oh My ZSH and Cobalt2 theme.'
 permalink:
-thumbnail: terminator_ubuntu_14_4_lts_cobalt2_oh_my_zsh.png
+thumbnail: ../../assets/images/terminator_ubuntu_14_4_lts_cobalt2_oh_my_zsh.png
 comment: true
 private: false
 ---

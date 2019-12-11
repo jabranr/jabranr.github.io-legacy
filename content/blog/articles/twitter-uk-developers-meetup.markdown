@@ -6,7 +6,7 @@ categories: articles
 tags: [Twitter UK, Twitter API, Developer]
 excerpt: 'Experience tale of attending first ever Twitter Developers meetup by Twitter UK in London.'
 permalink:
-thumbnail: twitter-uk-office.jpg
+thumbnail: ../../assets/images/twitter-uk-office.jpg
 comment: true
 private: false
 ---

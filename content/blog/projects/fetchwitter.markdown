@@ -7,7 +7,7 @@ excerpt: >
   Fetchwitter makes it easier to fetch Tweets from a Twitter API v1.1 and OAuth authentication/authorization.
 code: http://j.mp/fetchwitter
 private: false
-thumbnail: fetchwitter.png
+thumbnail: ../../assets/images/projects/fetchwitter.png
 featured: true
 ---
 

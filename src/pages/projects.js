@@ -6,7 +6,7 @@ import SEO from '../components/seo';
 
 import style from './index.module.scss';
 
-const ArticlesPage = ({ data, location }) => {
+const ProjectPage = ({ data, location }) => {
   const posts = data.allMarkdownRemark.edges;
 
   return (
@@ -15,8 +15,41 @@ const ArticlesPage = ({ data, location }) => {
         title="Articles"
         keywords={[`blog`, `jabran`, `rafique`, `javascript`, `react`]}
       />
-      <h2 className={style.h2}>Articles</h2>
-      <p>An archive collection of all articles written by Jabran Rafique.</p>
+      <h2 className={style.h2}>Projects</h2>
+      <p>This page has information about various projects of Jabran Rafique.</p>
+      <p>
+        Here is list of projects I have worked on from time to time. Most of
+        these are open-source and hosted at{' '}
+        <a
+          target="_blank"
+          rel="noopener noreferer"
+          href="https://www.github.com/jabranr"
+        >
+          GitHub
+        </a>{' '}
+        – free to use and explore. You are most welcome to share your feedback,
+        corrections and even enhancements to any of those.
+      </p>
+
+      <p>
+        I also use{' '}
+        <a
+          target="_blank"
+          rel="noopener noreferer"
+          href="https://gist.github.com/jabranr"
+        >
+          GitHub Gist
+        </a>{' '}
+        and{' '}
+        <a
+          target="_blank"
+          rel="noopener noreferer"
+          href="https://codepen.io/jabranr"
+        >
+          CodePen
+        </a>{' '}
+        to share experiments from day to day work.
+      </p>
       {posts.map(({ node }) => (
         <Link
           className={style.card}
@@ -46,7 +79,7 @@ const ArticlesPage = ({ data, location }) => {
   );
 };
 
-export default ArticlesPage;
+export default ProjectPage;
 
 export const pageQuery = graphql`
   query {
@@ -58,7 +91,7 @@ export const pageQuery = graphql`
     allMarkdownRemark(
       sort: { fields: [frontmatter___date], order: DESC }
       filter: {
-        frontmatter: { private: { eq: false }, categories: { eq: "articles" } }
+        frontmatter: { private: { eq: false }, categories: { eq: "projects" } }
       }
       limit: 1000
     ) {

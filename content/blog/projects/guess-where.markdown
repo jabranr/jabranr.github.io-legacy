@@ -7,7 +7,7 @@ excerpt: >
   An interactive geo quiz game app to guess town/city name from given choices and a unmarked map.
 code: https://github.com/jabranr/guess-where
 private: false
-thumbnail: guess-where.png
+thumbnail: ../../assets/images/projects/guess-where.png
 featured: true
 ---
 

@@ -7,7 +7,7 @@ excerpt: >
   Store data in memory for better performance by saving on network requests.
 code: https://github.com/jabranr/php-curl
 private: false
-thumbnail: php-curl.png
+thumbnail: ../../assets/images/projects/php-curl.png
 featured: true
 ---
 

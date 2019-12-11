@@ -6,18 +6,18 @@ categories: articles
 tags: ['FirstTechJob', 'education', 'web design', 'web development']
 excerpt: 'Recent involvement in #FirstTechJob discussion on Twitter brought out all nostalgic memories. Here I tell my life changing story from medical education to computing.'
 permalink:
-thumbnail: 
+thumbnail: ../../assets/images/
 comment: true
 private: false
 ---
 
-Until the year of 1999, I didn't know anything about computers apart from believing that they play some important roles somewhere. 
+Until the year of 1999, I didn't know anything about computers apart from believing that they play some important roles somewhere.
 
 At the time, I was pursuing an education to become a doctor. It was high time to do my best to enrol into any medical college by getting good grades in college as well as in entry test. Next step was to get ready for an entry test to make up to minimum merit level for medical colleges. I moved out of home temporary with my cousin Aamir to [Lahore](https://www.google.co.uk/#q=City+of+Lahore) for better preparation from some private acadamy. One of our dear friend Tanvir helped us get lodging at his [IT college](https://goo.gl/maps/ZbWuM1uUY7B2) student rooms in [Model Town](https://www.google.co.uk/#q=Model+Town,+City+of+Lahore).
 
-Tanvir was no doubt the person who actually introduced me to the computers for the first time. He took me to his lab sessions few times to educate me about extremely basic stuff i.e. using mouse and keyboard. I still remember how difficult it was to control the cursor movements initially. Later sessions amazed me further as I went on playing with [MS Paint](https://en.wikipedia.org/wiki/Paint_(software)). 
+Tanvir was no doubt the person who actually introduced me to the computers for the first time. He took me to his lab sessions few times to educate me about extremely basic stuff i.e. using mouse and keyboard. I still remember how difficult it was to control the cursor movements initially. Later sessions amazed me further as I went on playing with [MS Paint](https://en.wikipedia.org/wiki/Paint_(software)).
 
-As expected I was a convert very soon. Aamir sat in an entry test ahead of me only to find out that out of 5000+ passed candidates, first ~1600 can make it to available slots in colleges. We both were extremely disappointed. At least I lost all the charm of it and being already back to home means no more interactions with computers either. 
+As expected I was a convert very soon. Aamir sat in an entry test ahead of me only to find out that out of 5000+ passed candidates, first ~1600 can make it to available slots in colleges. We both were extremely disappointed. At least I lost all the charm of it and being already back to home means no more interactions with computers either.
 
 These were very depressing times I had no clue what I'm going to do in my life so with no proper guidance I still went on repeating exams year to improve my college grades. Ultimately *not* making such a big difference but learned that repeating the same educationl subjects for another year actually brings down the overall moral and does not help in any kind of improvements. Consequently I never sat in an entry test for medical colleges.
 

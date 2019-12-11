@@ -7,7 +7,7 @@ excerpt: >
   WordPress plugin based on Fetchwitter library.
 code: http://j.mp/fetchwitter-for-wordpress
 private: false
-thumbnail: fetchwitter-wordpress.png
+thumbnail: ../../assets/images/projects/fetchwitter-wordpress.png
 featured: true
 ---
 

@@ -6,7 +6,7 @@ categories: articles
 tags: [Google Map Maker, Google Maps, Mapping, Cartography, Regional Leads]
 excerpt: 'Reviewing the re-opening of Google Map Maker and new roles of Regional Leads'
 permalink:
-thumbnail: mapmaker_reopened.png
+thumbnail: ../../assets/images/mapmaker_reopened.png
 comment: true
 private: false
 ---

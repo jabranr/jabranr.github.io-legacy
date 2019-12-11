@@ -16,7 +16,7 @@ tags:
   ]
 excerpt: 'Here is a quick overview of my journey from WordPress to Github that introduced me to amazing collection of tools in web industry.'
 permalink:
-thumbnail: avatar.jpg
+thumbnail: ../../assets/images/avatar.jpg
 comment: true
 private: false
 ---

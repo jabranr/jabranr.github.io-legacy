@@ -15,7 +15,10 @@ const PostTemplate = ({ data, location, pageContext }) => {
     <Layout location={location} title={siteTitle}>
       <SEO title={post.frontmatter.title} description={post.excerpt} />
       <h1 className={style.title}>{post.frontmatter.title}</h1>
-      <p className={style.timestamp}>{post.frontmatter.date}</p>
+      <p className={style.timestamp}>
+        {post.frontmatter.date} &bull; {post.timeToRead} minute
+        {post.timeToRead === 1 ? '' : 's'} read
+      </p>
       <div
         className={style.content}
         dangerouslySetInnerHTML={{ __html: post.html }}
@@ -57,10 +60,14 @@ export const pageQuery = graphql`
         author
       }
     }
-    markdownRemark(fields: { slug: { eq: $slug } }) {
+    markdownRemark(
+      fields: { slug: { eq: $slug } }
+      frontmatter: { private: { eq: false } }
+    ) {
       id
       excerpt(pruneLength: 160)
       html
+      timeToRead
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")

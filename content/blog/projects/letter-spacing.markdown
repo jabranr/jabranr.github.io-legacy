@@ -7,7 +7,7 @@ excerpt: >
   An inline custom element to provide letter-spacing CSS styling to its contents.
 code: http://git.io/letter-spacing
 private: false
-thumbnail: letter-spacing.png
+thumbnail: ../../assets/images/projects/letter-spacing.png
 featured: true
 ---
 

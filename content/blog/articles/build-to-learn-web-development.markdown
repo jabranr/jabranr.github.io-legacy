@@ -6,7 +6,7 @@ categories: articles
 tags: [social media, Facebook, Twitter, Google+, Pinterest, API, SDKs]
 excerpt: 'The journey of learning web development by building some library, framework or merely a wrapper. Here is quick summary from building and maintaining of socialmedia.js and learning through this process.'
 permalink:
-thumbnail: socialmedia-js.png
+thumbnail: ../../assets/images/socialmedia-js.png
 comment: true
 private: false
 ---

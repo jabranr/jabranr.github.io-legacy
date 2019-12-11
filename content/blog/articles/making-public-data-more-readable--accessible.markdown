@@ -6,7 +6,7 @@ categories: articles
 tags: [Pakistan, public, census, boundaries, data]
 excerpt: 'Introducing Geography of Pakistan project that collects Pakistan’s public data from official sources and make them available in different better formats for reusability, scalability and accessibility.'
 permalink:
-thumbnail: pakistan_population_cesus_1998_portal.png
+thumbnail: ../../assets/images/pakistan_population_cesus_1998_portal.png
 comment: true
 private: false
 ---

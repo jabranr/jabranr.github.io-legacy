@@ -6,7 +6,7 @@ categories: articles
 tags: [Web, Design, Development, United Agency, London, Workflow]
 excerpt: 'Recently I worked on redesigning &amp; redeveloping United Agency website. Here is an overview on development workflow and tools used during this process.'
 permalink:
-thumbnail: united-agency-new-website.png
+thumbnail: ../../assets/images/united-agency-new-website.png
 comment: true
 private: false
 ---

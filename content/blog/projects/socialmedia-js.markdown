@@ -7,7 +7,7 @@ excerpt: >
   Use JavaScript based SDKs for various social media platforms conveniently.
 code: http://git.io/socialmedia.js
 private: false
-thumbnail: socialmedia.png
+thumbnail: ../../assets/images/projects/socialmedia.png
 featured: true
 ---
 
@@ -31,22 +31,25 @@ var gplus = new Socialmedia.GooglePlus();
 var gplusButton = document.querySelector('.google-plus-button');
 
 // Attach an event handler function
-gplusButton.addEventListener('click', function(event) {
+gplusButton.addEventListener(
+  'click',
+  function(event) {
+    // Prevent default event actions
+    event.preventDefault();
 
-	// Prevent default event actions
-	event.preventDefault();
-
-	// Use Share function from gplus instance of Socialmedia.GooglePlus class
-	gplus.Share({
-		link: 'http://example.com',
-		lang: 'ur'
-	});
-}, false);
+    // Use Share function from gplus instance of Socialmedia.GooglePlus class
+    gplus.Share({
+      link: 'http://example.com',
+      lang: 'ur'
+    });
+  },
+  false
+);
 ```
 
 The `link` parameter takes in any link you like to share and `lang` parameter sets the Google+ interface language. If you do not provide any parameters then default value for `link` would be current page URL and for `lang` it would be `en` (English). Since this action is now bound with button click event, this will trigger a Google+ Share dialog with relevant data. That’s all it takes to setup the Google+ Share function.
 
-<img src="../../assets/images/google-plus-share-dialog-example.png" alt="" />
+<img src="../../assets/images/projects/google-plus-share-dialog-example.png" alt="" />
 <p class="help-block">An example of Google+ Share dialog on action call</p>
 
 You can also try a live demo of this library by using social media sharing links at end of this page.

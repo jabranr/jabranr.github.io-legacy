@@ -7,7 +7,7 @@ excerpt: >
   PHP parser to parse CSV data from a file, stream or string.
 code: https://github.com/jabranr/csv-parser
 private: false
-thumbnail: csv-parser.png
+thumbnail: ../../assets/images/projects/csv-parser.png
 featured: true
 ---
 

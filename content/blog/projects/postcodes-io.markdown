@@ -7,7 +7,7 @@ excerpt: >
   PHP library for postcodes.io API
 code: https://github.com/jabranr/postcodes-io
 private: false
-thumbnail: postcodes-io.png
+thumbnail: ../../assets/images/projects/postcodes-io.png
 featured: true
 ---
 

@@ -7,7 +7,7 @@ excerpt: >
   An inline custom element to write alphabets in CSS by using CSS Sans project.
 code: https://github.com/jabranr/css-letters
 private: false
-thumbnail: css-letters.png
+thumbnail: ../../assets/images/projects/css-letters.png
 featured: true
 ---
 

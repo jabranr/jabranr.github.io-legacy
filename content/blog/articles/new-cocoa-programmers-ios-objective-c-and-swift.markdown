@@ -6,7 +6,7 @@ categories: articles
 tags: [iOS, Xcode, Mac OS X, Cocoa, Apple, Swift, Development]
 excerpt: 'I recently went into learning iOS development. Here is all about so far experience and what future holds in it with new child in Cocoa family called Swift.'
 permalink:
-thumbnail: wwdc-swift-launch.png
+thumbnail: ../../assets/images/wwdc-swift-launch.png
 comment: true
 private: false
 ---

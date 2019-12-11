@@ -7,7 +7,7 @@ excerpt: >
   Store data in memory for better performance by saving on network requests.
 code: https://github.com/jabranr/js-memcache
 private: false
-thumbnail: js-memcache.png
+thumbnail: ../../assets/images/projects/js-memcache.png
 featured: true
 ---
 

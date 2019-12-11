@@ -6,7 +6,7 @@ categories: articles
 tags: [Google, Maps, StreetView, Earth, Live satellite images]
 excerpt: 'Informational article explaining Google mapping products and how they work. Also covers relevant Google products directly or indirectly involved.'
 permalink:
-thumbnail: google-maps-logo.jpg
+thumbnail: ../../assets/images/google-maps-logo.jpg
 comment: true
 private: false
 ---
