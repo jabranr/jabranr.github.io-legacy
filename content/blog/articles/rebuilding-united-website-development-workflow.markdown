@@ -13,7 +13,7 @@ private: false
 
 Around three weeks ago, we ([Ben Chalk](https://twitter.com/_Bchalk) and myself) were given the task to redesign and redevelop the United website. The website have not been touched in months and totally required an overhaul. This was a very basic website spanned over a single page – with information about clients, services and contact. So basically by keeping the original set of contents and with a new section showcasing United work/case studies – idea was to give it a whole new vibrant look and make it more widely usable in terms of accessibility and user experience. Here is what we started with:
 
-<img src="../../assets/images/united-agency-old-website.png" alt="" class="img-responsive">
+<img src="../../assets/images/united-agency-old-website.png" alt="" />
 
 ### Design &amp; Wireframes
 
@@ -44,7 +44,7 @@ Sass provides an excellent support for manipulating and customizing the default 
 
 Merging different CSS files into single output file helps to enhance the performance by saving on HTTP round trips.
 
-<img src="../../assets/images/bootstrap-sass-selective-modules.png" alt="" class="img-responsive">
+<img src="../../assets/images/bootstrap-sass-selective-modules.png" alt="" />
 
 This awesomeness of selecting only required modules doesn't just stop at Bootstrap or Sass! It continues to other front-end tools used in this project as well i.e. jQuery, jQuery Mobile, Animate.css, Bootstrap.js etc. In addition to these, I also used a selective set of font icons from [IcoMoon](http://icomoon.io) that enables the social media links at the website. Once again, it is important to only import the glyphs that are required rather than loading a complete font file.
 
@@ -54,7 +54,7 @@ This awesomeness of selecting only required modules doesn't just stop at Bootstr
 
 The contact section has feeds from Instagram and Twitter channels.
 
-<img src="../../assets/images/united-agency-contact.png" alt="" class="img-responsive">
+<img src="../../assets/images/united-agency-contact.png" alt="" />
 
 #### Instagram Feed:
 

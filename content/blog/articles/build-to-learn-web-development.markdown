@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "Build to Learn – socialmedia.js – Case Study"
+title: 'Build to Learn – socialmedia.js – Case Study'
 date: 2015-04-13 08:00:00
 categories: articles
 tags: [social media, Facebook, Twitter, Google+, Pinterest, API, SDKs]
-excerpt: "The journey of learning web development by building some library, framework or merely a wrapper. Here is quick summary from building and maintaining of socialmedia.js and learning through this process."
+excerpt: 'The journey of learning web development by building some library, framework or merely a wrapper. Here is quick summary from building and maintaining of socialmedia.js and learning through this process.'
 permalink:
 thumbnail: socialmedia-js.png
 comment: true
@@ -39,38 +39,38 @@ The idea is to write minimum code to setup an SDK – and wherever possible – 
 In order to use the Facebook SDKs into your web app, you will normally need following chunk of code from [Facebook developers docs](https://developers.facebook.com/docs/javascript/quickstart/v2.3).
 
 ```html
-
 <script>
   window.fbAsyncInit = function() {
     FB.init({
-      appId      : 'your-app-id',
-      xfbml      : true,
-      version    : 'v2.3'
+      appId: 'your-app-id',
+      xfbml: true,
+      version: 'v2.3'
     });
   };
 
-  (function(d, s, id){
-     var js, fjs = d.getElementsByTagName(s)[0];
-     if (d.getElementById(id)) {return;}
-     js = d.createElement(s); js.id = id;
-     js.src = "//connect.facebook.net/en_US/sdk.js";
-     fjs.parentNode.insertBefore(js, fjs);
-   }(document, 'script', 'facebook-jssdk'));
+  (function(d, s, id) {
+    var js,
+      fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) {
+      return;
+    }
+    js = d.createElement(s);
+    js.id = id;
+    js.src = '//connect.facebook.net/en_US/sdk.js';
+    fjs.parentNode.insertBefore(js, fjs);
+  })(document, 'script', 'facebook-jssdk');
 </script>
-
 ```
 
 Here is how it is done with Socialmedia.
 
 ```html
-
 <script src="path/to/socialmedia.min.js" type="text/javascript"></script>
 <script>
-	var facebook = new Socialmedia.Facebook({
-		appid: 'your-app-id'
-	});
+  var facebook = new Socialmedia.Facebook({
+    appid: 'your-app-id'
+  });
 </script>
-
 ```
 
 At this stage – once all setup – web app will not only have all native objects and methods of SDK i.e. FB object but also additional easy-to-use helper methods built around some of most popular native methods. Here are some methods ([compelete API reference](https://github.com/jabranr/socialmedia/wiki/Facebook)) of the additional API that Socialmedia exposes in this case:
@@ -98,20 +98,25 @@ This website already uses Socialmedia therefore I can just go ahead and setup so
 The code used for this example is as following:
 
 ```html
-<button class="btn btn-sm btn-primary" type="button" id="inviteFriends">Invite friends to read article</button>
+<button class="btn btn-sm btn-primary" type="button" id="inviteFriends">
+  Invite friends to read article
+</button>
 
 <script type="text/javascript">
-	var inviteFriends = document.querySelector('#inviteFriends');
-	if ( inviteFriends ) {
-		inviteFriends.addEventListener('click', function(e){
-			facebook.Invite({
-				title: 'Invited friends to read this article',
-				message: document.title
-			});
-		}, false);
-	}
+  var inviteFriends = document.querySelector('#inviteFriends');
+  if (inviteFriends) {
+    inviteFriends.addEventListener(
+      'click',
+      function(e) {
+        facebook.Invite({
+          title: 'Invited friends to read this article',
+          message: document.title
+        });
+      },
+      false
+    );
+  }
 </script>
-
 ```
 
 ##### Example 2:
@@ -127,45 +132,58 @@ The code used for this example is as following:
 The code used for this example is as following:
 
 ```html
-<button class="btn btn-sm btn-primary" type="button" id="getInfo">Get basic info from Facebook</button>
-<textarea name="infoBox" id="infoBox" class="form-control" rows="5" style="resize: none;" placeholder="Info will appear here" disabled></textarea>
+<button class="btn btn-sm btn-primary" type="button" id="getInfo">
+  Get basic info from Facebook
+</button>
+<textarea
+  name="infoBox"
+  id="infoBox"
+  class="form-control"
+  rows="5"
+  style="resize: none;"
+  placeholder="Info will appear here"
+  disabled
+></textarea>
 
 <script>
-	var getInfo = document.querySelector('#getInfo');
+  var getInfo = document.querySelector('#getInfo');
 
-	if ( getInfo ) {
-		getInfo.addEventListener('click', function(e){
-			FB.getLoginStatus(function(response)	{
-				if ( response && response.status === 'connected' ) {
-					FB.api('/me', getUserInfo);
-					getInfo.style.display = 'none';
-				}
-				else {
-					FB.login(function(response)	{
-						if ( response && response.status === 'connected' ) {
-							FB.api('/me', getUserInfo);
-							getInfo.style.display = 'none';
-						}
-					});
-				}
-			});
-		}, false);
+  if (getInfo) {
+    getInfo.addEventListener(
+      'click',
+      function(e) {
+        FB.getLoginStatus(function(response) {
+          if (response && response.status === 'connected') {
+            FB.api('/me', getUserInfo);
+            getInfo.style.display = 'none';
+          } else {
+            FB.login(function(response) {
+              if (response && response.status === 'connected') {
+                FB.api('/me', getUserInfo);
+                getInfo.style.display = 'none';
+              }
+            });
+          }
+        });
+      },
+      false
+    );
 
-		function getUserInfo(info) {
-			var infoBox = document.querySelector('#infoBox');
-			infoBox.innerHTML = JSON.stringify(info, null, 2);
-		}
-	}
+    function getUserInfo(info) {
+      var infoBox = document.querySelector('#infoBox');
+      infoBox.innerHTML = JSON.stringify(info, null, 2);
+    }
+  }
 </script>
-
 ```
 
-<script src="{{ '/vendors/socialmedia/dist/socialmedia.min.js' | prepend: site.baseurl }}">
+<script src="https://unpkg.com/socialmedia@2.0.2/dist/socialmedia.min.js"></script>
+
 <script type="text/javascript">
 	window.jabranr = window.jabranr || {};
 
 	jabranr.facebook = new Socialmedia.Facebook({
-		appid: '{{ site.facebook.app_id }}'
+		appid: process.env.FACEBOOK_APP_ID
 	});
 
 	var inviteFriends = document.querySelector('#inviteFriends');
@@ -211,16 +229,13 @@ Socialmedia works similarly for other supported social media platforms too. Here
 For Twitter, it would be as following and few of the API methods ([complete API reference](https://github.com/jabranr/socialmedia/wiki/Twitter)):
 
 ```html
-
 <script src="path/to/socialmedia.min.js" type="text/javascript"></script>
 <script>
-	var twitter = new Socialmedia.Twitter();
+  var twitter = new Socialmedia.Twitter();
 </script>
 
-// Exposes following API to use with Twitter SDK:
-twitter.Tweet()
-twitter.Hashtag()
-twitter.Mention()
+// Exposes following API to use with Twitter SDK: twitter.Tweet()
+twitter.Hashtag() twitter.Mention()
 ```
 
 ## Google+ SDK
@@ -228,14 +243,12 @@ twitter.Mention()
 For Google+, it would be as following and few of the API methods ([complete API reference](https://github.com/jabranr/socialmedia/wiki/Google-Plus)):
 
 ```html
-
 <script src="path/to/socialmedia.min.js" type="text/javascript"></script>
 <script>
-	var gplus = new Socialmedia.GooglePlus();
+  var gplus = new Socialmedia.GooglePlus();
 </script>
 
-// Exposes following API to use with Google+ SDK:
-gplus.Share()
+// Exposes following API to use with Google+ SDK: gplus.Share()
 ```
 
 ## Pinterest SDK
@@ -243,14 +256,12 @@ gplus.Share()
 For Pinterest, it would be as following and few of the API methods ([complete API reference](https://github.com/jabranr/socialmedia/wiki/Pinterest)):
 
 ```html
-
 <script src="path/to/socialmedia.min.js" type="text/javascript"></script>
 <script>
-	var pinterest = new Socialmedia.Pinterest();
+  var pinterest = new Socialmedia.Pinterest();
 </script>
 
-// Exposes following API to use withPinterest SDK:
-pinterest.Pinit()
+// Exposes following API to use withPinterest SDK: pinterest.Pinit()
 ```
 
 Socialmedia is very stable for the purposes it is built – all thanks to it's Test Driven Development (TDD) – yet it's intensive use in basic to complex (in production) projects has further strengthened its stability.

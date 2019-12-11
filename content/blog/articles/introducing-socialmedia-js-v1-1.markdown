@@ -18,7 +18,7 @@ Those who often work with [Facebook API](https://developers.facebook.com/) are a
 
 You have to find and set up the appropriate JavaScript code into HTML of your each file in which you wish to use Facebook API as well as setup the channel file for cross-domain access and the special div tag to let SDK initialise them. It is quite a bit of work if you have to do it regularly or for each file — unless you ease the process a little by using some sort of MVC structured application or personalised templates.
 
-<img src="../../assets/images/socialmedia.js.jpg" alt="Socialmedia.js" class="img-responsive">
+<img src="../../assets/images/socialmedia.js.jpg" alt="Socialmedia.js" />
 
 Let me introduce you with [socialmedia.js](https://github.com/jabranr/socialmedia.js#readme) — a small JavaScript library that includes all required functionality for Facebook API SDKs and ready to go by adding few straightforward script line(s) into your application’s HTML. This library is surely a result of above mentioned bizarre recursion. socialmedia.js also works fine for all kind of Facebook built-in plugins such as [Like button](http://jabran.me/introducing-socialmedia-js-v1-1/https//developers.facebook.com/docs/reference/plugins/like/), [Comments Box](https://developers.facebook.com/docs/reference/plugins/comments/) and [Follow Button](https://developers.facebook.com/docs/reference/plugins/follow/) etc. and built-in functions such as [Share](https://developers.facebook.com/docs/plugins/share/), [Invite](https://developers.facebook.com/docs/reference/dialogs/requests/) etc.
 

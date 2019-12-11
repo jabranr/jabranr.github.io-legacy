@@ -1,23 +1,22 @@
 import React from 'react';
 import { Link, graphql } from 'gatsby';
 
-import Bio from '../components/bio';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 
-import style from './index.module.scss';
+import style from './articles.module.scss';
 
-const HomePage = ({ data, location }) => {
+const ArticlesPage = ({ data, location }) => {
   const posts = data.allMarkdownRemark.edges;
 
   return (
     <Layout location={location}>
       <SEO
-        title="Jabran Rafique"
+        title="Articles"
         keywords={[`blog`, `jabran`, `rafique`, `javascript`, `react`]}
       />
-      <Bio />
-      <h4 className={style.h4}>Articles</h4>
+      <h2 className={style.h2}>Articles</h2>
+      <p>An archive collection of all articles written by Jabran Rafique.</p>
       {posts.map(({ node }) => (
         <Link
           className={style.card}
@@ -34,14 +33,11 @@ const HomePage = ({ data, location }) => {
           />
         </Link>
       ))}
-      <p className={style.more}>
-        <Link to="/articles">More articles &raquo;</Link>
-      </p>
     </Layout>
   );
 };
 
-export default HomePage;
+export default ArticlesPage;
 
 export const pageQuery = graphql`
   query {
@@ -50,10 +46,7 @@ export const pageQuery = graphql`
         title
       }
     }
-    allMarkdownRemark(
-      sort: { fields: [frontmatter___date], order: DESC }
-      limit: 3
-    ) {
+    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
       edges {
         node {
           excerpt
