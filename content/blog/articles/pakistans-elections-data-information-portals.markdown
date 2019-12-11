@@ -11,7 +11,7 @@ private: false
 
 Since Pakistan’s next general elections are just few weeks away now, there has been an incredible use of technology in different and innovative forms. I see this as a revolution towards making much more information and data available for public than ever before. By far, most of these applications are providing a detailed overview of information, either in reports format or as overlayed on maps. Following is an example taken from [VoterMaps](https://votermaps.appspot.com/) and there is a [list of many more resources](#resources) at end of this article.
 
-<img src="{{ '/assets/images/votermaps_pk_elections_2013.jpg' | prepend: site.baseurl }}" alt="Pakistan Elections Voter Map" class="img-responsive">
+<img src="../../assets/images/votermaps_pk_elections_2013.jpg" alt="Pakistan Elections Voter Map" class="img-responsive">
 
 So all the sudden, this list started increasing rapidly and I started to think that what it is that is making everyone develop their own system while using somewhat similar data and information. This is kind of duplicating a resource for no further end users benefits. Being a developer I acknowledge that it is waste of resources to duplicate things as it complicates things at various levels for end users. After going through few of these available resources, I noticed that almost all of them have some difference to each other. The difference was found:
 
@@ -31,7 +31,7 @@ Basically, the data and information in these portals is enormously limited to wh
 
 Perhaps, these are major reasons that are making most developers come with improvements but because they either do not want or cannot contribute to existing systems, they rather find it easier to develop their own solution with somewhat similar system—with an extra feature or bit more precise information. Following screenshot is from [MyVote.pk](http://myvote.pk/), one of the portals currently offering constituencies maps based on ECP’s official maps.
 
-<img src="{{ '/assets/images/myvotepk_election_portal.jpg' | prepend: site.baseurl }}" alt="Pakistan Elections Voter Map" class="img-responsive">
+<img src="../../assets/images/myvotepk_election_portal.jpg" alt="Pakistan Elections Voter Map" class="img-responsive">
 
 This practice is not feasible in long term even though use of these systems is seasonal. This practice is also confusing the users at some point as they are unable to make their mind to actually use these systems or just give them a visit to praise them and never return back.
 

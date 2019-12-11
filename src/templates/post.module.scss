@@ -24,6 +24,10 @@
   .h6 {
     margin-bottom: 0.5rem;
   }
+
+  :global(.gatsby-resp-image-wrapper) {
+    margin-bottom: 2rem;
+  }
 }
 
 .hr {

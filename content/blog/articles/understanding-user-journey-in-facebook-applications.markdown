@@ -12,12 +12,12 @@ private: false
 
 [Facebook applications](http://developers.facebook.com/) (apps) are wonderful medium to promote products and build up a fan base. Facebook canvas apps can be subdivided into two types based on their type of use − canvas app and page tab app. You may be familiar with canvas apps in form of Facebook games. Page tab app on other hand resides inside the area of a [Facebook Page](https://www.facebook.com/pages/create/). There are different things that we can do and cannot do with each of the app type.
 
-<img src="{{ '/assets/images/facebook_app_basic_settings.jpg' | prepend: site.baseurl }}" alt="Facebook App Settings" class="img-responsive">
+<img src="../../assets/images/facebook_app_basic_settings.jpg" alt="Facebook App Settings" class="img-responsive">
 <p class="help-block">Basic settings for a Facebook application</p>
 
 The app settings page provides options to set destinations for various versions of your app so the application can provide a better user experience to end user despite of device type they use to access the app. Following flow chart explains how Facebook detects the device and redirect users to appropriate versions of the app.
 
-<img src="{{ '/assets/images/facebook_app_redirection_process.png' | prepend: site.baseurl }}" alt="User flow through Facebook App" class="img-responsive">
+<img src="../../assets/images/facebook_app_redirection_process.png" alt="User flow through Facebook App" class="img-responsive">
 <p class="help-block">Flow chart explaining process flow and user journey in Facebook applications</p>
 
 Let’s see what happens when a user clicks on a this fake Facebook application link i.e. http://apps.facebook.com/afaketemporaryapp

@@ -43,7 +43,7 @@ or
 
 ```bash
 yarn add -D lighthouse
-````
+```
 
 Then we can modify our `npm scripts` in `package.json` to include following:
 
@@ -73,11 +73,14 @@ It may already be self-explanatory but here is quick run through:
 > The `--view` flag to `lighthouse` part will open the report in browser after it is ready.
 
 ## Gotcha
+
 GatsbyJS will try to serve on port 9000 but if some other process is already using it then it may offer another port to serve. Normally an increment by one e.g. 9001. In such a case, `lighthouse` may fail to run as port 9000 may not be the one serving the GatsbyJS site.
 
 ## Usage in CI pipeline
+
 Since `lighthouse` can generate report in different formats including JSON, it can easily be read and evaluated by CI tools. This would be useful for a website with set performance budget so that in a CI pipeline, a build will fail if it does not meet the defined minimum criteria. This is what we are trying to achieve at [Rated People](https://www.ratedpeople.com).
 
-## References:
+### References
+
 - [Lighthouse documentation](https://developers.google.com/web/tools/lighthouse/)
 - [GatsbyJS documentation](https://www.gatsbyjs.com)

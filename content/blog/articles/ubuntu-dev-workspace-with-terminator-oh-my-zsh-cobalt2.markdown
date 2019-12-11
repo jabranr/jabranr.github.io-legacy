@@ -20,7 +20,7 @@ I was introduced to [Terminator](https://apps.ubuntu.com/cat/applications/precis
 
 Now next steps were to bring Terminator to life from its default (IMO a bit dull) UI. This included changing the shell from Bash to some other useful shell that in my case is ZSH and some customization with Oh My ZSH. I also wanted to carry on using the color profile of [Cobalt2 by Webos](https://github.com/wesbos/cobalt2) but unfortunately there was no official support for Terminator. After a quick Google search, I landed on Mark Badolato's [Cobalt2 config file for Terminator](https://github.com/mbadolato/iTerm2-Color-Schemes/blob/master/terminator/Cobalt2.config). Once I had all the ingredients in place it was just a matter of bringing them together. Here I'll go through installing and setting up all this on Ubuntu 14.4 LTS step by step as I did and at the end you shall find your shell customized similar to following.
 
-<img src="{{ '/assets/images/terminator_ubuntu_14_4_lts_cobalt2_oh_my_zsh.png' | prepend: site.baseurl }}" class="img-responsive" alt="Terminator on Ubuntu 14.4 LTS with Cobalt2 and Oh My ZSH" />
+<img src="../../assets/images/terminator_ubuntu_14_4_lts_cobalt2_oh_my_zsh.png" class="img-responsive" alt="Terminator on Ubuntu 14.4 LTS with Cobalt2 and Oh My ZSH" />
 
 ## Installation:
 
