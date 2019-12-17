@@ -5,10 +5,10 @@ import Layout from '../components/layout';
 import SEO from '../components/seo';
 
 import africaMappers from '../../content/assets/images/speaking/africa-mappers.png';
-// import tedxLahore from '../../content/assets/images/speaking/tedx-lahore.png';
-// import gmmRegionalConference from '../../content/assets/images/speaking/gmm-regional-conference.png';
-// import geoUsersSummit from '../../content/assets/images/speaking/geo-users-summit.png';
-// import bigTent from '../../content/assets/images/speaking/big-tent.png';
+import tedxLahore from '../../content/assets/images/speaking/tedx-lahore.png';
+import gmmRegionalConference from '../../content/assets/images/speaking/gmm-regional-uae.png';
+import geoUsersSummit from '../../content/assets/images/speaking/geo-summit-singapore.png';
+import bigTent from '../../content/assets/images/speaking/big-tent-sendai.png';
 
 import style from './speaking.module.scss';
 
@@ -35,8 +35,8 @@ const SpeakingPage = ({ data, location }) => {
       />
       <h2 className={style.h2}>Speaking</h2>
       <p>
-        I have spoken at various events in past. Mostly these talks were related
-        to my work with{' '}
+        I have spoken at various events in the past. Mostly these talks were
+        related to my work with{' '}
         <a
           href="https://mapmaker.google.com"
           target="_blank"
@@ -44,30 +44,65 @@ const SpeakingPage = ({ data, location }) => {
         >
           Google Map Maker
         </a>
-        . However I am now more focused on giving talks and workshops on tech
-        related topics.
+        . However I am now more focused towards tech, startups and mentoring.
       </p>
 
       <hr />
       <div className={style.speaking}>
-        <div>
+        <div className={style.event}>
           <h3>Google Africa Mappers Conference Kenya 2010</h3>
           <img src={africaMappers} alt="" />
+          <p>
+            I was invited with{' '}
+            <a
+              href="https://www.twitter.com/farazilu"
+              target="_blank"
+              rel="noopener noreferer"
+            >
+              Faraz Ahmad
+            </a>{' '}
+            – a fellow mapper at Google Map Maker to share our experience with
+            the platform and strategies we adopted to rapidly map Pakistan with
+            maintaining the quality. At this 2 days conference, we presented to
+            share methodologies with Africa mappers who were just get started.
+            More info at{' '}
+            <a
+              href="https://sites.google.com/site/superafricamappers/home"
+              target="_blank"
+              rel="noopener noreferer"
+            >
+              https://sites.google.com/site/superafricamappers/home
+            </a>
+          </p>
         </div>
-        {/* <div>
-          <img src={tedxLahore} alt="" /> TEDx Lahore 2010
+        <div className={style.event}>
+          <h3>TEDx Lahore 2010</h3>
+          <img src={tedxLahore} alt="" />
+          <p>
+            I was part of the TEDx Lahore 2010 to emphasize on need of open
+            access to public information with our struggle to help rescue and
+            relief efforts in recent natual disaster. More info at{' '}
+            <a
+              href="https://www.ted.com/tedx/events/915"
+              target="_blank"
+              rel="noopener noreferer"
+            >
+              https://www.ted.com/tedx/events/915
+            </a>
+          </p>
         </div>
-        <div>
-          <img src={gmmRegionalConference} alt="" /> Google Map Maker Regional
-          Conference Dubai 2011
+        <div className={style.event}>
+          <h3>Google Map Maker Regional Conference Dubai 2011</h3>
+          <img src={gmmRegionalConference} alt="" />
         </div>
-        <div>
-          <img src={geoUsersSummit} alt="" /> Google Geo Users Summit Singapore
-          2011
+        <div className={style.event}>
+          <h3>Google Geo Users Summit Singapore 2011</h3>
+          <img src={geoUsersSummit} alt="" />
         </div>
-        <div>
-          <img src={bigTent} alt="" /> Google Big Tent Sendai 2011
-        </div> */}
+        <div className={style.event}>
+          <h3>Google Big Tent Sendai 2011</h3>
+          <img src={bigTent} alt="" />
+        </div>
       </div>
     </Layout>
   );

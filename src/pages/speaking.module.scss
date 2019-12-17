@@ -1,5 +1,23 @@
 .speaking {
   font-size: 1.125rem;
+}
+
+.event {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-gap: 0 1rem;
+  color: #666;
+
+  & + & {
+    border-top: 2px solid #eee;
+    margin-top: 1rem;
+    padding-top: 2.5rem;
+  }
+
+  h3 {
+    grid-column: 1/-1;
+    color: #333;
+  }
 
   img {
     width: 150px;
