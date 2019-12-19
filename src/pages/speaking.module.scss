@@ -3,8 +3,8 @@
 }
 
 .event {
-  display: grid;
-  grid-template-columns: auto 1fr;
+  display: block;
+  clear: both;
   grid-gap: 0 1rem;
   color: #666;
 
@@ -20,10 +20,11 @@
   }
 
   img {
+    float: right;
     width: 150px;
     height: 150px;
     border-radius: 10%;
-    display: inline-block;
     vertical-align: middle;
+    margin: 0 0 1rem 1.125rem;
   }
 }

@@ -30,7 +30,7 @@ const Bio = () => {
       </div>
       <p className={style.subintro}>
         I love to work on ideas when I have a chance. Almost all of projects are
-        open-source and available from GitHub. Between 2008 and 2012 I
+        open-sourced and available from GitHub. Between 2008 and 2012 I
         volunteered as digital cartographer to map the unmapped areas of the
         world with{' '}
         <a
@@ -40,7 +40,10 @@ const Bio = () => {
         >
           Google Map Maker
         </a>
-        . I regularly{' '}
+        .
+      </p>
+      <p className={style.subintro}>
+        I regularly{' '}
         <a
           href="https://www.twitter.com/jabranr"
           target="_blank"

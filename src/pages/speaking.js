@@ -35,8 +35,8 @@ const SpeakingPage = ({ data, location }) => {
       />
       <h2 className={style.h2}>Speaking</h2>
       <p>
-        I have spoken at various events in the past. Mostly these talks were
-        related to my work with{' '}
+        I have spoken at various events in the past, ran workshops and training
+        sessions. Mostly these talks were related to my work with{' '}
         <a
           href="https://mapmaker.google.com"
           target="_blank"
@@ -50,10 +50,84 @@ const SpeakingPage = ({ data, location }) => {
       <hr />
       <div className={style.speaking}>
         <div className={style.event}>
-          <h3>Google Africa Mappers Conference Kenya 2010</h3>
+          <h3>Google Big Tent Sendai &ndash; 2011</h3>
+          <img src={bigTent} alt="" />
+          <p>
+            I was invited along with{' '}
+            <a
+              href="https://www.twitter.com/momers"
+              target="_blank"
+              rel="noopener noreferer"
+            >
+              Omer Sheikh
+            </a>
+            , a fellow mapper to highlight our mapping efforts through Google
+            Map Maker during couple of natural disasters that helped facilitate
+            relief and rescue efforts on grounds for various agencies such as
+            UNITAR/UNOSAT.
+          </p>
+          <p>
+            <a
+              href="https://googleblog.blogspot.com/2012/07/big-tent-sendai-smarter-ways-to-share.html"
+              target="_blank"
+              rel="noopener noreferer"
+            >
+              Google blog &raquo;
+            </a>
+          </p>
+        </div>
+        <div className={style.event}>
+          <h3>Google Geo Users Summit Singapore &ndash; 2011</h3>
+          <img src={geoUsersSummit} alt="" />
+          <p>
+            The Summit hosted Google Map Maker Mappers, Geo Modelers, Panoramio
+            Enthusiasts from Asia Pacific to celebrate their contribution in
+            crowd-sourced efforts and to set new strategies to increase
+            community engagement.
+          </p>
+          <p>
+            <a
+              href="https://sites.google.com/site/2011geocommunityapac/"
+              target="_blank"
+              rel="noopener noreferer"
+            >
+              More details &raquo;
+            </a>
+          </p>
+          <p>
+            <a
+              href="https://maps.googleblog.com/2011/04/celebrating-top-geo-contributors-in.html"
+              target="_blank"
+              rel="noopener noreferer"
+            >
+              Google blog &raquo;
+            </a>
+          </p>
+        </div>
+        <div className={style.event}>
+          <h3>Google Map Maker Regional Conference Dubai &ndash; 2011</h3>
+          <img src={gmmRegionalConference} alt="" />
+          <p>
+            The Regional Conference brought most active cartographers together
+            to meet, have fun and learn from each other. Teams and individuals
+            from each region presented their interesting stories of mapping and
+            how digital maps have helped their regions.
+          </p>
+          <p>
+            <a
+              href="https://sites.google.com/site/2012mapmakercommunity/mena"
+              target="_blank"
+              rel="noopener noreferer"
+            >
+              More details &raquo;
+            </a>
+          </p>
+        </div>
+        <div className={style.event}>
+          <h3>Africa Supper Mappers Conference, Kenya &ndash; 2010</h3>
           <img src={africaMappers} alt="" />
           <p>
-            I was invited with{' '}
+            I was invited along with{' '}
             <a
               href="https://www.twitter.com/farazilu"
               target="_blank"
@@ -61,47 +135,47 @@ const SpeakingPage = ({ data, location }) => {
             >
               Faraz Ahmad
             </a>{' '}
-            – a fellow mapper at Google Map Maker to share our experience with
-            the platform and strategies we adopted to rapidly map Pakistan with
-            maintaining the quality. At this 2 days conference, we presented to
-            share methodologies with Africa mappers who were just get started.
-            More info at{' '}
+            , a fellow mapper at Google Map Maker to share our experience and
+            strategies we adapted to rapidly map Pakistan &ndash; with keeping
+            up the quality. This helped attendees learn different methodologies
+            towards digital cartography of Africa.
+          </p>
+          <p>
             <a
               href="https://sites.google.com/site/superafricamappers/home"
               target="_blank"
               rel="noopener noreferer"
             >
-              https://sites.google.com/site/superafricamappers/home
+              More details &raquo;
             </a>
           </p>
         </div>
         <div className={style.event}>
-          <h3>TEDx Lahore 2010</h3>
+          <h3>TEDx Lahore &ndash; 2010</h3>
           <img src={tedxLahore} alt="" />
           <p>
-            I was part of the TEDx Lahore 2010 to emphasize on need of open
-            access to public information with our struggle to help rescue and
-            relief efforts in recent natual disaster. More info at{' '}
+            I was invited along with{' '}
+            <a
+              href="https://www.twitter.com/momers"
+              target="_blank"
+              rel="noopener noreferer"
+            >
+              Omer Sheikh
+            </a>{' '}
+            at TEDx Lahore 2010 to speak about improtance of open access to
+            public information and data &ndash; especially during times of
+            natural disasters. We spoke about the struggle faced by agencies due
+            to limited and restricted availability of information and data.
+          </p>
+          <p>
             <a
               href="https://www.ted.com/tedx/events/915"
               target="_blank"
               rel="noopener noreferer"
             >
-              https://www.ted.com/tedx/events/915
+              More details &raquo;
             </a>
           </p>
-        </div>
-        <div className={style.event}>
-          <h3>Google Map Maker Regional Conference Dubai 2011</h3>
-          <img src={gmmRegionalConference} alt="" />
-        </div>
-        <div className={style.event}>
-          <h3>Google Geo Users Summit Singapore 2011</h3>
-          <img src={geoUsersSummit} alt="" />
-        </div>
-        <div className={style.event}>
-          <h3>Google Big Tent Sendai 2011</h3>
-          <img src={bigTent} alt="" />
         </div>
       </div>
     </Layout>
